@@ -1,0 +1,28 @@
+.catalog-list
+	display: grid
+	grid-template-columns: repeat(3, minmax(0,1fr))
+	gap: fluid(10,40)
+
+	@include media('max', 'pc')
+		gap: fluid(10,24)
+
+	@include media('max', 'laptop-xxl')
+		grid-template-columns: repeat(2, minmax(0,1fr))
+
+	&:not(:first-child)
+		margin-top: fluid(20,24)
+
+	&--list
+		@include media('min', 'tablet')
+			display: flex
+			flex-direction: column
+			gap: fluid(20,24)
+
+	&--search
+		grid-template-columns: repeat(4, minmax(0,1fr))
+
+		@include media('max', 'pc')
+			grid-template-columns: repeat(3, minmax(0,1fr))
+
+		@include media('max', 'tablet')
+			grid-template-columns: repeat(2, minmax(0,1fr))

@@ -1,0 +1,92 @@
+.footer
+	margin-top: fluid(40,120)
+	padding: fluid(16,40) 0 24px
+	background-color: var(--color-neutral-200)
+
+	&__cont
+		display: grid
+		grid-template-columns: repeat(12, minmax(0,1fr))
+		gap: fluid(12,40)
+
+		@include media('max', 'tablet')
+			display: flex
+			flex-direction: column
+
+		&:not(:last-child)
+			margin-bottom: fluid(24,64)
+
+	&__nav
+		grid-column: 1/7
+
+		@include media('max', 'laptop-xxl')
+			grid-column: -1/1
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__text
+		grid-column: 1/5
+		margin-top: auto
+
+		@include media('max', 'laptop-xxl')
+			grid-column: -1/1
+
+		@include media('max', 'tablet')
+			display: none
+
+		&-title
+			margin-bottom: 8px
+
+		:where(p:not([class]))
+			font-size: var(--font-size-text-s)
+
+			&:not(:last-child)
+				margin-bottom: 8px
+
+	&__contacts
+		grid-column: 7/13
+		grid-row: span 2
+
+		@include media('max', 'laptop-xxl')
+			grid-column: -1/1
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__partners
+		padding: fluid(0,24) 0
+		border-top: 2px solid var(--color-neutral-300)
+		border-bottom: 2px solid var(--color-neutral-300)
+
+		@include media('max', 'tablet')
+			border: 0
+
+		&:not(:last-child)
+			margin-bottom: 24px
+
+	&__bottom
+		display: flex
+		align-items: flex-start
+		gap: 8px 24px
+		font-size: var(--font-size-text-s)
+
+		@include media('max', 'tablet')
+			flex-direction: column
+
+		.link
+			--link-font-size: var(--font-size-text-s)
+
+	&__copyright
+		flex-shrink: 0
+
+	&__links
+		display: flex
+		flex-grow: 1
+		flex-wrap: wrap
+		gap: 8px 24px
+
+		@include media('max', 'tablet')
+			flex-direction: column
+
+	&__dev
+		flex-shrink: 0

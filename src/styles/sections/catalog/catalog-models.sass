@@ -1,0 +1,59 @@
+.catalog-models
+	&__list
+		display: grid
+		grid-template-columns: repeat(8, minmax(0,1fr))
+		gap: 8px
+
+		@include media('max', 'pc')
+			grid-template-columns: repeat(6, minmax(0,1fr))
+
+		@include media('max', 'laptop')
+			grid-template-columns: repeat(4, minmax(0,1fr))
+
+		@include media('max', 'mobile-xl')
+			grid-template-columns: repeat(2, minmax(0,1fr))
+
+.models-card
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: center
+	gap: fluid(4,8)
+	padding: fluid(16,20) fluid(12,20)
+	min-height: fluid(144,200)
+	border-radius: var(--radius-s)
+	text-align: center
+	background-color: var(--color-neutral-200)
+	color: var(--color-neutral-900)
+	transition: background-color .3s ease
+
+	@include hover
+		background-color: var(--color-primary-100)
+
+	&__name
+		flex-grow: 1
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: fluid(12, 18)
+		line-height: var(--line-height-text)
+		font-weight: 600
+
+	&__img
+		--aspect-ratio: 183/102
+		--object-fit: contain
+
+		flex-shrink: 0
+		max-width: 183px
+
+		@include media('max', 'tablet')
+			--aspect-ratio: 120/56
+			max-width: 120px
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		font-size: 0

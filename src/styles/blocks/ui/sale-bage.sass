@@ -1,0 +1,43 @@
+.sale-bage
+	--sale-bage-border-color: var(--color-neutral-400)
+
+	display: flex
+	align-items: center
+	gap: 6px
+	padding: 10px 20px
+	border-radius: var(--radius-l)
+	border: 2px solid var(--sale-bage-border-color)
+	background-color: transparent
+	font-size: 16px
+	line-height: var(--line-height-text)
+
+	&__text
+		white-space: nowrap
+
+	&__count
+		white-space: nowrap
+		font-weight: 600
+
+	&__icon
+		flex-shrink: 0
+		margin-left: auto
+		width: fluid(16,20)
+		height: fluid(16,20)
+		object-fit: contain
+		color: currentColor
+
+	&__item
+		display: flex
+		align-items: center
+		gap: 6px
+		cursor: pointer
+		transition: color .3s ease
+
+		@include hover
+			color: var(--color-primary-500)
+
+		&.active
+			color: var(--color-primary-600)
+
+	&--dropdown
+		width: 100%

@@ -1,0 +1,101 @@
+@import 'vue-toastification/dist/index.css'
+
+.Vue-Toastification__container.toast-container
+	&.bottom-center
+		right: var(--wrapper-padding)
+		bottom: var(--wrapper-padding)
+		left: unset
+		display: flex
+		align-items: flex-end
+		gap: 10px
+		padding: 0
+
+	.toast
+		width: 100%
+		min-width: unset
+		max-width: 512px
+		margin-right: unset
+		margin-bottom: 0
+		margin-left: auto
+		padding: fluid(16,24)
+		gap: fluid(16,24)
+
+		border-radius: var(--radius-s)
+
+		background-color: var(--color-neutral-100)
+		box-shadow: none
+		border: var(--border-default)
+
+		@include media('max', 'tablet')
+			max-width: calc(100% - var(--wrapper-padding) * 2)
+
+		&__body
+			display: flex
+			align-items: center
+			gap: 12px
+			color: var(--color-neutral-900)
+			font-family: var(--font-family-primary)
+			font-size: var(--font-size-text-l)
+			line-height: var(--line-height-text)
+			font-weight: 600
+
+		&__close
+			align-self: center
+
+			size: 28px
+			margin-left: 16px
+
+			background-color: var(--color-neutral-900)
+			mask-position: center
+			mask-repeat: no-repeat
+			opacity: 1
+
+			font-size: 0
+
+			@include icon('close')
+
+		&__icon
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			size: 28px
+			border-radius: 50%
+			margin-right: 0
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+
+			&--success
+				@include icon('success', 'background')
+
+			&--warning
+				@include icon('warning', 'background')
+
+			&--error
+				@include icon('error', 'background')
+
+			&--info
+				@include icon('info', 'background')
+
+		&--success,
+		&--warning,
+		&--error,
+		&--info
+			background-color: var(--color-neutral-100)
+
+		&--success
+			color: var(--color-positive)
+
+		&--warning
+			color: var(--color-warning)
+
+		&--error
+			color: var(--color-negative)
+
+		&--info
+			color: var(--color-info)
+
+	.Vue-Toastification__progress-bar
+		background-color: currentColor
+

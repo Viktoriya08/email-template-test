@@ -1,0 +1,33 @@
+.main-screen
+	&__wrapper
+		display: flex
+		flex-direction: column
+		gap: fluid(16,40)
+
+	&__search
+		display: none
+
+		@include media('max', 'tablet')
+			display: block
+
+	&__catalog
+		display: grid
+		grid-template-columns: repeat(12, minmax(0,1fr))
+		gap: fluid(16, 40)
+
+		@include media('max', 'laptop')
+			display: flex
+			flex-direction: column
+
+	&__brands
+		grid-column: 1/9
+		display: flex
+		flex-direction: column
+
+	&__models
+		grid-column: 9/13
+		display: flex
+		flex-direction: column
+
+		@include media('max', 'laptop')
+			order: -1

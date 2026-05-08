@@ -1,0 +1,164 @@
+.accordion
+	--accordion-px: fluid(16, 24)
+	--accordion-py: fluid(16, 24)
+	--accordion-bg: transparent
+	--accordion-bg-hover: transparent
+	--accordion-active-bg: transparent
+	--accordion-bg-disabled: transparent
+	--accordion-border: 2px solid var(--color-neutral-200)
+	--accordion-border-radius: var(--radius-m)
+	--accordion-header-cursor: pointer
+	--accordion-title-size: var(--font-size-h5)
+	--accordion-title-line-height: var(--line-height-text)
+	--accordion-title-color: inherit
+	--accordion-title-color-hover: inherit
+	--accordion-title-color-disabled: var(--color-neutral-400)
+	--accordion-icon-size: fluid(32, 40)
+	--accordion-icon-gap: fluid(16, 20)
+	--accordion-icon-color: var(--color-neutral-900)
+	--accordion-icon-color-hover: var(--color-neutral-500)
+	--accordion-icon-color-disabled: var(--color-neutral-trans-50)
+	--accordion-icon-color-active: var(--color-neutral-100)
+	--accordion-icon-background: var(--color-neutral-100)
+	--accordion-icon-background-hover: var(--color-neutral-500)
+	--accordion-icon-background-active: var(--color-primary-600)
+	--accordion-icon-background-disabled: var(--color-transparent-30)
+	--accordion-icon-line-color: var(--color-primary-300)
+	--accordion-icon-line-size: 2px
+	--accordion-icon-line-offset: 2px
+	--accordion-dropdown-height: 0
+	--accordion-dropdown-gap: fluid(16, 20)
+	--accordion-dropdown-px: 0
+	--accordion-dropdown-py: 0
+	--accordion-dropdown-transition-duration: 0.3s
+
+	padding: var(--accordion-py) var(--accordion-px)
+	border-top: var(--accordion-border)
+	transition: padding .3s
+
+	&.disabled
+		--accordion-bg: var(--accordion-bg-disabled)
+		--accordion-header-cursor: not-allowed
+		--accordion-title-color: var(--accordion-title-color-disabled)
+		--accordion-icon-color: var(--accordion-icon-color-disabled)
+		--accordion-icon-background: var(--accordion-icon-background-disabled)
+
+	&.active
+		--accordion-bg: var(--accordion-active-bg)
+		--accordion-icon-color: var(--accordion-icon-color-active)
+		--accordion-icon-background: var(--accordion-icon-background-active)
+		--accordion-border: 2px solid transparent
+
+		+ .accordion
+			--accordion-border: 2px solid transparent
+
+	&__box 
+		border-radius: var(--accordion-border-radius)
+		background-color: var(--accordion-bg)
+		transition: background-color .3s ease
+
+
+	&__header
+		display: flex
+		justify-content: space-between
+		gap: var(--accordion-icon-gap)
+		cursor: var(--accordion-header-cursor)
+
+		@include media("max", "mobile-xl")
+			padding-right: 15px
+
+		&:focus-within
+			--accordion-icon-background: var(--accordion-icon-background-hover)
+
+	&__title
+		flex: 1 1 auto
+		max-width: 720px
+		color: var(--accordion-title-color)
+		font-size: var(--accordion-title-size)
+		line-height: var(--accordion-title-line-height)
+
+	&__icon
+		display: flex
+		flex-shrink: 0
+		align-items: center
+		justify-content: center
+
+		size: var(--accordion-icon-size)
+
+		border: none
+		border-radius: var(--radius-s)
+
+		background-color: var(--accordion-icon-background)
+
+		color: var(--accordion-icon-color)
+
+		transition: color .3s ease, background-color .3s ease
+
+		&:focus-visible
+			background-color: var(--accordion-icon-background-hover)
+
+		@include hover
+			background-color: var(--accordion-icon-background-hover)
+
+		&:disabled
+			pointer-events: none
+
+		&-image
+			size: 60%
+
+	&__body
+		max-width: 720px
+		padding: var(--accordion-dropdown-gap) 0 0 0
+
+	&--secondary
+		--accordion-px: fluid(16, 24)
+		--accordion-py: fluid(16, 24)
+		--accordion-active-bg: var(--color-primary-300)
+		--accordion-border-radius: var(--radius-xl)
+		--accordion-dropdown-py: 16px
+
+	&--backdrop
+		// --accordion-px: var(--accordion-px)
+		// --accordion-py: var(--accordion-py)
+		--accordion-bg: var(--color-neutral-100)
+		--accordion-bg-hover: var(--color-primary-100)
+		--accordion-bg-disabled: var(--color-primary-100)
+		--accordion-active-bg: var(--color-primary-100)
+		--accordion-icon-background: var(--color-neutral-200)
+		--accordion-dropdown-py: 16px
+		padding-right: 0
+		padding-left: 0
+
+		&:focus-within
+			--accordion-bg: var(--accordion-bg-hover)
+			--accordion-icon-background: var(--color-primary-300)
+
+		.accordion
+			&__box 
+				padding: var(--accordion-py) var(--accordion-px)
+
+	&--ltl
+		& .accordion
+			&__header
+				flex-direction: row-reverse
+
+			&__body
+				padding: var(--accordion-dropdown-gap, var(--accordion-dropdown-py)) var(--accordion-dropdown-px) var(--accordion-dropdown-py) calc(var(--accordion-dropdown-px) + var(--accordion-icon-size) + var(--accordion-icon-gap))
+
+	&:not(:first-child)
+
+		&.active 
+			padding: 0
+
+.accordion-enter-active,
+.accordion-leave-active
+	overflow: hidden
+	transition: height var(--accordion-dropdown-transition-duration) ease
+
+.accordion-enter-to,
+.accordion-leave-from
+	height: var(--accordion-dropdown-height)
+
+.accordion-enter-from,
+.accordion-leave-to
+	height: 0

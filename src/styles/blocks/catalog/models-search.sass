@@ -1,0 +1,40 @@
+.models-search
+	flex-grow: 1
+	display: flex
+	flex-direction: column
+	gap: fluid(20,24)
+	padding: fluid(16,24)
+	border-radius: var(--radius-m)
+	background-color: var(--color-neutral-900)
+	color: var(--color-neutral-100)
+
+	&__top
+		display: flex
+		justify-content: space-between
+		gap: 24px
+
+	&__icon
+		flex-shrink: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		border-radius: var(--radius-s)
+		background-color: rgba(var(--color-neutral-100-rgb), .2)
+
+		&-img
+			width: 24px
+			height: 24px
+			object-fit: contain
+
+	&__item
+		display: flex
+		flex-direction: column
+		gap: fluid(6,8)
+
+	&__bottom
+		margin-top: auto
+
+		.btn
+			width: 100%

@@ -1,0 +1,41 @@
+.footer-contacts
+	display: grid
+	grid-template-columns: repeat(6, minmax(0,1fr))
+	gap: fluid(12,40)
+
+	@include media('max', 'mobile-xl')
+		display: flex
+		flex-direction: column
+
+	&__item
+		grid-column: span 2
+
+		display: flex
+		flex-direction: column
+		gap: 8px
+		background-color: var(--color-neutral-100)
+		padding: fluid(16,24)
+		border-radius: var(--radius-m)
+
+		@include media('max', 'tablet')
+			grid-column: span 3
+
+		&-btn
+			margin-top: auto
+
+			@include media('max', 'tablet')
+				margin-top: 24px
+
+		&-text
+			@include media('min', 'mobile-xl')
+				max-width: 170px
+
+		&--all
+			grid-column: 3/7
+			grid-row: span 2
+
+			@include media('max', 'tablet')
+				display: none
+
+		&--color
+			background-color: var(--color-primary-200)

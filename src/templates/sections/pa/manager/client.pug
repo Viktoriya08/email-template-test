@@ -1,0 +1,19 @@
+mixin client()
+	.client
+		.client__grid 
+			.client__name Константин Георгиевич Красильников
+			.client__contacts 
+				a(href="tel:+79876543210").client__contacts-link.link.link--color +7 987 654-32-10
+				a(href="mailto:client@mail.com").client__contacts-link.link.link--color client@mail.com
+
+			.client__info 
+				.client__info-box
+					.client__text.client__text--grey Баланс:
+					.client__data 32 800 ₽
+				.client__info-box
+					.client__text.client__text--grey Скидка:
+					.client__text 15%
+
+			.client__btn.link 
+				| К заказам
+				+icon('arrow-right').link__icon

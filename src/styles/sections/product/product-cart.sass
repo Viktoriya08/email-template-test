@@ -1,0 +1,96 @@
+.product-cart
+	display: flex
+	flex-direction: column
+
+	@include media('min', 'tablet')
+		padding: 16px
+		border-radius: var(--radius-m)
+		background-color: var(--color-neutral-200)
+
+	&__price
+		--price-font-size: var(--font-size-h3)
+		--price-old-font-size: var(--font-size-text-m)
+		--price-direction: row
+		--price-gap: 12px
+
+		align-items: center
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__sale
+		align-self: flex-start
+
+		@include media('max', 'tablet')
+			display: none
+
+		&:not(:first-child)
+			margin-top: 8px
+
+	&__bages
+		&:not(:first-child)
+			margin-top: 12px
+
+			@include media('max', 'tablet')
+				margin-top: 0
+
+	&__btns
+		flex-shrink: 0
+		display: flex
+		gap: 10px
+		margin-top: auto
+
+		@include media('max', 'tablet')
+			order: 3
+
+		&:not(:first-child)
+			margin-top: 16px
+
+			@include media('max', 'tablet')
+				margin-top: 0
+
+		.btn
+			&:only-child
+				flex-grow: 1
+
+	&__btn-cart
+		flex-grow: 1
+
+		&:not(:only-child)
+			min-width: 160px
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__btn-one-click
+		flex-grow: 1
+		flex-shrink: 0
+
+		@include media('max', 'tablet')
+			--btn-color: var(--color-neutral-900)
+			--btn-color-hover: var(--color-neutral-900)
+			--btn-color-focus: var(--color-neutral-900)
+			--btn-color-active: var(--color-neutral-900)
+			--btn-color-disabled: var(--color-neutral-100)
+			// -----------------
+			--btn-bg: var(--color-primary-200)
+			--btn-bg-hover: var(--color-primary-100)
+			--btn-bg-focus: var(--color-primary-300)
+			--btn-bg-active: var(--color-primary-300)
+			--btn-bg-disabled: var(--color-neutral-500)
+
+			width: 100%
+			margin-top: 16px
+
+	&__info
+		font-size: var(--font-size-text-s)
+		color: var(--color-neutral-700)
+
+		@include media('min', 'tablet')
+			text-align: center
+
+		&:not(:first-child)
+			margin-top: 12px
+
+		a:not([class])
+			text-decoration: none

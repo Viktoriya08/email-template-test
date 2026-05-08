@@ -1,0 +1,61 @@
+.quantity
+	display: flex
+	align-items: center
+	max-width: fluid(120,140)
+	width: 100%
+	gap: 4px
+
+	&__btn
+		position: relative
+		flex-shrink: 0
+		width: 20px
+		height: 20px
+		color: currentColor
+		cursor: pointer
+		transition: opacity .3s ease
+
+		@include media('max', 'mobile-xl')
+			width: 16px
+			height: 16px
+
+		@include hover
+			opacity: .7
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: currentColor
+
+		&::after
+			content: ''
+			position: absolute
+			top: -4px
+			left: -4px
+			right: -4px
+			bottom: -4px
+
+		&-minus
+			&::before
+				@include icon('minus', 'mask')
+
+		&-plus
+			&::before
+				@include icon('plus', 'mask')
+
+	&__input
+		appearance: none
+		border: 0
+		outline: 0
+		background: transparent
+		border-radius: 0
+		box-shadow: none
+		width: calc(100% - 8px - 20px)
+		text-align: center
+		pointer-events: none
+
+		@include media('max', 'mobile-xl')
+			width: calc(100% - 8px - 16px)

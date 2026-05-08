@@ -1,0 +1,18 @@
+mixin media-card(title, img, video="false", gallery="false")
+	article.media-card
+		a(href="#" title=`${title}`).media-card__title.media-card__link=title
+		.media-card__photo
+			if img
+				+image(
+					{
+						src: `img/${img}`,
+						width: '430',
+						height: '290',
+					},
+				).media-card__photo-img 
+			if video 
+				.media-card__btn-play.btn.btn--color-primary.btn--play
+					+icon('play').btn__icon
+			if gallery 
+				.media-card__tag.info-tag.info-tag--icon 123
+		.media-card__data.info-data 12.05.2024

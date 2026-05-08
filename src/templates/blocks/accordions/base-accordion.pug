@@ -1,0 +1,5 @@
+mixin base-accordion(items = [])
+	each item in items
+		base-accordion&attributes(attributes)
+			template(#title)!=item.title
+			template(#body)!=item.content

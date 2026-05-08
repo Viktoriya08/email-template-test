@@ -1,0 +1,61 @@
+.vacancies
+
+	&__grid 
+		display: grid
+		grid-template-columns: repeat(12, minmax(0, 1fr))
+		column-gap: fluid(10,40)
+		row-gap: 32px
+
+	&__left
+		grid-column: 1/5
+
+		@include media("max", "tablet-xl")
+			grid-column: 1/-1
+
+	&__right
+		grid-column: 7/-1
+
+		@include media("max", "pc")
+			grid-column: 6/-1
+
+		@include media("max", "tablet-xl")
+			grid-column: 1/-1
+
+	&__text
+		font-size: var(--font-size-text-m)
+		line-height: 1.4
+
+	&__item 
+		padding: 24px 0
+		border-top: 2px solid var(--color-neutral-200)
+
+		@include media("max", "tablet-xl")
+			padding: 0
+
+	&__info 
+		&:not(:last-child)
+			margin-bottom: fluid(16, 40)
+
+	&__subtext 
+		color: var(--color-neutral-700)
+		font-size: var(--font-size-text-m)
+		line-height: 1.4
+
+		&:not(:last-child)
+			margin-bottom: 12px
+
+	&__sum 
+		font-size: var(--font-size-h2)
+		font-weight: 600
+		line-height: 1.4
+
+	&__content 
+		h2:not([class])
+			font-size: var(--font-size-h5)
+
+			&:not(:last-child)
+				margin-bottom: fluid(1, 20)
+
+			&:not(:first-child)
+				margin-top: fluid(24, 32)
+

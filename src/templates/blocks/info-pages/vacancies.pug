@@ -1,0 +1,18 @@
+mixin vacancies(title, text)
+	.vacancies.vacancies__grid 
+		.vacancies__left 
+			if title 
+				h2.title.title--h2.vacancies__title!=title 
+			if text
+				.vacancies__text!=text
+		.vacancies__right
+
+			ul.vacancies__list 
+				li.vacancies__item 
+					+vacancy('Менеджер по оптовым закупкам', 'от 50 000 ₽')
+				li.vacancies__item 
+					+vacancy('Менеджер по работе с клиентами', 'от 50 000 ₽')
+				li.vacancies__item 
+					+vacancy('Исполнительный директор', 'от 150 000 ₽')
+				li.vacancies__item 
+					+vacancy('Менеджер по работе с клиентами в Копейске', 'от 50 000 ₽')

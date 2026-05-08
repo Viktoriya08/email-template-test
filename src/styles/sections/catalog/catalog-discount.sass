@@ -1,0 +1,15 @@
+.catalog-discount
+	position: relative
+
+	&:not(:last-child)
+		margin-bottom: 20px
+
+	&--mob
+		@include media('min', 'tablet')
+			display: none
+
+	&__dropdown
+		width: max-content
+
+	&__bage
+		--bage-font-size: var(--font-size-text-m)

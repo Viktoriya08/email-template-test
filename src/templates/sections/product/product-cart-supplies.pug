@@ -1,0 +1,22 @@
+.product-cart
+	.product-cart__price.price
+		.price__item.price__item--current(itemscope itemprop="offers" itemtype="http://schema.org/Offer")
+			span(itemprop="price").price__item-price 21 024
+			span(itemprop="priceCurrency" content="RUB").price__item-currency ₽
+			meta(itemprop="availability" content="http://schema.org/InStock")
+	.product-cart__bages.bages
+		span.bage Нет в наличии
+		base-tooltip.bage
+			span.bage__tooltip
+				+icon('question').bage__icon
+				| Дисконт
+
+			template(#tooltip)
+				span Дисконтный товар, это товар с небольшими визуальными дефектами, которые не влияют на работу. Благодаря этому товар может стоить дешевле.
+
+	.product-cart__btns
+		button.btn.btn--color-primary.product-cart__btn-cart
+			+icon('bell').btn__icon
+			span.btn__text Сообщить о поступлении
+
+	.product-cart__info Если вы оптовый покупатель <a href="#">войдите в&nbsp;профиль</a>, чтобы получить персональную скидку

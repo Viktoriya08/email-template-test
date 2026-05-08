@@ -1,0 +1,423 @@
+catalog-filters
+
+	.catalog-filters__brands
+		.catalog-filters__item
+			a(href="#").catalog-filters__link.link.link--color.active
+				| Дисконтные товары
+				+icon('procent').link__icon
+		.catalog-filters__item
+			a(href="#").catalog-filters__link.link.link--color
+				| Универсальные товары
+				+icon('car').link__icon
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title A
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Acura
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el Acura - 1
+								button.filters-brand__item-el Acura - 2
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Audi
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el Audi - 1
+								button.filters-brand__item-el Audi - 2
+							.filters-brand__item
+
+								span.filters-brand__item-label B
+								button.filters-brand__item-el Audi - 1
+								button.filters-brand__item-el Audi - 2
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title B
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Bmw
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el SANTA FE 01-06 (ТАГАЗ 08-)
+								button.filters-brand__item-el.active MAZDA 5 ( PREMACY) (CR W) 05-08
+
+							.filters-brand__item
+								span.filters-brand__item-label B
+								button.filters-brand__item-el Audi - 1
+								button.filters-brand__item-el Audi - 2
+							.filters-brand__item
+
+								span.filters-brand__item-label C
+								button.filters-brand__item-el Audi - 1
+								button.filters-brand__item-el Audi - 2
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title C
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Changan
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el ALSVIN 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CS35 Plus 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label U
+								button.filters-brand__item-el UNI-K 20-
+								button.filters-brand__item-el UNI-T 23-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Chery
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el AMULET 05-
+
+							.filters-brand__item
+								span.filters-brand__item-label Q
+								button.filters-brand__item-el QQ 06-
+
+							.filters-brand__item
+								span.filters-brand__item-label T
+								button.filters-brand__item-el TIGGO 06-
+								button.filters-brand__item-el TIGGO 4 18-
+								button.filters-brand__item-el TIGGO 4 PRO 21-
+								button.filters-brand__item-el TIGGO 7 16-
+								button.filters-brand__item-el TIGGO 7 PRO 19-
+								button.filters-brand__item-el TIGGO 7 PRO MAX 22-
+								button.filters-brand__item-el TIGGO 8 18-
+								button.filters-brand__item-el TIGGO 8 PRO 21-
+								button.filters-brand__item-el TIGGO 8 PRO MAX 21-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Chevrolet
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el AVEO (T200) 04-07
+								button.filters-brand__item-el AVEO (T250) 07-12
+								button.filters-brand__item-el AVEO (T255) HATCH 08-
+								button.filters-brand__item-el AVEO (T300) 11-
+
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CAPTIVA 06-
+								button.filters-brand__item-el COBALT 12-
+								button.filters-brand__item-el CRUZE 09-
+
+							.filters-brand__item
+								span.filters-brand__item-label E
+								button.filters-brand__item-el EPICA 06-
+
+							.filters-brand__item
+								span.filters-brand__item-label L
+								button.filters-brand__item-el LACETTI HATCHBAK 04-
+								button.filters-brand__item-el LACETTI SEDAN(WG)04-
+								button.filters-brand__item-el LANOS (T100) 04-
+
+							.filters-brand__item
+								span.filters-brand__item-label O
+								button.filters-brand__item-el ORLANDO 10-
+
+							.filters-brand__item
+								span.filters-brand__item-label S
+								button.filters-brand__item-el SPARK (М200) 05-10
+								button.filters-brand__item-el SPARK 11-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Chrysler
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CAPTIVA 06-
+								button.filters-brand__item-el COBALT 12-
+								button.filters-brand__item-el CRUZE 09-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Citroen
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CITROEN BERLINGO 02-07
+								button.filters-brand__item-el CITROEN BERLINGO 08-
+								button.filters-brand__item-el CITROEN C-CROSSER 07-11
+								button.filters-brand__item-el CITROEN C3 02-09
+								button.filters-brand__item-el CITROEN C3 10-
+								button.filters-brand__item-el CITROEN C3 PICASSO 09-
+								button.filters-brand__item-el CITROEN C4 04-11
+								button.filters-brand__item-el CITROEN C4 12-
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title D
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Daewoo
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el ALSVIN 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CS35 Plus 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label U
+								button.filters-brand__item-el UNI-K 20-
+								button.filters-brand__item-el UNI-T 23-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Daihatsu
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el AMULET 05-
+
+							.filters-brand__item
+								span.filters-brand__item-label Q
+								button.filters-brand__item-el QQ 06-
+
+							.filters-brand__item
+								span.filters-brand__item-label T
+								button.filters-brand__item-el TIGGO 06-
+								button.filters-brand__item-el TIGGO 4 18-
+								button.filters-brand__item-el TIGGO 4 PRO 21-
+								button.filters-brand__item-el TIGGO 7 16-
+								button.filters-brand__item-el TIGGO 7 PRO 19-
+								button.filters-brand__item-el TIGGO 7 PRO MAX 22-
+								button.filters-brand__item-el TIGGO 8 18-
+								button.filters-brand__item-el TIGGO 8 PRO 21-
+								button.filters-brand__item-el TIGGO 8 PRO MAX 21-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Datsun
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el AVEO (T200) 04-07
+								button.filters-brand__item-el AVEO (T250) 07-12
+								button.filters-brand__item-el AVEO (T255) HATCH 08-
+								button.filters-brand__item-el AVEO (T300) 11-
+
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CAPTIVA 06-
+								button.filters-brand__item-el COBALT 12-
+								button.filters-brand__item-el CRUZE 09-
+
+							.filters-brand__item
+								span.filters-brand__item-label E
+								button.filters-brand__item-el EPICA 06-
+
+							.filters-brand__item
+								span.filters-brand__item-label L
+								button.filters-brand__item-el LACETTI HATCHBAK 04-
+								button.filters-brand__item-el LACETTI SEDAN(WG)04-
+								button.filters-brand__item-el LANOS (T100) 04-
+
+							.filters-brand__item
+								span.filters-brand__item-label O
+								button.filters-brand__item-el ORLANDO 10-
+
+							.filters-brand__item
+								span.filters-brand__item-label S
+								button.filters-brand__item-el SPARK (М200) 05-10
+								button.filters-brand__item-el SPARK 11-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Dodge
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CAPTIVA 06-
+								button.filters-brand__item-el COBALT 12-
+								button.filters-brand__item-el CRUZE 09-
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title F
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Fiat
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el ALSVIN 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CS35 Plus 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label U
+								button.filters-brand__item-el UNI-K 20-
+								button.filters-brand__item-el UNI-T 23-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Ford
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el AMULET 05-
+
+							.filters-brand__item
+								span.filters-brand__item-label Q
+								button.filters-brand__item-el QQ 06-
+
+							.filters-brand__item
+								span.filters-brand__item-label T
+								button.filters-brand__item-el TIGGO 06-
+								button.filters-brand__item-el TIGGO 4 18-
+								button.filters-brand__item-el TIGGO 4 PRO 21-
+								button.filters-brand__item-el TIGGO 7 16-
+								button.filters-brand__item-el TIGGO 7 PRO 19-
+								button.filters-brand__item-el TIGGO 7 PRO MAX 22-
+								button.filters-brand__item-el TIGGO 8 18-
+								button.filters-brand__item-el TIGGO 8 PRO 21-
+								button.filters-brand__item-el TIGGO 8 PRO MAX 21-
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title G
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Geely
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label A
+								button.filters-brand__item-el ALSVIN 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label C
+								button.filters-brand__item-el CS35 Plus 18-
+
+							.filters-brand__item
+								span.filters-brand__item-label U
+								button.filters-brand__item-el UNI-K 20-
+								button.filters-brand__item-el UNI-T 23-
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title H
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Haval
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label I
+								button.filters-brand__item-el INFINITI QX56 10-
+								button.filters-brand__item-el INFINITY FX35 08-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Honda
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label I
+								button.filters-brand__item-el INFINITI QX56 10-
+								button.filters-brand__item-el INFINITY FX35 08-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Hyundai
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label I
+								button.filters-brand__item-el INFINITI QX56 10-
+								button.filters-brand__item-el INFINITY FX35 08-
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title I
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Infiniti
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label I
+								button.filters-brand__item-el INFINITI QX56 10-
+								button.filters-brand__item-el INFINITY FX35 08-
+
+		.catalog-filters__item.filters-brand
+			span.filters-brand__title J
+			.filters-brand__list
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Jaguar
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label I
+								button.filters-brand__item-el INFINITI QX56 10-
+								button.filters-brand__item-el INFINITY FX35 08-
+
+				brand-accordion.filters-brand__accordion
+					template(#title)
+						span.filters-brand__name Jeep
+
+					template(#body)
+						.filters-brand__models
+							.filters-brand__item
+								span.filters-brand__item-label I
+								button.filters-brand__item-el INFINITI QX56 10-
+								button.filters-brand__item-el INFINITY FX35 08-

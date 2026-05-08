@@ -1,0 +1,22 @@
+mixin head(balance)
+	.pa-head.pa-head__wrapper 
+		.pa-head__left 
+			h1.pa-head__title.title.title--h1 Добро пожаловать, <br> Константин Георгиевич
+
+			a(href="#").pa-head__logout.link.link--color-white
+				span.link__text Выйти из аккаунта
+				+icon('logout').link__icon
+
+		if balance
+			.pa-head__info
+				.pa-head__info-elem 
+					.pa-head__text Мой баланс
+					.pa-head__text.pa-head__text--l 5 800 ₽
+
+				.pa-head__info-elem 
+					.pa-head__text Моя скидка
+					.pa-head__text.pa-head__text--m 15%
+
+				button.pa-head__info-error.link.link--color-white
+					span.link__text Сообщить об ошибке в балансе
+					+icon('arrow-right').link__icon

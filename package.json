@@ -1,0 +1,96 @@
+{
+  "name": "frontend-template",
+  "type": "module",
+  "version": "2.3.0",
+  "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": ">=18.13"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "watch": "vue-tsc --noEmit && vite build --mode production --watch",
+    "build-initial": "vue-tsc --noEmit && vite build --mode initial",
+    "preview": "vue-tsc --noEmit && vite build --mode initial && vite preview",
+    "deploy": "vue-tsc --noEmit && vite build --mode deploy",
+    "deploy-production": "vue-tsc --noEmit && vite build --mode deploy-production",
+    "svgo": "svgo ./src/**/*.svg",
+    "lint": "eslint . --fix && stylelint . --fix",
+    "pre-commit": "lint-staged --allow-empty --config lint-staged.config.js",
+    "prepare": "husky install"
+  },
+  "workspaces": [
+    "src/*"
+  ],
+  "dependencies": {
+    "@popperjs/core": "2.11.8",
+    "@vueform/multiselect": "2.6.7",
+    "@vueform/slider": "2.1.10",
+    "@vueform/toggle": "2.1.4",
+    "@vuelidate/core": "2.0.3",
+    "@vuelidate/validators": "2.0.4",
+    "axios": "1.6.8",
+    "dialog-polyfill": "0.5.6",
+    "gsap": "3.12.5",
+    "lodash": "4.17.21",
+    "maska": "2.1.11",
+    "nodemailer": "^8.0.7",
+    "photoswipe": "5.4.3",
+    "pinia": "2.1.7",
+    "swiper": "11.0.7",
+    "v-calendar": "3.1.2",
+    "vue": "3.4.21",
+    "vue-router": "4.3.0",
+    "vue-toastification": "2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.9.0",
+    "@spiriit/vite-plugin-svg-spritemap": "2.2.4",
+    "@types/lodash": "4.17.0",
+    "@types/node": "20.11.30",
+    "@types/pug": "2.0.10",
+    "@vitejs/plugin-vue": "5.0.4",
+    "@vituum/vite-plugin-juice": "1.2.0",
+    "autoprefixer": "10.4.19",
+    "eslint": "8.57.0",
+    "husky": "9.0.11",
+    "lightningcss": "1.24.1",
+    "lint-staged": "15.2.2",
+    "postcss": "8.4.38",
+    "postcss-functions": "4.0.2",
+    "postcss-html": "1.6.0",
+    "postcss-pxtorem": "6.1.0",
+    "postcss-sass": "0.5.0",
+    "postcss-short": "5.0.0",
+    "postcss-sort-media-queries": "5.2.0",
+    "pug": "3.0.2",
+    "sass": "1.72.0",
+    "ssh2-sftp-client": "10.0.3",
+    "stylelint": "16.2.1",
+    "stylelint-config-html": "1.1.0",
+    "stylelint-config-recommended-scss": "14.0.0",
+    "stylelint-config-recommended-vue": "1.5.0",
+    "stylelint-order": "6.0.4",
+    "sugarss": "4.0.1",
+    "svgo": "3.2.0",
+    "terser": "5.29.2",
+    "typescript": "5.4.3",
+    "unplugin-fonts": "1.1.1",
+    "vite": "5.2.2",
+    "vue-tsc": "2.0.7"
+  },
+  "browserslist": [
+    ">1%",
+    "not op_mini all",
+    "not ie 11",
+    "last 3 chrome version",
+    "last 3 firefox version",
+    "last 3 safari version"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  }
+}

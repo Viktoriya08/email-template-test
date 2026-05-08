@@ -1,0 +1,48 @@
+.pa-body__search.pa-search.pa-search__wrapper 
+	.pa-search__search
+		input-search(placeholder="Введите название запчасти или номер заказа" id="pa-search" :tooltips="['First tooltip', 'Second tooltip']")
+	inputs-period(class="pa-search__period")
+
+if notFoundOrders
+
+	.pa-body__list 
+		p.pa-body__list-text К сожалению, по вашему запросу ничего не найдено
+
+if zeroOrders
+	.pa-body__title 
+		h2.title.title--h3 Список заказов
+		.pa-body__count 0 заказов
+
+	.pa-body__list 
+		p.pa-body__list-text К сожалению, пока ни одного заказа не было оформлено.
+
+		a(href="/").btn.btn--color-primary.pa-body__btn-catalog
+			span.btn__text К покупкам
+
+else
+	.pa-body__title 
+		h2.title.title--h3 Список заказов
+		.pa-body__count 12 заказов
+
+	.pa-body__list 
+		order-accordion(btn-pay, tab-accepted, tab-awaiting)
+
+		order-accordion(tab-accepted, tab-awaiting, delivery-point)
+
+		order-accordion(quantity-more, tab-accepted, tab-payment-upon, delivery-courier)
+
+		order-accordion(tab-accepted, tab-paid)
+
+		order-accordion(tab-booked, tab-paid)
+
+		order-accordion(tab-on-way, tab-paid)
+
+		order-accordion(tab-transport, tab-paid)
+
+		order-accordion(tab-ready, tab-paid)
+
+		order-accordion(tab-completed, tab-paid)
+
+	.page-section__pagination
+		big-pagination(arrows-style="simple" :total="100" :limit="15" :max-buttons="5")
+

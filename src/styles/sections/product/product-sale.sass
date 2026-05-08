@@ -1,0 +1,63 @@
+.product-sale
+	display: flex
+	flex-direction: column
+	gap: 12px
+
+	&__title
+		display: flex
+		gap: 4px
+		align-items: flex-start
+
+		&::after
+			content: ''
+			width: fluid(16,24)
+			height: fluid(16,24)
+			flex-shrink: 0
+			background-color: currentColor
+
+			@include icon('procent', 'mask')
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, minmax(0,1fr))
+		gap: 6px
+
+		@include media('max', 'mobile-xl')
+			display: flex
+			overflow: auto
+			padding-bottom: 10px
+			margin-bottom: -10px
+
+			@include hide-scroll
+
+			@include out-wrapper
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 4px
+		padding: 12px
+		border-radius: var(--radius-m)
+		border: var(--border-default)
+		text-align: center
+
+		@include media('max', 'mobile-xl')
+			flex-shrink: 0
+			width: 195px
+
+	&__name
+		display: flex
+		gap: 6px
+		font-size: var(--font-size-text-m)
+		line-height: var(--line-height-text)
+		font-weight: 600
+
+	&__count
+		color: var(--color-primary-600)
+
+	&__desc
+		font-size: var(--font-size-text-xs)
+		line-height: var(--line-height-text)
+		color: var(--color-neutral-700)
+

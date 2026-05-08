@@ -1,0 +1,27 @@
+mixin about(title, text=[])
+
+	.about
+		.about__banner 
+			+image(
+				{
+					src: 'img/content/info.webp',
+					width: 1840,
+					height: 560,
+					lazy: false,
+				},
+				[
+					{
+						src: 'img/content/info.webp',
+						mediaQuery: 'max-width',
+						breakpoint: 768,
+					}
+				]
+			).about__banner-img
+
+		.about__grid
+
+			.about__content 
+				h2!=title
+				if text
+					each el in text
+						p=el

@@ -1,0 +1,23 @@
+.partners
+	partners-slider.partners__slider
+		template(#default)
+			-for(var i = 0; i < 8; i ++)
+				.swiper-slide.partners__item
+					.partners-card
+						+image({
+							src: 'img/partners/partner-1.svg',
+							width: 135,
+							height: 90
+						}).partners-card__image
+						span.partners-card__name Автосервис Пекин
+						a(href="#").partners-card__link Автосервис Пекин
+
+				.swiper-slide.partners__item
+					.partners-card
+						+image({
+							src: 'img/partners/partner-2.svg',
+							width: 135,
+							height: 90
+						}).partners-card__image
+						span.partners-card__name Locauto
+						a(href="#").partners-card__link Locauto

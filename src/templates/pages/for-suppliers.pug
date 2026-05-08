@@ -1,0 +1,40 @@
+section.page-header.page-header--info-page
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'For suppliers']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 For suppliers
+
+
+section.page-section
+	.wrapper
+
+		+about("Our history", 
+		[
+			"The company was established in 2009 from a small business of body parts orders for foreign-made cars. It was a small business with just one employee. In 2010, the company transformed into an online store format with its own website and order processing functionality. The number of suppliers increased. During this period, the company acquired its own warehouse spaces, and the number of office and warehouse staff grew annually. The customer base included body shops of several official dealers, auto parts stores, small private services, and retail customers.",
+			"In 2016, the company switched to direct container shipments from manufacturers in China and Taiwan. Currently, these shipments are well-established and growing annually. The company's logistics team is working on the assortment of goods to offer, which we are pleased and proud to present to our customers. Over the years, the company has gained invaluable experience in working with clients and their requests."
+		])
+		include /sections/info-pages/about-gallery
+
+
+//-задачами компании были
+include /sections/info-pages/advantages
+
+
+section.page-section
+	.wrapper
+		include /sections/info-pages/advantages-slider-en
+
+
+section.page-section
+	.wrapper
+		include /sections/info-pages/conditions
+
+
+//-Payment Methods
+include /sections/info-pages/methods
+
+
+//- faq
+section.page-section
+	.wrapper
+		include /sections/info-pages/faq

@@ -1,0 +1,97 @@
+a, button
+	&.link
+		cursor: pointer
+
+.link
+	--link-gap: fluid(6, 12)
+	// Typography
+	--link-font-family: var(--font-family-primary)
+	--link-font-size: var(--font-size-text-m)
+	--link-line-height: var(--line-height-text)
+	--link-font-weight: 400
+	--link-text-transform: none
+	// Color
+	--link-color: var(--color-neutral-900)
+	--link-color-hover: var(--color-primary-500)
+	--link-color-focus: var(--color-primary-500)
+	--link-color-active: var(--color-primary-700)
+	--link-color-disabled: var(--color-neutral-700)
+	// Border
+	--link-border-color: transparent
+	--link-border-color-hover: transparent
+	--link-border-color-active: var(--color-primary-300)
+	// -------------------------
+	--link-icon-size: fluid(16, 20)
+
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: var(--link-gap)
+
+	min-height: calc(var(--link-font-size) * var(--link-line-height))
+
+	border: 0
+	border-radius: 0
+
+	background-color: transparent
+	box-shadow: none
+
+	color: var(--link-color)
+
+	font-family: var(--link-font-family)
+	font-size: var(--link-font-size)
+	font-weight: var(--link-font-weight)
+	line-height: var(--link-line-height)
+
+	text-decoration: none
+	text-transform: var(--link-text-transform)
+
+	transition: color .3s ease
+
+	//cursor: pointer
+
+	&:focus
+		outline: none
+
+	&:focus-visible
+		text-decoration: underline
+		text-decoration-color: var(--link-color-hover)
+		text-decoration-thickness: 1px
+		text-underline-offset: 2px
+
+	@include hover
+		--link-color: var(--link-color-hover)
+		--link-border-color: var(--link-border-color-hover)
+
+	&:active,
+	&.active
+		--link-color: var(--link-color-active)
+		--link-border-color: var(--link-border-color-active)
+
+	&:disabled,
+	&.disabled
+		--link-color: var(--link-color-disabled)
+		--link-border-color: var(--link-border-color-disabled)
+
+		cursor: not-allowed
+
+		&:focus-visible
+			text-decoration: none
+
+	&.disabled
+		pointer-events: none
+
+	&__icon
+		display: block
+		flex: none
+		size: var(--link-icon-size)
+		color: currentcolor
+
+	&--color
+		--link-color: var(--color-primary-600)
+
+		&-grey 
+			--link-color: var(--color-neutral-700)
+
+		&-white 
+			--link-color: var(--color-neutral-100)

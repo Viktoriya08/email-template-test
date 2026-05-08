@@ -1,0 +1,43 @@
+
+.about.about__grid
+	//- для for-suppliers.html
+	if suppliers
+		h2.about__title.title.title--h2 What conditions do we provide?
+		.about__content 
+			+advantages(
+				[
+					{
+						title: 'Financial obligations',
+						text: 'Purchasing a franchise includes an initial franchise fee, which can vary depending on the brand and market value of the franchise. In addition, the franchisee must be prepared to invest in starting and growing the business, which includes costs for equipment, inventory, premises rental and marketing. There may also be monthly or annual payments in the form of royalties and marketing contributions.'
+					},
+					{
+						title: 'Compliance with franchisor standards and procedures',
+						text: 'The franchisee must strictly adhere to the standards and procedures established by the franchisor, which include store appearance, customer service practices, marketing and sales strategies, and inventory management. This ensures uniformity and quality of service across all franchise locations.'
+					},
+					{
+						title: 'Legal and contractual obligations',
+						text: 'Before entering into a franchise agreement, the franchisee should carefully read the agreement and ensure that he understands all legal aspects and obligations. The agreement may include the terms of use of the brand, the duration of the agreement, the terms of its renewal or termination, as well as the obligations and rights of both parties'
+					}
+				]
+			)
+	//-
+	else
+
+		h2.about__title.title.title--h2 Какие условия мы предлагаем?
+		.about__content 
+			+advantages(
+				[
+					{
+						title: 'Финансовые обязательства',
+						text: 'Покупка франшизы включает в себя начальный франшизный взнос, который может варьироваться в зависимости от бренда и рыночной стоимости франшизы. Кроме того, франчайзи должен быть готов к инвестициям в запуск и развитие бизнеса, что включает расходы на оборудование, инвентарь, аренду помещений и маркетинг. Также могут предусматриваться ежемесячные или ежегодные платежи в виде роялти и взносов на маркетинг'
+					},
+					{
+						title: 'Соблюдение стандартов и процедур франчайзера',
+						text: 'Франчайзи должен строго придерживаться установленных франчайзером стандартов и процедур, что включает внешний вид магазина, методы обслуживания клиентов, маркетинговые и продажные стратегии, а также управление запасами. Это обеспечивает единообразие и качество услуг во всех франшизных точках'
+					},
+					{
+						title: 'Правовые и договорные обязательства',
+						text: 'Перед заключением франшизного соглашения франчайзи должен внимательно ознакомиться с договором и убедиться, что он понимает все правовые аспекты и обязательства. К договору могут относиться условия использования бренда, продолжительность соглашения, условия его продления или расторжения, а также обязанности и права обеих сторон'
+					}
+				]
+			)

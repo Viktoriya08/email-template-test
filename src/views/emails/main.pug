@@ -1,0 +1,52 @@
+extends /emails/_head
+block vars
+	- let title = 'Заголовок письма будет виден в списке писем.'
+	- let bodyClass = null
+
+block head
+
+block content
+	table.main-table(align="center" border="0" cellspacing="0" cellpadding="0" role="presentation")
+
+		//- header
+		include /emails/header.pug
+
+		//- Banner
+		include /emails/banner.pug
+
+		//- Text-block
+		include /emails/text-block.pug
+
+		//- Cards
+		include /emails/cards.pug
+
+		//- Personal
+		include /emails/personal.pug
+
+		tr.padding-line
+			td.padding-line__td(align="center")
+
+		//- Personal-2
+		include /emails/personal-2.pug
+
+		//- Btn
+		include /emails/block-btn.pug
+
+		//- //- product
+		//- include /emails/product.pug
+
+		//- //- Big banner
+		//- include /emails/big-banner
+
+
+		//- //- Наше приложение / Мы в соцсетях / social-block
+		//- include /emails/social-block.pug
+
+		//- Footer
+		include /emails/footer.pug
+
+	//[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+	//<![endif]

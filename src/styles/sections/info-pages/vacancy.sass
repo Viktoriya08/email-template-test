@@ -1,0 +1,25 @@
+.vacancy
+	display: flex
+	align-items: flex-start
+	gap: fluid(12, 40)
+	padding: 24px 0
+
+	@include media("max", "mobile-xl")
+		flex-direction: column
+		align-items: stretch
+
+	&__name 
+		flex-grow: 1
+		font-size: var(--font-size-text-l)
+		font-weight: 600
+		line-height: 1.4
+
+	&__sum 
+		font-size: var(--font-size-text-l)
+		font-weight: 600
+		line-height: 1.4
+		white-space: nowrap
+
+	&__btn 
+		@include media("max", "mobile-xl")
+			margin-top: 4px

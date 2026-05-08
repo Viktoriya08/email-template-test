@@ -1,0 +1,74 @@
+.pa-body
+
+	&__title 
+		display: flex
+		flex-wrap: wrap
+		align-items: baseline
+		gap: 8px
+
+		&:not(:last-child)
+			margin-bottom: fluid(16,32)
+
+		&-link 
+			flex-grow: 1
+			justify-content: flex-end
+			font-weight: 600
+
+			@include media("max", "tablet")
+				justify-content: flex-start
+				width: 100%
+
+	&__count 
+		color: var(--color-neutral-700)
+		font-size: var(--font-size-text-l)
+		font-weight: 600
+		line-height: 1.4
+
+	&__list 
+		min-height: fluid(240, 480)
+
+		&-text 
+			font-size: var(--font-size-text-m)
+			line-height: 1.4
+
+			@include media("max", "tablet")
+				margin-top: 24px
+
+	&__btn-catalog
+		margin-top: fluid(24, 32)
+
+		@include media("max", "mobile-xl")
+			width: 100%
+
+	&__details
+		max-width: 1370px
+
+		&:not(:last-child)
+			margin-bottom: fluid(16, 40)
+			padding-bottom: fluid(16, 40)
+			border-bottom: var(--border-default)
+
+			@include media("max", "tablet")
+				border-bottom: none
+
+	&__grid
+		display: grid
+		grid-template-columns: repeat(12, minmax(0, 1fr))
+		gap: fluid(8, 40)
+
+	&__manager
+		grid-column: 1/6
+			
+
+		@include media("max", "laptop-xl")
+			grid-column: 1/9
+
+		@include media("max", "tablet")
+			grid-column: 1/-1
+
+		&:not(:last-child)
+			margin-bottom: fluid(16, 32)
+
+	&__back 
+		margin-bottom: fluid(16, 24)
+

@@ -1,0 +1,30 @@
+menu-modal(id="filters-modal")
+	template(#default="{close}")
+		section.modal.modal--filters
+			.filters-modal
+				.filters-modal__top
+					button(@click="close").filters-modal__close.btn.btn--transparent-dark
+						span.btn__text Закрыть
+						+icon('close').btn__icon
+
+				catalog-filters-mob
+					template(#categories)
+						.catalog-tags
+							span.catalog-tags__title Популярные категории
+							categories-toggle(btn-class="btn--transparent-color catalog-tags__btn").catalog-tags__toggle
+								template(#list)
+									.catalog-tags__list
+										.catalog-tags__item.tag.tag--color-primary
+											| Бампер
+											+icon('close').tag__icon
+										.catalog-tags__item.tag.tag--color-primary
+											| Заглушка в бампер
+											+icon('close').tag__icon
+
+										-for (var i = 0; i < 2; i++)
+											each category, i in ['Бампер', 'Заглушка в бампер', 'Бачок', 'Брызговик', 'Защита двигателя', 'Зеркало']
+												.catalog-tags__item.tag.tag--color-light=category
+
+										button.btn.btn--transparent-dark.catalog-tags__clear
+											span.btn__text Сбросить все
+											+icon('close').btn__icon

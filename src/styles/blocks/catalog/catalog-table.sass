@@ -1,0 +1,47 @@
+.catalog-table
+	width: 100%
+	border-spacing: 0
+
+	@include media('max', 'tablet')
+		&:not(:first-child)
+			margin-top: fluid(20,24)
+
+	&__body
+		@include media('max', 'tablet')
+			display: grid
+			grid-template-columns: repeat(2, minmax(0,1fr))
+			gap: fluid(10,24)
+
+	&__head
+		position: sticky
+		top: 0
+		background-color: var(--body-bg)
+		z-index: var(--z-index-above-secondary)
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__col
+		@include media('min', 'tablet')
+			min-width: fluid(110,150)
+			padding-top: 16px
+			padding-bottom: 16px
+			border-bottom: var(--border-default)
+			vertical-align: top
+
+			&:not(:last-child)
+				padding-right: 16px
+
+		@include media('max', 'tablet')
+			display: contents
+
+		&--desc
+			@include media('max', 'tablet')
+				display: none
+
+	&__title
+		&:not(:last-child)
+			margin-bottom: 4px
+
+	&__discount
+		--bage-font-size: var(--font-size-text-m)

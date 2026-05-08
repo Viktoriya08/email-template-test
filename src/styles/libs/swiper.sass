@@ -1,0 +1,130 @@
+.layout
+	--swiper-theme-color: var(--color-primary-600)
+	--swiper-pagination-bullet-width: fluid(8,10)
+	--swiper-pagination-bullet-height: fluid(8,10)
+	--swiper-pagination-bullet-size: fluid(8,10)
+	--swiper-pagination-bullet-horizontal-gap: fluid(4,5)
+	--swiper-pagination-bullet-inactive-color: var(--color-neutral-300)
+	--swiper-pagination-bullet-inactive-opacity: 1
+	--swiper-pagination-progressbar-bg-color: var(--color-neutral-200)
+
+	.swiper-navigation
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		gap: 16px
+
+		.swiper-pagination
+			position: relative
+			top: 0
+			right: 0
+			left: 0
+			margin: 0
+			text-align: left
+
+	.swiper-pagination
+		&-progressbar
+			border-radius: var(--radius-m)
+
+			&-fill 
+				border-radius: var(--radius-m)
+
+	.swiper-buttons
+		display: flex
+		flex-shrink: 0
+		gap: 12px
+
+		.swiper-button
+			display: flex
+			align-items: center
+			justify-content: center
+
+			&:not(.swiper-button-modal)
+				position: relative
+				top: 0
+				right: 0
+				left: 0
+				margin: 0
+
+	.swiper-button
+		--swiper-button-bg: var(--color-neutral-200)
+		--swiper-button-color: var(--color-neutral-900)
+
+		width: 40px !important
+		height: 40px !important
+		border: 0
+
+		border-radius: var(--radius-s)
+		background-color: var(--swiper-button-bg)
+		box-shadow: none
+		transition: background-color .3s ease
+		cursor: pointer
+
+		&::after
+			width: 20px
+			height: 20px
+			background-color: var(--swiper-button-color)
+			transition: background-color .3s ease
+
+		&:focus-visible
+			--swiper-button-bg: var(--color-primary-500)
+			--swiper-button-color: var(--color-neutral-100)
+
+			outline: 2px solid var(--color-primary-600)
+			outline-offset: 0
+
+		@include hover
+			--swiper-button-bg: var(--color-primary-500)
+			--swiper-button-color: var(--color-neutral-100)
+
+		&:active
+			--swiper-button-bg: var(--color-primary-700)
+			--swiper-button-color: var(--color-neutral-100)
+
+		&-prev
+			&::after
+				content: ''
+
+				@include icon('chevron-left-sm', 'mask')
+
+		&-next
+			&::after
+				content: ''
+
+				@include icon('chevron-right-sm', 'mask')
+
+
+
+.modal-window
+	--swiper-navigation-color: var(--color-neutral-100)
+	--swiper-navigation-size: 40px
+
+	.swiper-button-modal
+		width: var(--swiper-navigation-size)
+		height: var(--swiper-navigation-size)
+		background-color: var(--color-neutral-100)
+		mask-position: center
+		mask-repeat: no-repeat
+		mask-size: 100%
+		transform: translate(0, -100%)
+
+	.swiper-button
+
+		&::after
+			display: none
+
+		&-prev
+			left: 5%
+			mask-image: url("../../assets/icons/chevron-left.svg")
+
+			@include media("max", "laptop-xxl")
+				left: 0
+
+		&-next
+			right: 5%
+			mask-image: url("../../assets/icons/chevron-right.svg")
+
+			@include media("max", "laptop-xxl")
+				right: 0
+		
+

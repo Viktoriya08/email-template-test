@@ -1,0 +1,61 @@
+.product-desc
+	.product-desc__item
+		span.product-desc__label Номер
+		.product-desc__cont
+			span.product-desc__el HN04099BB
+
+	.product-desc__item
+		span.product-desc__label Оригинальный номер
+		.product-desc__cont
+			span.product-desc__el HN04099BB
+
+	.product-desc__item
+		span.product-desc__label Номера аналогов
+		text-clamp.product-desc__cont
+			template(#default="{showMore, showLess}")
+				.product-desc__list.text-clamp__text(data-clamp-text)
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+					span.product-desc__el HN04099BB
+
+				.product-desc__btns.text-clamp__btns
+					button.btn.btn--transparent-color.text-clamp__btn-less(@click="showLess") Свернуть
+					button.btn.btn--transparent-color.text-clamp__btn-more(@click="showMore") Показать больше
+
+	.product-desc__item
+		span.product-desc__label Применимость для&nbsp;моделей
+		text-clamp.product-desc__cont
+			template(#default="{showMore, showLess}")
+				.product-desc__list.text-clamp__text(data-clamp-text)
+					span.product-desc__el Hyundai Solaris 10-16 Sedan
+					span.product-desc__el Kia Rio 17
+					span.product-desc__el Chevrolet Cruze 09
+					span.product-desc__el Hyundai Solaris 10-16 Sedan
+					span.product-desc__el Kia Rio 17
+					span.product-desc__el Chevrolet Cruze 09
+					span.product-desc__el Hyundai Solaris 10-16 Sedan
+					span.product-desc__el Kia Rio 17
+					span.product-desc__el Chevrolet Cruze 09
+					span.product-desc__el Hyundai Solaris 10-16 Sedan
+					span.product-desc__el Kia Rio 17
+					span.product-desc__el Chevrolet Cruze 09
+
+				.product-desc__btns.text-clamp__btns
+					button.btn.btn--transparent-color.text-clamp__btn-less(@click="showLess") Свернуть
+					button.btn.btn--transparent-color.text-clamp__btn-more(@click="showMore") Показать больше
+
+	.product-desc__item
+		span.product-desc__label Оригинальность
+		.product-desc__cont
+			span.product-desc__el Аналог
+
+	.product-desc__item
+		span.product-desc__label Производитель
+		.product-desc__cont
+			span.product-desc__el ATYG (Тайвань)

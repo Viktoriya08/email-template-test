@@ -1,0 +1,32 @@
+section.page-header
+	.wrapper
+		
+		include ../sections/pa/head
+		+head(true)
+
+section.page-section.pa-body
+	.wrapper
+
+		.page-section__tabs.page-section__tabs--border.pa-tabs
+			+pa-tabs(['Мои заказы', 'Мои данные', 'История операций', 'Мой менеджер', 'Связаться с руководителем'])
+
+		.pa-body__content
+
+			.pa-body__details
+				//- Личные данные
+				personal-data-form
+
+			.pa-body__details
+				//- Адрес доставки
+				delivery-address-form
+
+			.pa-body__details
+				//- Мои организации
+				my-organizations-form
+
+			.pa-body__details
+				//- Изменение пароля
+				change-password-form
+
+
+

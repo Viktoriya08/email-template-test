@@ -1,0 +1,30 @@
+.brands-search
+	//display: flex
+	flex-direction: column
+	gap: 16px
+	min-height: 298px
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 12px
+
+	&__label
+		display: block
+		padding: 0 6px
+		border-radius: var(--radius-m)
+		background-color: var(--color-neutral-200)
+		font-size: var(--font-size-text-s)
+		line-height: var(--line-height-text)
+		text-transform: uppercase
+		color: var(--color-neutral-700)
+
+		&:not(:first-child)
+			margin-top: 8px
+
+	&__item
+		justify-content: space-between
+
+	&__empty
+		font-size: 16px
+		line-height: var(--line-height-text)

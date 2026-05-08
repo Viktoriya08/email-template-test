@@ -1,0 +1,83 @@
+.header
+	margin-bottom: fluid(16,24)
+	padding: fluid(8,16) 0
+
+	@include media('max', 'tablet')
+		margin-bottom: 16px
+		box-shadow: var(--shadow-s)
+
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 60px
+		margin-bottom: 16px
+
+		padding-bottom: 16px
+		border-bottom: var(--border-default)
+
+		@include media("max", "tablet")
+			display: none
+
+	&__navigation
+		display: flex
+		gap: 30px
+
+	&__nav
+		display: flex
+		gap: 30px
+
+		@include media("max", "pc")
+			display: none
+
+	&__actions
+		display: flex
+		gap: 30px
+
+		@include media("max", "pc")
+			flex-grow: 1
+
+	&__contacts
+		display: flex
+		align-items: center
+		gap: 30px
+
+	&__bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 20px
+
+	&__logo
+		margin-right: 20px
+
+	&__catalog
+		@include media('max', 'tablet')
+			display: none
+
+	&__search
+		flex-grow: 1
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__btns
+		display: flex
+		gap: 12px
+
+		@include media('max', 'tablet')
+			display: none
+
+		&-el
+			white-space: nowrap
+
+	&__burger
+		display: none
+
+		@include media('max', 'tablet')
+			display: flex
+
+	&--margin 
+		margin-bottom: fluid(4, 8)
+
+

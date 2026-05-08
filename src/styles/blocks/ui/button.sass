@@ -1,0 +1,300 @@
+a, button
+	&.btn
+		cursor: pointer
+
+.btn
+	--btn-py: fluid(10,14)
+	--btn-px: fluid(12,22)
+	--btn-gap: 8px
+	// -----------------
+	--btn-font-family: var(--font-family-primary)
+	--btn-font-size: var(--font-size-text-m)
+	--btn-line-height: var(--line-height-text)
+	--btn-letter-spacing: inherit
+	--btn-font-weight: 600
+	--btn-text-transform: none
+	// -----------------
+	--btn-color: inherit
+	--btn-color-hover: inherit
+	--btn-color-focus: inherit
+	--btn-color-active: inherit
+	--btn-color-disabled: inherit
+	// -----------------
+	--btn-bg: transparent
+	--btn-bg-hover: transparent
+	--btn-bg-focus: transparent
+	--btn-bg-active: transparent
+	--btn-bg-disabled: transparent
+	// -----------------
+	--btn-border-size: 2px
+	--btn-border-color: transparent
+	--btn-border-color-hover: transparent
+	--btn-border-color-focus: transparent
+	--btn-border-color-active: transparent
+	--btn-border-color-disabled: transparent
+	// -----------------
+	--btn-radius: var(--radius-s)
+	// -----------------
+	--btn-loader-color: inherit
+	--btn-loader-ring-color: transparent
+	--btn-icon-size: fluid(16,20)
+
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: var(--btn-gap)
+
+	min-height: calc(var(--btn-font-size) * var(--btn-line-height) + var(--btn-py) * 2 + var(--btn-border-size) * 2)
+	padding: var(--btn-py) var(--btn-px)
+
+	border: var(--btn-border-size) solid var(--btn-border-color)
+	border-radius: var(--btn-radius)
+
+	background-color: var(--btn-bg)
+
+	color: var(--btn-color)
+
+	font-family: var(--btn-font-family)
+	font-size: var(--btn-font-size)
+	font-weight: var(--btn-font-weight)
+	letter-spacing: var(--btn-letter-spacing)
+	line-height: var(--btn-line-height)
+
+	text-align: center
+	text-decoration: none
+	text-transform: var(--btn-text-transform)
+
+	transition: color .3s ease, border-color .3s ease, background-color .3s ease
+
+	//cursor: pointer
+
+	&:focus
+		--btn-color: var(--btn-color-focus)
+		--btn-bg: var(--btn-bg-focus)
+		--btn-border-color: var(--btn-border-color-focus)
+		outline: none
+
+	&:focus-visible
+		outline: 2px solid var(--color-primary-600)
+		outline-offset: 0
+
+	@include hover
+		--btn-color: var(--btn-color-hover)
+		--btn-bg: var(--btn-bg-hover)
+		--btn-border-color: var(--btn-border-color-hover)
+
+	&:active
+		--btn-color: var(--btn-color-active)
+		--btn-bg: var(--btn-bg-active)
+		--btn-border-color: var(--btn-border-color-active)
+
+	&:disabled,
+	&.disabled
+		--btn-color: var(--btn-color-disabled)
+		--btn-bg: var(--btn-bg-disabled)
+		--btn-border-color: var(--btn-border-color-disabled)
+		--btn-color-hover: var(--btn-color-disabled)
+		--btn-bg-hover: var(--btn-bg-disabled)
+		--btn-border-color-hover: var(--btn-border-color-disabled)
+
+		cursor: not-allowed
+
+		&:focus-visible
+			outline: none
+
+	&.disabled
+		pointer-events: none
+
+	&.loading
+		cursor: wait
+
+		&::before
+			--btn-loader-color: var(--btn-color)
+			--btn-loader-ring-color: var(--color-neutral-500)
+
+			content: ''
+
+			display: block
+			flex: none
+
+			size: var(--btn-icon-size)
+
+			border-width: 2px
+			border-style: solid
+
+			border-radius: 50%
+			border-color: var(--btn-loader-color) var(--btn-loader-color) var(--btn-loader-ring-color)
+
+			transition: border-color .3s ease
+			animation: spin360 .8s linear infinite
+
+		& > *
+			display: none
+
+	&__icon
+		flex: none
+		size: var(--btn-icon-size)
+		color: currentcolor
+
+	&__text
+		&-mob
+			@include media('min', 'tablet')
+				display: none
+
+		&-desc
+			@include media('max', 'tablet')
+				display: none
+
+	&--color
+		&-primary
+			--btn-color: var(--color-neutral-100)
+			--btn-color-hover: var(--color-neutral-100)
+			--btn-color-focus: var(--color-neutral-100)
+			--btn-color-active: var(--color-neutral-100)
+			--btn-color-disabled: var(--color-neutral-100)
+			// -----------------
+			--btn-bg: var(--color-primary-600)
+			--btn-bg-hover: var(--color-primary-500)
+			--btn-bg-focus: var(--color-primary-500)
+			--btn-bg-active: var(--color-primary-700)
+			--btn-bg-disabled: var(--color-neutral-500)
+
+		&-dark
+			--btn-color: var(--color-neutral-100)
+			--btn-color-hover: var(--color-neutral-100)
+			--btn-color-focus: var(--color-neutral-100)
+			--btn-color-active: var(--color-neutral-100)
+			--btn-color-disabled: var(--color-neutral-100)
+			// -----------------
+			--btn-bg: var(--color-neutral-800)
+			--btn-bg-hover: var(--color-neutral-700)
+			--btn-bg-focus: var(--color-neutral-700)
+			--btn-bg-active: var(--color-neutral-900)
+			--btn-bg-disabled: var(--color-neutral-500)
+
+		&-light
+			--btn-color: var(--color-neutral-900)
+			--btn-color-hover: var(--color-neutral-900)
+			--btn-color-focus: var(--color-neutral-900)
+			--btn-color-active: var(--color-neutral-900)
+			--btn-color-disabled: var(--color-neutral-100)
+			// -----------------
+			--btn-bg: var(--color-primary-200)
+			--btn-bg-hover: var(--color-primary-100)
+			--btn-bg-focus: var(--color-primary-300)
+			--btn-bg-active: var(--color-primary-300)
+			--btn-bg-disabled: var(--color-neutral-500)
+
+		&-revert
+			--btn-color: var(--color-neutral-900)
+			--btn-color-hover: var(--color-neutral-900)
+			--btn-color-focus: var(--color-neutral-900)
+			--btn-color-active: var(--color-neutral-100)
+			--btn-color-disabled: var(--color-neutral-100)
+			// -----------------
+			--btn-bg: var(--color-neutral-100)
+			--btn-bg-hover: rgba(var(--color-neutral-100-rgb), .8)
+			--btn-bg-focus: rgba(var(--color-neutral-100-rgb), .8)
+			--btn-bg-active: var(--color-primary-700)
+			--btn-bg-disabled: rgba(var(--color-neutral-100-rgb), .5)
+
+	&--border
+		&-primary
+			--btn-color: var(--color-neutral-900)
+			--btn-color-hover: var(--color-neutral-900)
+			--btn-color-focus: var(--color-neutral-900)
+			--btn-color-active: var(--color-neutral-900)
+			--btn-color-disabled: var(--color-neutral-500)
+			// -----------------
+			--btn-bg: transparent
+			--btn-bg-hover: var(--color-primary-100)
+			--btn-bg-focus: transparent
+			--btn-bg-active: var(--color-primary-300)
+			--btn-bg-disabled: transparent
+			// -----------------
+			--btn-border-color: var(--color-neutral-400)
+			--btn-border-color-hover: var(--color-primary-200)
+			--btn-border-color-focus: var(--color-primary-700)
+			--btn-border-color-active: var(--color-primary-400)
+			--btn-border-color-disabled: var(--color-neutral-400)
+
+		&-revert
+			--btn-color: var(--color-neutral-100)
+			--btn-color-hover: var(--color-neutral-100)
+			--btn-color-focus: var(--color-neutral-100)
+			--btn-color-active: var(--color-neutral-100)
+			--btn-color-disabled: rgba(var(--color-neutral-100-rgb), .5)
+			// -----------------
+			--btn-bg: transparent
+			--btn-bg-hover: rgba(var(--color-neutral-100-rgb), .2)
+			--btn-bg-focus: rgba(var(--color-neutral-100-rgb), .2)
+			--btn-bg-active: rgba(var(--color-neutral-100-rgb), .5)
+			--btn-bg-disabled: transparent
+			// -----------------
+			--btn-border-color: var(--color-neutral-100)
+			--btn-border-color-hover: var(--color-neutral-100)
+			--btn-border-color-focus: var(--color-neutral-100)
+			--btn-border-color-active: var(--color-neutral-100)
+			--btn-border-color-disabled: rgba(var(--color-neutral-100-rgb), .5)
+
+	&--transparent
+		&-dark
+			--btn-color: var(--color-neutral-900)
+			--btn-color-hover: var(--color-primary-500)
+			--btn-color-focus: var(--color-primary-600)
+			--btn-color-active: var(--color-primary-600)
+			--btn-color-disabled: var(--color-neutral-500)
+			--btn-gap: 6px
+			--btn-py: 0
+			--btn-px: 0
+
+			border: 0
+			min-height: auto
+
+			&:focus-visible
+				outline: none
+
+		&-color
+			--btn-color: var(--color-primary-600)
+			--btn-color-hover: var(--color-primary-500)
+			--btn-color-focus: var(--color-primary-600)
+			--btn-color-active: var(--color-primary-600)
+			--btn-color-disabled: var(--color-neutral-500)
+			--btn-gap: 6px
+			--btn-py: 0
+			--btn-px: 0
+
+			border: 0
+			min-height: auto
+
+			&:focus-visible
+				outline: none
+
+		&-revert
+			--btn-color: var(--color-neutral-100)
+			--btn-color-hover: rgba(var(--color-neutral-100-rgb), .8)
+			--btn-color-focus: rgba(var(--color-neutral-100-rgb), .8)
+			--btn-color-active: var(--color-neutral-100)
+			--btn-color-disabled: rgba(var(--color-neutral-100-rgb), .5)
+			--btn-gap: 6px
+			--btn-py: 0
+			--btn-px: 0
+
+			border: 0
+			min-height: auto
+
+			&:focus-visible
+				outline: none
+
+	&--play
+		--btn-radius: var(--radius-s)
+		--btn-py: 8px
+		--btn-px: 8px
+		--btn-icon-size: fluid(16, 24)
+		min-height: auto
+
+		&-m 
+			--btn-py: fluid(8, 14)
+			--btn-px: fluid(8, 14)
+
+

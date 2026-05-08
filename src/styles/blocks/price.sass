@@ -1,0 +1,29 @@
+.price
+	--price-font-size: var(--font-size-h5)
+	--price-font-weight: 600
+	--price-old-font-size: var(--font-size-text-s)
+	--price-old-color: var(--color-neutral-700)
+	--price-direction: column
+	--price-gap: 4px
+
+	display: flex
+	flex-direction: var(--price-direction)
+	gap: var(--price-gap)
+
+	&__item
+		display: flex
+		white-space: nowrap
+		gap: 4px
+
+		&-price,
+		&-currency
+			flex-shrink: 0
+
+		&--current
+			font-size: var(--price-font-size)
+			font-weight: var(--price-font-weight)
+
+		&--old
+			font-size: var(--price-old-font-size)
+			color: var(--price-old-color)
+			text-decoration: line-through

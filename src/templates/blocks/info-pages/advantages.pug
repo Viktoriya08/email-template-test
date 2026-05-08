@@ -1,0 +1,7 @@
+mixin advantages(items = [], icons="")
+	ul.advantages(class=`${icons}`)
+		each item in items
+			li.advantages__item 
+				.advantages__title=item.title
+				.advantages__text=item.text
+

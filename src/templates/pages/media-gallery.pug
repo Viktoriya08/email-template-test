@@ -1,0 +1,51 @@
+section.page-header.page-header--info-page
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'Медиа', 'Заголовок альбома с фотографиями, занимающий одну, две и более строки']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 Заголовок альбома с фотографиями, занимающий одну, две и более строки
+
+
+section.page-section
+	.wrapper
+		.page-section__info
+			.info-tag Новости компании
+			.info-data 12.05.2024
+			.info-tag.info-tag--icon 123
+
+		.media-gallery
+			- for(let i=0; i<5; i++)
+				a(href="#" @click="openModal('modal-gallery')").media-gallery__item
+					+image(
+						{
+							src: `img/media/m-${i+1}.jpg`,
+							width: 430,
+							height: 290,
+						},
+					).media-gallery__item-img
+			- for(let i=0; i<5; i++)
+				a(href="#" @click="openModal('modal-gallery')").media-gallery__item
+					+image(
+						{
+							src: `img/media/m-${i+1}.jpg`,
+							width: 430,
+							height: 290,
+						},
+					).media-gallery__item-img
+			- for(let i=0; i<2; i++)
+				a(href="#" @click="openModal('modal-gallery')").media-gallery__item
+					+image(
+						{
+							src: `img/media/m-${i+1}.jpg`,
+							width: 430,
+							height: 290,
+						},
+					).media-gallery__item-img
+
+		.page-section__pagination
+			base-pagination(arrows-style="simple" :total="100" :limit="15" :max-buttons="5")
+
+		.page-section__share
+			include ../blocks/info-pages/share-block
+
+//-Смотрите также
+include ../sections/info-pages/see-also

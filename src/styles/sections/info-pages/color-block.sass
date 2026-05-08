@@ -1,0 +1,58 @@
+.color-block
+
+	&__box 
+		padding: fluid(16, 32)
+		border-radius: var(--radius-m)
+		background-color: var(--color-primary-100)
+
+	&__title 
+		margin-bottom: fluid(24, 80)
+
+	&__list 
+		counter-reset: count
+
+		&--column-2
+			display: grid
+			grid-auto-flow: column
+			grid-template-columns: repeat(2, minmax(0, 1fr))
+			column-gap: fluid(16, 40)
+
+			@include media("max", "tablet")
+				grid-auto-flow: row
+				grid-template-columns: minmax(0, 1fr)
+
+			.color-block
+				&__item 
+					&:nth-child(-n+3)
+						grid-column: 1
+
+	&__item 
+		display: flex
+		flex-direction: column
+		padding: fluid(16, 24)
+		border-radius: var(--radius-m)
+		background-color: var(--color-neutral-100)
+		line-height: 1.4
+
+		@include media("max", "mobile-xl")
+			line-height: 1.2
+
+		&::before
+			content: counter(count, decimal-leading-zero)
+			display: block
+			margin-bottom: fluid(8, 16)
+			font-size: var(--font-size-h4)
+			counter-increment: count
+
+		&:not(:last-child)
+			margin-bottom: 8px
+
+	&__text 
+		font-size: var(--font-size-h6)
+
+	&--neutral-200
+		.color-block__box 
+			background-color: var(--color-neutral-200)
+
+
+

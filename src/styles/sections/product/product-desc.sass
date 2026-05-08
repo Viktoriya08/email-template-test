@@ -1,0 +1,40 @@
+.product-desc
+	padding-top: fluid(8,10)
+	border-top: 1px solid var(--color-neutral-200)
+
+	&__item
+		display: flex
+		gap: 16px
+		justify-content: space-between
+		align-items: flex-start
+		padding-bottom: fluid(8,10)
+		margin-bottom: fluid(8,10)
+		border-bottom: 1px solid var(--color-neutral-200)
+		font-size: var(--font-size-text-m)
+		line-height: var(--line-height-text)
+
+	&__label
+		flex-shrink: 0
+		max-width: fluid(148,218)
+
+	&__cont
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+
+	&__list
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		gap: fluid(2,4)
+		max-height: fluid(64,82)
+
+		&.text-clamp__text
+			mask-image: none
+
+	&__el
+		font-weight: 600
+		text-align: right
+
+	&__btns
+		margin-top: fluid(2,4)

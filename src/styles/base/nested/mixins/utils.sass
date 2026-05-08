@@ -1,0 +1,72 @@
+@use "sass:math"
+
+/* Оформление горизонтального скроллбара */
+@mixin h-scroll()
+	scrollbar-color: var(--color-primary-600) var(--color-neutral-200)
+	scrollbar-width: thin
+
+	&::-webkit-scrollbar /* 1 - скроллбар */
+		-webkit-appearance: none
+		appearance: none
+
+	&::-webkit-scrollbar-track /* 3 - трек */
+		border-radius: 2px
+		background: var(--color-neutral-200)
+
+	&::-webkit-scrollbar-thumb /* 5 - ползунок */
+		border: 3px solid var(--color-primary-600)
+		border-radius: 2px
+		background-color: var(--color-primary-600)
+
+/* Оформление вертикального скроллбара */
+@mixin v-scroll()
+	scrollbar-color: var(--color-primary-600) var(--color-neutral-200)
+	scrollbar-width: thin
+
+	&::-webkit-scrollbar /* 1 - скроллбар */
+		width: 4px
+		-webkit-appearance: none
+		appearance: none
+
+	&::-webkit-scrollbar-track /* 3 - трек */
+		border-radius: 4px
+		background: var(--color-neutral-200)
+
+	&::-webkit-scrollbar-thumb /* 5 - ползунок */
+		border: 2px solid var(--color-primary-600)
+		border-radius: 2px
+		background-color: var(--color-primary-600)
+
+/*	Скрыть отображение скроллбара */
+@mixin hide-scroll()
+	scrollbar-width: none
+
+	&::-webkit-scrollbar
+		display: none
+		width: 0
+		-webkit-appearance: none
+		appearance: none
+
+		&:horizontal
+			height: 0
+
+/* Обрезание строки */
+@mixin cut-string($count)
+	display: -webkit-box
+	overflow: hidden
+	text-overflow: ellipsis
+	-webkit-line-clamp: $count
+	-webkit-box-orient: vertical
+
+/* Отключение ховеров в тач устройствах */
+@mixin hover()
+	@media (hover: hover)
+		&:hover
+			@content
+
+@mixin out-wrapper()
+	max-width: calc( 100% + var(--wrapper-padding) * 2 )
+	margin-right: calc( -1 * var(--wrapper-padding) )
+	margin-left: calc( -1 * var(--wrapper-padding) )
+	padding-right: var(--wrapper-padding)
+	padding-left: var(--wrapper-padding)

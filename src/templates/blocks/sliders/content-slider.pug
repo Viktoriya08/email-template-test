@@ -1,0 +1,27 @@
+mixin content-slider(items = [])
+	.standard-block__slider&attributes(attributes)
+		content-slider
+			template(#default)
+				each item, i in items
+					if i === 0
+						article.swiper-slide
+							+image(
+								{
+									src: `img/content/${item.img}.jpg`,
+									width: 900,
+									height: 506,
+								},
+							).standard-block__slider-img(fetchpriority='high')
+							.standard-block__slider-text
+								p!=item.text
+					else
+						article.swiper-slide
+							+image(
+								{
+									src: `img/content/${item.img}.jpg`,
+									width: 900,
+									height: 506,
+								},
+							).standard-block__slider-img(fetchpriority='low')
+							.standard-block__slider-text
+								p!=item.text

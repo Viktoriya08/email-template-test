@@ -1,0 +1,55 @@
+.modals#modals-container
+	include burger-menu
+
+	inform-receipt-modal
+
+	include filters-mob
+
+	one-click-modal
+		template(#product)
+			.modal__product.product-modal
+				+image({
+					src: 'img/catalog/product-1.webp',
+						width: '65',
+						height: '40'
+					}).product-modal__img
+				.product-modal__desc
+					span.product-modal__name Бампер задний Hyundai Solaris 11-13 4D Россия Purple Fantasia PXA (Фиолетовый перламутр)
+					span.product-modal__info TYG-Тайвань
+					.product-modal__bages.bages
+						span.bage.bage--small Дисконт
+				.product-modal__price.price
+					.price__item.price__item--current
+						span.price__item-price 23 000
+						span.price__item-currency ₽
+					.price__item.price__item--old
+						span.price__item-price 28 000
+						span.price__item-currency ₽
+
+	include callback
+
+	include confirm
+
+	include supplies
+
+	include gallery
+
+	include video
+	
+	include password-pa
+
+	include application-pa
+
+	include share
+
+	include add-company
+
+	include editing-personal
+
+	include request-sent
+
+	include go-out
+
+	include error-balance
+
+	cookie-toast

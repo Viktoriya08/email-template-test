@@ -1,0 +1,53 @@
+.seo-block
+	&--decor
+		@include media('min', 'laptop')
+			.seo-block
+				&__wrapper
+					display: grid
+					grid-template-columns: repeat(12, minmax(0,1fr))
+					gap: fluid(8,40)
+
+				&__cont
+					grid-column: 2/8
+
+	&__cont
+		max-width: 900px
+		width: 100%
+
+	&__btns
+		display: none
+		margin-top: 8px
+
+		@include media('max', 'tablet')
+			display: block
+
+	&__text
+		@include media('min', 'tablet')
+			&.text-clamp__text
+				&:not(.text-clamp-open)
+					mask-image: none
+
+		@include media('max', 'tablet')
+			max-height: 220px
+
+		// PARAGRAPHS
+		p:not([class])
+
+			&:not(:last-child)
+				margin-bottom: 8px
+
+		// HEADINGS
+		h2, h3, h4, h5, h6
+			&:not([class])
+				&:not(:last-child)
+					margin-bottom: 12px
+
+				&:not(:first-child)
+					margin-top: 24px
+
+		// LIST
+		ul:not([class])
+			li
+				&::before
+					background: currentColor
+					border-color: currentColor

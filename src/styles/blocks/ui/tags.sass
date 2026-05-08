@@ -1,0 +1,162 @@
+.tags
+	--tags-color-label: var(--color-neutral-700)
+
+	display: flex
+	flex-direction: column
+	gap: fluid(6,8)
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		gap: 4px
+
+	&__label
+		color: var(--tags-color-label)
+		font-size: var(--font-size-text-s)
+		font-weight: 400
+		line-height: var(--line-height-text)
+
+.tag
+	--tag-py: fluid(6,10)
+	--tag-px: fluid(12,20)
+	--tag-gap: 10px
+	// -----------------
+	--tag-font-family: var(--font-family-primary)
+	--tag-font-size: var(--font-size-text-s)
+	--tag-line-height: var(--line-height-text)
+	--tag-letter-spacing: inherit
+	--tag-font-weight: 400
+	--tag-text-transform: none
+	// -----------------
+	--tag-color: inherit
+	--tag-color-hover: inherit
+	--tag-color-focus: inherit
+	--tag-color-active: inherit
+	--tag-color-disabled: inherit
+	// -----------------
+	--tag-bg: transparent
+	--tag-bg-hover: transparent
+	--tag-bg-focus: transparent
+	--tag-bg-active: transparent
+	--tag-bg-disabled: transparent
+	// -----------------
+	--tag-border-size: 2px
+	--tag-border-color: transparent
+	--tag-border-color-hover: transparent
+	--tag-border-color-focus: transparent
+	--tag-border-color-active: transparent
+	--tag-border-color-disabled: transparent
+	// -----------------
+	--tag-radius: 40px
+	// -----------------
+	--tag-icon-size: fluid(16,20)
+
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: var(--tag-gap)
+
+	min-height: calc(var(--tag-font-size) * var(--tag-line-height) + var(--tag-py) * 2 + var(--tag-border-size) * 2)
+	padding: var(--tag-py) var(--tag-px)
+
+	border: var(--tag-border-size) solid var(--tag-border-color)
+	border-radius: var(--tag-radius)
+
+	background-color: var(--tag-bg)
+
+	color: var(--tag-color)
+
+	font-family: var(--tag-font-family)
+	font-size: var(--tag-font-size)
+	font-weight: var(--tag-font-weight)
+	letter-spacing: var(--tag-letter-spacing)
+	line-height: var(--tag-line-height)
+
+	text-align: center
+	text-decoration: none
+	text-transform: var(--tag-text-transform)
+
+	transition: color .3s ease, border-color .3s ease, background-color .3s ease
+
+	cursor: pointer
+
+	&:focus
+		--tag-color: var(--tag-color-focus)
+		--tag-bg: var(--tag-bg-focus)
+		--tag-border-color: var(--tag-border-color-focus)
+		outline: none
+
+	&:focus-visible
+		outline: 2px solid var(--color-primary-600)
+		outline-offset: 0
+
+	@include hover
+		--tag-color: var(--tag-color-hover)
+		--tag-bg: var(--tag-bg-hover)
+		--tag-border-color: var(--tag-border-color-hover)
+
+	&:active
+		--tag-color: var(--tag-color-active)
+		--tag-bg: var(--tag-bg-active)
+		--tag-border-color: var(--tag-border-color-active)
+
+	&:disabled,
+	&.disabled
+		--tag-color: var(--tag-color-disabled)
+		--tag-bg: var(--tag-bg-disabled)
+		--tag-border-color: var(--tag-border-color-disabled)
+
+		cursor: not-allowed
+
+		&:focus-visible
+			outline: none
+
+	&.disabled
+		pointer-events: none
+
+	&__icon
+		flex: none
+		size: var(--tag-icon-size)
+		color: currentcolor
+
+	&--color
+		&-primary
+			--tag-color: var(--color-neutral-100)
+			--tag-color-hover: var(--color-neutral-100)
+			--tag-color-focus: var(--color-neutral-100)
+			--tag-color-active: var(--color-neutral-100)
+			--tag-color-disabled: var(--color-neutral-500)
+			// -----------------
+			--tag-bg: var(--color-primary-600)
+			--tag-bg-hover: var(--color-primary-400)
+			--tag-bg-focus: var(--color-primary-400)
+			--tag-bg-active: var(--color-primary-500)
+			--tag-bg-disabled: var(--color-neutral-200)
+
+		&-light
+			--tag-color: var(--color-neutral-700)
+			--tag-color-hover: var(--color-primary-600)
+			--tag-color-focus: var(--color-primary-600)
+			--tag-color-active: var(--color-primary-700)
+			--tag-color-disabled: var(--color-neutral-500)
+			// -----------------
+			--tag-bg: var(--color-neutral-200)
+			--tag-bg-hover: var(--color-neutral-200)
+			--tag-bg-focus: var(--color-neutral-200)
+			--tag-bg-active: var(--color-neutral-200)
+			--tag-bg-disabled: var(--color-neutral-200)
+
+		&-revert
+			--tag-color: var(--color-neutral-100)
+			--tag-color-hover: var(--color-primary-400)
+			--tag-color-focus: var(--color-primary-400)
+			--tag-color-active: var(--color-primary-500)
+			--tag-color-disabled: var(--color-neutral-700)
+			// -----------------
+			--tag-bg: var(--color-neutral-800)
+			--tag-bg-hover: var(--color-neutral-800)
+			--tag-bg-focus: var(--color-neutral-800)
+			--tag-bg-active: var(--color-neutral-800)
+			--tag-bg-disabled: var(--color-neutral-800)
+
+

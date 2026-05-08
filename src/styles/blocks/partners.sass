@@ -1,0 +1,63 @@
+.partners
+	&__slider
+		mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) var(--wrapper-padding), rgba(0,0,0,1) calc(100% - var(--wrapper-padding)), rgba(0,0,0,0) 100%)
+
+		&.swiper
+			width: calc(100% + var(--wrapper-padding) * 2)
+			padding-left: var(--wrapper-padding)
+			padding-right: var(--wrapper-padding)
+			margin-left: calc(var(--wrapper-padding) * -1)
+			margin-right: calc(var(--wrapper-padding) * -1)
+
+		.swiper-wrapper
+			transition-timing-function: linear
+
+	&__item
+		padding: 0 38px
+
+		@include media('max', 'laptop-xxl')
+			padding: 0 24px
+
+		@include media('max', 'tablet')
+			padding: 0 16px
+
+		@include media('max', 'mobile-xl')
+			padding: 0
+
+.partners-card
+	position: relative
+	display: flex
+	flex-direction: column
+	gap: fluid(6,12)
+	text-align: center
+
+	&__image
+		--width: 135
+		--aspect-ratio: 135/90
+		--object-fit: contain
+
+		&::selection
+			background-color: transparent
+			color: inherit
+
+		img
+			&::selection
+				background-color: transparent
+				color: inherit
+
+	&__name
+		font-size: var(--font-size-text-s)
+		line-height: var(--line-height-text)
+		color: var(--color-neutral-700)
+
+		&::selection
+			background-color: transparent
+			color: inherit
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		font-size: 0

@@ -1,0 +1,70 @@
+.modal-gallery
+
+	&__thumbs
+		// width: fit-content
+		max-width: 1228px
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+
+		&.swiper
+			@include media("max", "tablet")
+				@include out-wrapper
+				width: auto
+
+		.swiper-slide
+			width: 104px
+			padding: 0 4px
+
+			&-thumb-active
+				.modal-gallery__img-thumb
+					&::before
+						display: none
+
+	&__img
+		--aspect-ratio: 1220/690
+		--width: 1220px
+		--object-fit: cover
+		--radius: var(--radius-m)
+		margin: 0 auto
+
+		@include media("max", "laptop")
+			--aspect-ratio: 700/400
+			--width: 700px
+
+		&-thumb
+			--aspect-ratio: 96/64
+			--width: 96px
+			--object-fit: cover
+			--radius: var(--radius-s)
+			position: relative
+
+			&::before
+				content: ' '
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: var(--color-transparent-50)
+
+	&__video 
+		width: 1220px
+		aspect-ratio: 1220/690
+		margin: 0 auto
+
+		@include media("max", "laptop")
+			width: 100%
+
+	.swiper-pagination
+		position: static
+		margin: 16px 0
+		color: var(--color-neutral-700)
+		font-size: var(--font-size-text-l)
+		font-weight: 600
+		line-height: 1.4
+
+		&-current
+			color: var(--color-neutral-100)
+
+

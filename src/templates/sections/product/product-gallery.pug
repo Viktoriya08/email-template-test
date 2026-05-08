@@ -1,0 +1,60 @@
+.product-gallery
+	product-gallery
+		template(#default)
+			.swiper-slide.product-gallery__slide
+				+image(
+					{
+						src: `img/product/product-slide.webp`,
+						width: 900,
+						height: 506,
+						itemprop: 'image'
+					},
+				).product-gallery__img(@click="openModal('modal-gallery')")
+
+			.swiper-slide.product-gallery__slide
+				+image(
+					{
+						src: `img/product/product-slide.webp`,
+						width: 900,
+						height: 506,
+						itemprop: 'image'
+					},
+				).product-gallery__img(@click="openModal('modal-gallery')")
+
+			.swiper-slide.product-gallery__slide
+				+image(
+					{
+						src: `img/product/product-slide.webp`,
+						width: 900,
+						height: 506,
+						itemprop: 'image'
+					},
+				).product-gallery__img(@click="openModal('modal-gallery')")
+
+		template(#thumbs)
+			.swiper-slide.product-gallery__slide-thumb
+				+image(
+					{
+						src: `img/product/product-thumb.webp`,
+						width: 96,
+						height: 64,
+					},
+				).product-gallery__img-thumb
+
+			.swiper-slide.product-gallery__slide-thumb
+				+image(
+					{
+						src: `img/product/product-thumb.webp`,
+						width: 96,
+						height: 64,
+					},
+				).product-gallery__img-thumb
+
+			.swiper-slide.product-gallery__slide-thumb
+				+image(
+					{
+						src: `img/product/product-thumb.webp`,
+						width: 96,
+						height: 64,
+					},
+				).product-gallery__img-thumb

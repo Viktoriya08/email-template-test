@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="/local/client-app/dist/favicons/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="/local/client-app/dist/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/local/client-app/dist/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/local/client-app/dist/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/local/client-app/dist/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/local/client-app/dist/favicons/safari-pinned-tab.svg" color="#ffffff">
+	<meta name="msapplication-TileColor" content="#e9e9e9">
+	<meta name="theme-color" content="#392bed">
+
+	<!-- OpenGraph -->
+	<meta property="og:title" content="Email-template"/>
+	<meta property="og:locale" content="ru_RU"/>
+	<meta property="og:description" content=""/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content=""/>
+	<meta property='og:site_name' content=''>
+
+	<meta property="og:image" content="/img/opengraph-image.jpg"/>
+	<meta property="og:image:width" content="1024"/>
+	<meta property="og:image:height" content="568"/>
+
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:image" content="/img/opengraph-image.jpg"/>
+
+	<title>Email-template</title>
+
+	<style>@charset "UTF-8";
+/* Оформление горизонтального скроллбара */
+/* Оформление вертикального скроллбара */
+/*	Скрыть отображение скроллбара */
+/* Обрезание строки */
+/* Отключение ховеров в тач устройствах */
+.project-view {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: clamp(1.5rem, 10vw, 4rem) 0;
+  background-color: var(--color-neutral-200);
+}
+.project-view::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+}
+.pv-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(0.5rem, 1.5vw, 1.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.pv-title__text {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 600;
+}
+.pv-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pv-logo__image {
+  --width: 270px;
+  --aspect-ratio: 270/70;
+  --object-fit: contain;
+}
+.pv-blocks {
+  width: 100%;
+}
+.pv-blocks--columns {
+  column-count: auto;
+  column-width: clamp(16rem, 45vw, 32rem);
+  column-gap: clamp(0.5rem, 1.5vw, 1.5rem);
+}
+.pv-blocks--columns .pv-block {
+  break-inside: avoid;
+}
+.pv-blocks--list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 2rem);
+}
+.pv-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1rem, 1.5vw, 1.5rem);
+  border-radius: var(--radius-m);
+  background-color: var(--color-neutral-100);
+}
+.pv-block__video {
+  width: 500px;
+  height: 333px;
+}
+.pv-block--dark {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-100);
+}
+.pv-block__title {
+  margin: 0 0 clamp(1rem, 1.5vw, 1.5rem);
+  padding-bottom: clamp(0.5rem, 1vw, 1rem);
+  border-bottom: 1px solid var(--color-neutral-400);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 700;
+}
+.pv-block__title-sub {
+  margin-bottom: 20px;
+  color: var(--color-neutral-700);
+  font-size: clamp(1.25rem, 1.5vw, 2rem);
+  font-weight: 700;
+}
+.pv-block__nav {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 1.5vw, 1.5rem);
+}
+.pv-block__nav--sub {
+  padding-left: 30px;
+}
+.pv-block__preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  width: 100%;
+}
+.pv-block__items {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vw, 1.5rem);
+  width: 100%;
+  max-width: 100%;
+}
+.pv-block__item {
+  max-width: 100%;
+}
+.pv-block__devider {
+  flex: 1 1 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--color-neutral-400);
+}
+.pv-block__items--row {
+  flex: 1 1 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  column-gap: clamp(1rem, 2.5vw, 2rem);
+}
+.pv-block__items--align-start {
+  align-items: flex-start;
+}
+.pv-link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: var(--color-neutral-900);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.pv-link:hover, .pv-link:focus {
+  opacity: 0.5;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.gallery__item {
+  display: block;
+  width: 375px;
+  height: 250px;
+}
+	</style>
+  <script type="module" crossorigin src="/local/client-app/dist/scripts/index-CuKUcNeV.js"></script>
+  <link rel="stylesheet" crossorigin href="/local/client-app/dist/styles/index-wBUPdlSw.css">
+</head>
+<body>
+<div id="app">
+	<!-- Закомментировать или удалить, если делаешь SPA -->
+	<!-- ---------------------------------------------------------------------------------------- -->
+	<main>
+		<section class="project-view">
+			<div class="wrapper">
+				<div class="pv-title">
+					<a href="/" class="pv-logo pv-title__logo">
+						<picture class="pv-logo__image img">
+							<img class="img__image" src="/local/client-app/dist/img/logo.svg" alt="logo">
+						</picture>
+					</a>
+					<h1 class="pv-title__text">Email-template</h1>
+				</div>
+				<div class="pv-blocks">
+					<div class="pv-block">
+						<h3 class="pv-block__title">Тестовое задание - шаблон письма</h3>
+						<p class="pv-block__title">Выполнила: Гнездилова Виктория</p>
+						<nav class="pv-block__nav">
+							<a class="pv-link" href="./views/emails/main.html">Шаблон письма</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- ---------------------------------------------------------------------------------------- -->
+</div>
+
+
+</body>
+</html>

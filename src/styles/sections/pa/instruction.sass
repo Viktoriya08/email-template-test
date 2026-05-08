@@ -1,0 +1,79 @@
+.instruction
+	position: relative
+	display: flex
+	flex-direction: column
+	gap: fluid(4, 8)
+	height: 100%
+
+	@include hover
+		.instruction
+			&__picture
+				background-color: var(--color-neutral-300)
+
+	&__picture
+		position: relative
+
+		display: flex
+		flex: none
+		align-items: center
+		justify-content: center
+		order: -1
+
+		width: 100%
+		aspect-ratio: 286/192
+		margin-bottom: fluid(12, 16)
+
+		overflow: hidden
+
+		border-radius: var(--radius-s)
+		background-color: var(--color-neutral-200)
+
+		transition: background-color .3s
+
+	&__img 
+		--aspect-ratio: 286/192
+		--object-fit: cover
+		--radius: 0
+		--width: 100%
+		transition: transform 0.3s
+
+		&-icon 
+			width: 96px
+			height: 84px
+
+	&__play-btn 
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+	&__info 
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+		justify-content: space-between
+		gap: fluid(4, 8)
+
+	&__title 
+		color: var(--color-neutral-900)
+		text-decoration: none
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+
+		@include hover 
+			+.instruction
+				&__picture
+					.instruction__img
+						transform: scale(1.02)
+
+		@include cut-string(2)
+
+	&__count 
+		color: var(--color-neutral-700)
+		font-size-adjust: var(--font-size-text-s)

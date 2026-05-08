@@ -1,0 +1,232 @@
+.product-card
+	--product-direction: column
+	--product-gap: fluid(8,12)
+
+	position: relative
+	display: flex
+	flex-direction: var(--product-direction)
+	gap: var(--product-gap)
+
+	@include hover
+		.product-card__name
+			color: var(--color-primary-600)
+
+	&__img
+		--width: 100%
+		--aspect-ratio: 430/285
+		--radius: var(--radius-m)
+		--object-fit: cover
+
+		flex-shrink: 0
+
+		&--mini
+			position: relative
+			z-index: var(--z-index-above)
+			transition: transform .3s ease
+			transform-origin: left top
+
+			@include media('min', 'tablet')
+				--width: 78px
+				--radius: var(--radius-s)
+
+			&[data-gallery]
+				cursor: pointer
+
+				@include hover
+					transform: scale(3)
+					z-index: calc(var(--z-index-above) + 2)
+
+	&__desc
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+		gap: 8px
+
+	&__name
+		margin-bottom: auto
+		font-size: var(--font-size-text-m)
+		line-height: var(--line-height-text)
+		font-weight: 600
+		transition: color .3s ease
+
+		@include cut-string(3)
+
+		@include media('max', 'mobile-xl')
+			@include cut-string(2)
+
+	&__info
+		font-size: var(--font-size-text-s)
+		line-height: var(--line-height-text)
+		color: var(--color-neutral-700)
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__bages
+		position: relative
+		z-index: var(--z-index-above)
+		margin-top: 4px
+
+		@include hover
+			z-index: var(--z-index-dropdown)
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__actions
+		display: flex
+		flex-direction: column
+		gap: fluid(8,16)
+
+		&--row
+			@include media('min', 'tablet')
+				flex-direction: row
+				width: max-content
+
+				.product-card__price
+					align-items: flex-start
+
+	&__price
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		min-width: 140px
+		flex-shrink: 0
+
+		@include media('max', 'mobile-xl')
+			align-items: flex-start
+
+	&__btns
+		position: relative
+		z-index: var(--z-index-above)
+		flex-shrink: 0
+		display: flex
+		gap: 12px
+		margin-top: auto
+
+		&--col
+			flex-direction: column
+
+		.btn
+			&:only-child
+				flex-grow: 1
+
+	&__btn-cart
+		flex-grow: 1
+
+		@include media('max', 'tablet')
+			max-width: 100%
+
+	&__btn-one-click
+		flex-shrink: 0
+
+		@include media('max', 'mobile-xl')
+			display: none
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		font-size: 0
+
+	&__top
+		display: flex
+		flex-direction: column
+		gap: fluid(8,16)
+
+		@include media('min', 'laptop-xxl')
+			flex-direction: row
+			align-items: flex-start
+
+		@include media('max', 'tablet')
+			flex-grow: 1
+
+	&__supplies
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 2px
+
+		&--desc
+			@include media('max', 'tablet')
+				display: none
+
+		&-title
+			font-size: var(--font-size-text-s)
+			color: var(--color-neutral-700)
+
+		&-el
+			color: currentColor
+			text-decoration: none
+			transition: color .3s ease
+
+			&[href]
+				@include hover
+					color: var(--color-primary-500)
+
+	&--tile
+		.product-card
+			&__actions
+				padding-top: fluid(8,12)
+				border-top: var(--border-default)
+
+			&__btn-cart
+				flex-grow: 1
+				max-width: 100%
+
+	&--list
+		@include media('min', 'tablet')
+			--product-direction: row
+			--product-gap: fluid(20,24)
+
+			padding-bottom: fluid(20,24)
+			border-bottom: var(--border-default)
+
+			.product-card
+				&__img
+					--width: fluid(180,240)
+					--aspect-ratio: 240/160
+					--radius: var(--radius-s)
+
+					flex-shrink: 0
+
+				&__desc
+					max-width: 655px
+					width: 100%
+
+				&__actions
+					flex-shrink: 0
+					margin-left: auto
+
+				&__btn-cart
+					width: 160px
+
+	&--row
+		@include media('min', 'tablet')
+			display: table-row
+
+			.price
+				--price-font-size: var(--font-size-text-m)
+
+			.quantity
+				max-width: 107px
+
+		@include media('max', 'tablet')
+			.product-card
+				&__actions
+					padding-top: fluid(8,12)
+					border-top: var(--border-default)
+
+	&--slide
+		height: 100%
+
+		.product-card
+			&__actions
+				padding-top: fluid(8,12)
+				border-top: var(--border-default)
+
+			&__btn-cart
+				flex-grow: 1
+				max-width: 100%

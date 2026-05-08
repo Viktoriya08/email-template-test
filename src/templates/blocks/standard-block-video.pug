@@ -1,0 +1,31 @@
+//- ВНИМАНИЕ!!!
+//- Все, что внутри .standard-block__content должно быть без классов
+
+div
+	.standard-block
+		.standard-block__header
+			h1.standard-block__title.title.title--h1 Заголовок для видео
+
+
+		article.standard-block__content
+			.standard-block__video(@click="openModal('modal-video')")
+				+image(
+					{
+						src: 'img/content/video-ban.jpg',
+						width: 900,
+						height: 506,
+					},
+				).standard-block__video-img
+				button.btn.btn--play.btn--play-m.btn--color-primary.standard-block__video-btn
+					+icon('play').btn__icon
+
+
+			h2 Несколько <br> двухстрочных заголовков h2
+			p Если за заголовком более низкого уровня сразу следует заголовок более высокого, это нарушает композиционную связность элементов оформления и логику повествования. Поэтому после заголовка должен следовать текст (или иной контент), который этот заголовок и подчиненные ему подзаголовки, если они есть, озаглавливают
+			p Если за заголовком более низкого уровня сразу следует заголовок более высокого, это нарушает композиционную связность элементов оформления и логику повествования. Поэтому после заголовка должен следовать текст (или иной контент)
+
+			
+		.standard-block__share
+			include /blocks/info-pages/share-block
+			
+

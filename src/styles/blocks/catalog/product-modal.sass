@@ -1,0 +1,49 @@
+.product-modal
+	display: flex
+	gap: fluid(10,16)
+	align-items: flex-start
+
+	@include media('max', 'mobile-xl')
+		flex-direction: column
+
+	&__img
+		--width: 65px
+		--aspect-ratio: 65/40
+		--object-fit: cover
+		--radius: var(--radius-s)
+
+		flex-shrink: 0
+
+	&__desc
+		max-width: 250px
+		width: 100%
+		display: flex
+		flex-direction: column
+		gap: 8px
+
+	&__name
+		font-size: var(--font-size-text-s)
+		line-height: var(--line-height-text)
+
+	&__info
+		font-size: var(--font-size-text-s)
+		line-height: var(--line-height-text)
+		color: var(--color-neutral-700)
+
+	&__badges
+		padding-top: 2px
+
+	&__price
+		--price-font-size: 14px
+
+		margin-left: auto
+		align-items: flex-end
+
+		@include media('max', 'mobile-xl')
+			margin-left: 0
+			flex-direction: row
+			align-items: center
+			gap: 8px
+
+			.price__item--old
+				order: -1

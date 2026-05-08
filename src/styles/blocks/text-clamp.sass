@@ -1,0 +1,24 @@
+.text-clamp
+	&__text
+		overflow: hidden
+
+		&:not(.text-clamp-open)
+			mask-image: linear-gradient(0deg, rgba(0,0,0,0) 2px, rgba(0,0,0,1) 16px)
+
+			+ .text-clamp__btns
+				.text-clamp__btn-less
+					display: none
+
+		&.text-clamp-open
+			max-height: inherit
+
+			+ .text-clamp__btns
+				.text-clamp__btn-more
+					display: none
+
+
+		&.no-clamp
+			mask-image: none
+
+			+ .text-clamp__btns
+				display: none

@@ -1,0 +1,11 @@
+.product-sticky
+	.product-sticky__price.price
+		.price__item.price__item--current(itemscope itemprop="offers" itemtype="http://schema.org/Offer")
+			span(itemprop="price").price__item-price 21 024
+			span(itemprop="priceCurrency" content="RUB").price__item-currency ₽
+			meta(itemprop="availability" content="http://schema.org/InStock")
+
+	.product-sticky__btns
+		button.btn.btn--color-primary.product-sticky__btn-cart
+			+icon('bell').btn__icon
+			span.btn__text Сообщить о поступлении

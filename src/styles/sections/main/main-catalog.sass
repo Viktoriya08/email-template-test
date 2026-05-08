@@ -1,0 +1,11 @@
+.main-catalog
+	&__wrapper
+		display: grid
+		grid-template-columns: repeat(12, minmax(0,1fr))
+		gap: fluid(8,40)
+
+		@include media('max', 'laptop-xxl')
+			display: block
+
+	&__cont
+		grid-column: 2/12

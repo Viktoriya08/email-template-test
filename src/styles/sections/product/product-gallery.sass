@@ -1,0 +1,61 @@
+.product-gallery
+	display: flex
+	flex-direction: column
+	gap: 12px
+
+	&__slider
+		position: relative
+		width: 100%
+
+		border-radius: var(--radius-m)
+
+		@include media('max', 'tablet')
+			border-radius: var(--radius-s)
+
+	&__thumbs
+		width: 100%
+		border-radius: var(--radius-s)
+
+		@include media('max', 'tablet')
+			display: none !important
+
+	&__controls
+		position: absolute
+		bottom: 16px
+		right: 16px
+
+		@include media('max', 'tablet')
+			display: none !important
+
+	&__pagination
+		position: absolute
+		left: 0
+		right: 0
+
+		@include media('min', 'tablet')
+			display: none
+
+	&__img
+		--width: 100%
+		--aspect-ratio: 587/392
+		--radius: var(--radius-m)
+		--object-fit: cover
+
+		@include media('max', 'tablet')
+			--radius: var(--radius-s)
+
+	&__slide-thumb
+		cursor: pointer
+
+		&.swiper-slide
+			width: 96px
+			transition: opacity .3s ease
+
+		&:not(.swiper-slide-thumb-active)
+			opacity: .5
+
+	&__img-thumb
+		--width: 100%
+		--aspect-ratio: 96/65
+		--radius: var(--radius-s)
+		--object-fit: cover

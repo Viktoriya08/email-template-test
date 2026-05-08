@@ -1,0 +1,73 @@
+.bages
+	display: flex
+	flex-wrap: wrap
+	gap: 4px
+
+.bage
+	--bage-py: fluid(4,10)
+	--bage-px: fluid(8,20)
+	--bage-gap: fluid(4,8)
+	// -----------------
+	--bage-font-family: var(--font-family-primary)
+	--bage-font-size: var(--font-size-text-s)
+	--btageline-height: var(--line-height-text)
+	--bage-letter-spacing: inherit
+	--bage-font-weight: 400
+	--bage-text-transform: none
+	// -----------------
+	--bage-color: var(--color-neutral-900)
+	// -----------------
+	--bage-bg: var(--color-neutral-300)
+	// -----------------
+	--bage-border-size: 1px
+	--bage-border-color: transparent
+	// -----------------
+	--bage-radius: var(--radius-l)
+	// -----------------
+	--bage-icon-size: fluid(12,16)
+
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: var(--bage-gap)
+
+	padding: var(--bage-py) var(--bage-px)
+
+	border: var(--bage-border-size) solid var(--btn-border-color)
+	border-radius: var(--bage-radius)
+
+	background-color: var(--bage-bg)
+
+	color: var(--bage-color)
+
+	font-family: var(--bage-font-family)
+	font-size: var(--bage-font-size)
+	font-weight: var(--bage-font-weight)
+	letter-spacing: var(--bage-letter-spacing)
+	line-height: var(--bage-line-height)
+
+	text-align: center
+	text-decoration: none
+	text-transform: var(--bage-text-transform)
+
+
+	&__tooltip
+		display: flex
+		align-items: center
+		justify-content: center
+		gap: var(--bage-gap)
+
+	&__icon
+		flex-shrink: 0
+		width: var(--bage-icon-size)
+		height: var(--bage-icon-size)
+		object-fit: contain
+		color: currentColor
+
+	&--small
+		--bage-py: 4px
+		--bage-px: fluid(8,10)
+		--bage-gap: fluid(4,6)
+
+	&--color
+		--bage-bg: var(--color-primary-300)

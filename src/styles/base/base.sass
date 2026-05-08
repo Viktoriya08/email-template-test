@@ -1,0 +1,59 @@
+@use "sass:math"
+
+html
+	background-color: var(--color-neutral-100)
+	color: var(--color-neutral-900)
+	font-family: var(--font-family)
+	font-size: calc(16 / 1920) * 100vw
+	font-weight: var(--font-weight)
+	scroll-behavior: smooth
+
+	@include media('max', 'pc')
+		font-size: calc(16 / 1600) * 100vw
+
+	@include media('max', 'laptop-xxl')
+		font-size: calc(16 / 1440) * 100vw
+
+	@include media('max', 'laptop')
+		font-size: calc(16 / 1024) * 100vw
+
+	@include media('max', 'tablet')
+		font-size: calc(16 / 768) * 100vw
+
+	@include media('max', 'mobile-xl')
+		font-size: calc(16 / 375) * 100vw
+
+	@media (width <= em(320))
+		font-size: calc(16 / 320) * 100vw
+
+	@include v-scroll
+
+html,
+body
+	height: 100%
+
+body
+	min-width: var(--page-min-width)
+	margin: 0 auto
+	font-size: var(--font-size)
+
+	&.modal-lock
+		padding-right: var(--scrollbar-compensate, 0)
+		overflow: hidden
+
+*::selection
+	background-color: var(--color-primary-300)
+	color: var(--color-neutral-900)
+	-webkit-tap-highlight-color: transparent
+
+.scroll-lock
+	overflow: hidden
+
+/* Оболочка */
+.layout
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.grecaptcha-badge
+	display: none !important

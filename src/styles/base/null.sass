@@ -1,0 +1,53 @@
+*
+	margin: 0
+	padding: 0
+
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
+*::selection
+	-webkit-tap-highlight-color: transparent
+
+/* Common */
+
+body
+	-webkit-text-size-adjust: none
+	text-size-adjust: none // чтобы сафари сам не регулировал размер шрифта
+
+:where(h1, h2, h3, h4, h5, h6, p, dl, blockquote, body)
+	margin: 0
+
+:where(ul, ol)
+	margin: 0
+	padding: 0
+	list-style: none
+
+:where(img, svg, video, iframe)
+	max-width: 100%
+	height: auto
+	font-style: italic
+	vertical-align: middle
+
+:where(address[class])
+	font-style: normal
+
+:where(a)
+	&[href^="tel"]
+		white-space: nowrap
+
+:where(a, button)
+	&:focus-visible
+		outline: 2px solid var(--color-primary-600)
+		outline-offset: 1px
+
+img,
+svg,
+video,
+iframe
+	max-width: 100%
+
+:where(button, input, textarea, select)
+	font: inherit
+	color: currentColor

@@ -1,0 +1,55 @@
+.page-section
+
+	&__top
+		display: flex
+		gap: 16px
+		margin-bottom: fluid(16,24)
+
+		&--border
+			padding-bottom: fluid(8,16)
+			border-bottom: var(--border-default)
+
+	&__title
+		flex-grow: 1
+
+	&__tabs
+		&.page-section__tabs--border
+			border-bottom: 2px solid var(--color-neutral-200)
+
+			&:not(:last-child)
+				margin-bottom: fluid(24,32)
+
+			.tabs
+				margin-bottom: -2px
+
+		&:not(:last-child)
+			margin-bottom: fluid(20,32)
+
+	&__pagination
+		margin-top: fluid(24,40)
+
+	&__info 
+		display: flex
+		align-items: center
+		gap: fluid(12, 16)
+
+		&:not(:last-child)
+			margin-bottom: fluid(24,40)
+
+	&__share
+		&:not(:first-child)
+			margin-top: fluid(32,120)
+
+	&__controls
+		flex-shrink: 0
+
+		&.swiper-buttons
+			@include media("max", "tablet")
+				display: none !important
+
+	&--height 
+		min-height: 480px
+
+	&:not(:last-child)
+		margin-bottom: fluid(32,120)
+

@@ -1,0 +1,88 @@
+.burger-menu
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100%
+	background-color: var(--color-neutral-100)
+	padding-bottom: 24px
+	overflow-y: auto
+
+	&__header
+		position: sticky
+		z-index: var(--z-index-header)
+		background-color: var(--color-neutral-100)
+		top: 0
+		left: 0
+		right: 0
+		padding: fluid(8,16) 0
+		margin-bottom: 16px
+
+		@include media('max', 'tablet')
+			box-shadow: var(--shadow-s)
+
+		&-wrapper
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+	&__cont
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+		&-wrapper
+			flex-grow: 1
+			display: flex
+			flex-direction: column
+
+	&__search
+		&:not(:last-child)
+			margin-bottom: 16px
+
+	&__item
+		display: flex
+		flex-direction: column
+		gap: 28px
+
+		&:not(:last-child)
+			padding-bottom: 16px
+			margin-bottom: 16px
+			border-bottom: var(--border-default)
+
+		&:last-child
+			flex-grow: 1
+
+	&__city-toggle
+		.btn
+			width: 100%
+			justify-content: space-between
+
+			@include media('max', 'mobile-xl')
+				--btn-font-size: 18px
+				--btn-icon-size: 20px
+
+		.dropdown__body
+			width: 100%
+			max-width: calc(100% - var(--wrapper-padding) * 2)
+
+	&__actions
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 12px
+
+	&__contacts
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 16px
+		margin-top: auto
+
+.main-menu
+	display: flex
+	flex-direction: column
+	gap: 12px
+
+	&__link
+		--link-font-size: 16px
+		justify-content: flex-start

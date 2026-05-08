@@ -1,0 +1,20 @@
+.share-block.share-block__wrapper 
+
+	.share-block__social 
+		.share-block__title Поделиться
+		ul.share-block__list 
+			li.share-block__item 
+				a(href="#", target="_blank" title="Telegram").share-block__link
+					+icon('telegram').share-block__link-icon
+			li.share-block__item 
+				a(href="#", target="_blank" title="WhatsApp").share-block__link
+					+icon('whatsapp').share-block__link-icon
+			li.share-block__item 
+				a(href="#", target="_blank" title="Viber").share-block__link
+					+icon('viber').share-block__link-icon
+
+	.share-block__copy
+		.share-block__url 
+			span.share-block__url-text https://ua74.ru/
+		share-link(#default="{link, copyLink}")
+			button.btn.btn--color-primary.share-block__btn(@click="copyLink('Ссылка успешно скопирована')") Скопировать ссылку

@@ -1,0 +1,41 @@
+.catalog
+	&__tabs
+		@include media('max', 'mobile-xl')
+			.tabs
+				&__list
+					width: 100%
+
+				&__item
+					flex: 1
+
+					.tab
+						width: 100%
+
+	&__grid
+		display: flex
+		gap: fluid(40,90)
+
+		@include media('max', 'pc')
+			gap: 32px
+
+		@include media('max', 'laptop')
+			flex-direction: column
+
+	&__aside
+		flex-shrink: 0
+		width: 380px
+
+		@include media('max', 'pc')
+			width: 320px
+
+		@include media('max', 'laptop')
+			display: none
+
+	&__container
+		flex-grow: 1
+
+	&__content
+		&-tags
+			@include media('max', 'laptop')
+				display: none
+

@@ -1,0 +1,129 @@
+.modal
+	position: relative
+	width: 100%
+	max-width: 520px
+	margin: auto
+
+	padding: fluid(16,24)
+	border-radius: var(--radius-m)
+	background-color: var(--color-neutral-100)
+
+	@include media('max', 'mobile-xl')
+		margin-bottom: 0
+
+	&__close
+		position: absolute
+		top: 12px
+		right: 12px
+		z-index: var(--z-index-header)
+
+		width: 24px
+		height: 24px
+
+		border: none
+
+		background-color: transparent
+
+		color: var(--color-neutral-500)
+
+		transition: color 0.3s ease
+
+		cursor: pointer
+
+		&:focus
+			outline: none
+
+		&:focus-visible
+			outline: none
+			color: var(--color-primary-500)
+
+		@include hover
+			color: var(--color-primary-600)
+
+		&-icon
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__title
+		width: 100%
+		max-width: 444px
+		padding-right: 20px
+		text-wrap: inherit
+
+		&:not(:last-child)
+			margin-bottom: fluid(8,16)
+
+	&__text
+		width: 100%
+		max-width: 444px
+		padding-right: 20px
+		font-size: var(--font-size-text-m)
+		line-height: var(--line-height-text)
+
+		&:not(:last-child)
+			margin-bottom: fluid(20,24)
+
+	&__bottom
+		margin-top: fluid(20,40)
+
+	&__buttons
+		display: flex
+		flex-wrap: wrap
+		gap: 12px
+
+		@include media('max', 'mobile-xl')
+			flex-direction: column
+
+		.btn
+			flex: 1
+
+		.modal__btn
+			&--grow
+				flex-grow: 1.4
+
+	&__contacts
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 8px
+
+		&-title
+			font-size: var(--font-size-text-m)
+			line-height: var(--line-height-text)
+
+		&-link
+			--link-font-size: var(--font-size-text-l)
+			--link-font-weight: 600
+
+	&__product
+		margin: 24px 0
+		padding: 16px 0
+		border-top: var(--border-default)
+		border-bottom: var(--border-default)
+
+	&--filters
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+		max-width: 100%
+
+	&--gallery 
+		position: static
+		width: fit-content
+		max-width: 100%
+		padding: 16px
+		background-color: transparent
+
+		@include media("max", "tablet")
+			margin-bottom: auto
+			padding: 0
+
+		.modal
+			&__close 
+				top: 40px
+				right: 40px
+
+				@include media("max", "tablet")
+					top: 24px
+					right: 10px

@@ -1,0 +1,112 @@
+.tabs
+	display: flex
+	max-width: 100%
+
+	&__list
+		display: flex
+		align-items: center
+		gap: 4px
+		width: max-content
+		max-width: 100%
+		overflow-x: auto
+
+		+hide-scroll()
+
+		&--gap 
+			gap: fluid(16, 20)
+
+.tab
+	--tab-py: 10px
+	--tab-px: 20px
+	--tab-font-size: var(--font-size-text-m)
+	--tab-line-height: var(--line-height-text)
+	--tab-color: var(--color-neutral-700)
+	--tab-color-hover: var(--color-primary-600)
+	--tab-color-active: var(--color-neutral-100)
+	--tab-color-disabled: var(--color-neutral-500)
+	--tab-bg-color: var(--color-neutral-200)
+	--tab-bg-color-hover: var(--color-neutral-200)
+	--tab-bg-color-active: var(--color-primary-600)
+	--tab-bg-color-disabled: var(--color-neutral-200)
+	--tab-border-radius: var(--radius-l)
+
+	display: inline-flex
+	align-items: center
+	justify-content: center
+
+	padding: var(--tab-py) var(--tab-px)
+
+	border: 0
+
+	border-radius: var(--tab-border-radius)
+	background-color: var(--tab-bg-color)
+
+	color: var(--tab-color)
+
+	font-size: var(--tab-font-size)
+	font-weight: var(--tab-font-weight)
+	letter-spacing: var(--tab--letter-spacing)
+	line-height: var(--tab-line-height)
+
+	text-align: center
+	text-decoration: none
+	white-space: nowrap
+
+	transition: color .3s ease, background-color .3s ease
+
+	cursor: pointer
+
+	&:focus
+		outline: none
+
+	&:focus-visible
+		outline: 2px solid var(--color-primary-300)
+		outline-offset: -2px
+
+	@include hover
+		--tab-color: var(--tab-color-hover)
+		--tab-bg-color: var(--tab-bg-color-hover)
+
+	&:active,
+	&.active
+		--tab-color: var(--tab-color-active)
+		--tab-bg-color: var(--tab-bg-color-active)
+
+	&:disabled,
+	&.disabled
+		--tab-color: var(--tab-color-disabled)
+		--tab-bg-color: var(--tab-bg-color-disabled)
+
+		pointer-events: none
+
+		&:focus-visible
+			outline: none
+
+	&--border 
+		--tab-py: fluid(16, 24)
+		--tab-px: 0
+		--tab-color: var(--color-neutral-900)
+		--tab-color-active: var(--color-neutral-900)
+		--tab-bg-color: transparent
+		--tab-bg-color-hover: transparent
+		--tab-bg-color-active: transparent
+		--tab-bg-color-disabled: transparent
+		--tab-border-radius: 0
+
+		padding: 0 0 var(--tab-py)
+		border-bottom: 2px solid transparent
+		font-weight: 600
+
+		&:active
+			--tab-color: var(--tab-color-hover)
+			--tab-bg-color: var(--tab-bg-color-active)
+
+		&:disabled,
+		&.disabled
+			--tab-color: var(--tab-color-disabled)
+			--tab-bg-color: var(--tab-bg-color-disabled)
+
+		&.active
+			--tab-color: var(--tab-color-active)
+			--tab-bg-color: var(--tab-bg-color-active)
+			border-color: var(--color-primary-600)

@@ -1,0 +1,42 @@
+.order-tab
+	display: flex
+	align-items: center
+	gap: 8px
+
+	padding: 8px 10px
+
+	border-radius: var(--radius-s)
+
+	font-size: var(--font-size-text-s)
+	font-weight: 400
+	line-height: 1.4
+
+	@include media("max", "tablet")
+		padding: 4px 8px
+
+	&__icon 
+		size: 16px
+
+		@include media("max", "tablet")
+			size: 10px
+
+	&--accepted
+		background-color: var(--color-order-accepted)
+		color: var(--color-neutral-100)
+
+	&--await
+		background-color: var(--color-order-await)
+
+	&--upon
+		background-color: var(--color-order-upon)
+
+	&--paid 
+		background-color: var(--color-order-paid)
+
+	&--booked
+		background-color: var(--color-order-booked)
+		color: var(--color-neutral-100)
+
+	&--completed
+		background-color: var(--color-order-completed)
+		color: var(--color-neutral-700)

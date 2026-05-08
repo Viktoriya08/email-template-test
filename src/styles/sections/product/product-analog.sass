@@ -1,0 +1,71 @@
+.product-analog
+	&__card
+		display: grid
+		grid-template-columns: repeat(12, minmax(0,1fr))
+		gap: fluid(20,40)
+
+		@include media('min', 'laptop')
+			padding-top: 64px
+			padding-bottom: 64px
+			border-radius: var(--radius-m)
+			background-color: var(--color-neutral-200)
+
+		@include media('max', 'laptop')
+			grid-template-columns: repeat(6, minmax(0,1fr))
+
+		@include media('max', 'mobile-xl')
+			display: block
+
+	&__cont
+		grid-column: 2/12
+		display: flex
+		flex-direction: column
+		gap: fluid(16,24)
+
+		@include media('max', 'laptop')
+			grid-column: -1/1
+
+	&__title
+		display: flex
+		align-items: center
+		gap: 8px
+		font-family: var(--font-family)
+		font-size: var(--font-size-h4)
+		font-weight: 600
+		line-height: 1.35
+		text-wrap: balance
+
+		@include media('max', 'laptop')
+			font-size: var(--font-size-h2)
+			line-height: 1.25
+
+		@include media('max', 'mobile-xl')
+			align-items: flex-start
+
+		&-icon
+			flex-shrink: 0
+			width: 20px
+			height: 24px
+			display: block
+
+			@include media('max', 'mobile-xl')
+				width: 24px
+
+	&__product
+		border: 0
+
+		@include media('min', 'laptop')
+			padding: fluid(16,20)
+			border-radius: var(--radius-m)
+			background-color: var(--color-neutral-100)
+
+			.product-card__name
+				font-size: var(--font-size-text-l)
+
+			.product-card__price
+				--price-font-size: var(--font-size-h4)
+
+			.product-card__img
+				--width: fluid(180,256)
+				--aspect-ratio: 256/160
+				--radius: var(--radius-s)

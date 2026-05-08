@@ -1,0 +1,164 @@
+.form-block
+	display: flex
+	gap: fluid(20,40)
+	min-height: 480px
+	padding: fluid(16,40)
+	border-radius: var(--radius-m)
+	background-color: var(--color-neutral-900)
+	color: var(--color-neutral-100)
+
+	@include media('max', 'tablet')
+		flex-direction: column
+		gap: fluid(20,40)
+		min-height: auto
+		border-radius: var(--radius-s)
+
+	&__cont
+		display: flex
+		flex: 1
+		flex-direction: column
+		gap: fluid(20,32)
+
+	&__title
+		&:not(:last-child)
+			margin-bottom: 20px
+
+	&__subtitle
+		width: 100%
+		max-width: 480px
+		font-size: var(--font-size-text-m)
+		line-height: var(--line-height-text)
+
+		&:not(:last-child)
+			margin-bottom: fluid(20,32)
+
+	&__contacts
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		align-self: flex-start
+		gap: 32px
+
+		min-height: 160px
+		margin-top: auto
+		padding: fluid(16,24)
+
+		border-radius: var(--radius-m)
+		background-color: rgba(var(--color-neutral-100-rgb), .2)
+
+		@include media('max', 'tablet')
+			display: none
+
+		&-top
+			display: flex
+			gap: fluid(24,60)
+			width: 100%
+			margin-bottom: auto
+
+		&-title
+			flex-grow: 1
+
+		&-icon
+			flex-shrink: 0
+			width: 32px
+			height: 32px
+			color: currentcolor
+			object-fit: contain
+
+		&-link
+			color: var(--color-neutral-300)
+			font-size: var(--font-size-h4)
+			font-weight: 600
+			line-height: 1.35
+			text-decoration: none
+			transition: color .3s ease
+
+			@include hover
+				color: var(--color-neutral-100)
+
+	&__form
+		position: relative
+
+		display: flex
+		flex: 1
+		flex-direction: column
+
+		padding: fluid(16,32)
+
+		border-radius: var(--radius-m)
+		background-color: var(--color-neutral-100)
+
+		color: var(--color-neutral-900)
+
+		@include media('min', 'pc')
+			max-width: 860px
+			margin-left: auto
+
+		@include media('max', 'tablet')
+			--di-color: var(--color-neutral-100)
+			--di-color-disabled: var(--color-neutral-700)
+			--di-color-error: var(--color-neutral-100)
+			--di-bg: var(--color-neutral-800)
+			--di-bg-hover: var(--color-neutral-800)
+			--di-bg-disabled: var(--color-neutral-800)
+			--di-bg-focus: var(--color-neutral-800)
+			--di-border-color-hover: var(--color-primary-400)
+			--di-border-color-active: var(--color-primary-400)
+			--di-border-color-disabled: transparent
+			--di-placeholder-color: var(--color-neutral-700)
+			--di-label-color: var(--color-neutral-100)
+			padding: 0
+			border-radius: 0
+
+			background-color: transparent
+			color: var(--color-neutral-100)
+
+		.form
+			flex-grow: 1
+
+			&.submit
+				opacity: 0
+
+				@include media('max', 'tablet')
+					display: none
+
+			&__items
+				&--column-2
+					@include media('max', 'laptop')
+						grid-template-columns: 100%
+
+			&__bottom
+				@include media('max', 'laptop')
+					flex-direction: column
+					align-items: stretch
+
+			&__agree
+				color: currentcolor
+
+			&__submit
+				@include media('max', 'laptop')
+					order: -1
+					width: 100%
+
+		.form-send
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+
+			padding: fluid(16,32)
+
+			border-radius: var(--radius-m)
+			background-color: var(--color-neutral-100)
+
+			color: var(--color-neutral-900)
+
+			@include media('max', 'tablet')
+				position: relative
+				border-radius: var(--radius-s)
+
+	&__btn 
+		@include media("max", "mobile-xl")
+			width: 100%
+

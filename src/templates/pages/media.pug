@@ -1,0 +1,26 @@
+section.page-header.page-header--info-page
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'Медиа']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 Медиа
+
+
+section.page-section
+	.wrapper
+
+		.page-section__tabs.page-section__tabs--border
+			ul.tabs.tabs__list.tabs__list--gap.page-section__tabs-list
+				li.tabs__item
+					a.tab.tab--border.active(href="#") Все медиа
+				li.tabs__item
+					a.tab.tab--border(href="#") Новости
+				li.tabs__item
+					a.tab.tab--border(href="#") Фото
+				li.tabs__item
+					a.tab.tab--border(href="#") Видео
+
+
+		include /sections/info-pages/media-list
+				
+		.page-section__pagination
+			base-pagination(arrows-style="simple" :total="100" :limit="15" :max-buttons="5")

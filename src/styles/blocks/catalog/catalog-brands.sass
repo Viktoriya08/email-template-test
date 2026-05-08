@@ -1,0 +1,90 @@
+.catalog-brands
+	flex-grow: 1
+	padding: fluid(16,32)
+	border-radius: var(--radius-m)
+	background-color: var(--color-neutral-200)
+
+	&__top
+		padding-bottom: fluid(8,24)
+		border-bottom: 2px solid var(--color-neutral-300)
+		margin-bottom: 16px
+
+	&__list
+		display: flex
+		justify-content: space-between
+		gap: 16px
+
+		@include media('max', 'tablet')
+			display: none
+
+	&__item
+		min-width: 160px
+		display: flex
+		flex-direction: column
+		gap: 16px
+
+	&__links
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 8px
+
+		&-el
+			--link-font-weight: 600
+
+	&__group
+		display: flex
+		gap: 20px
+
+		&-label
+			font-size: var(--font-size-h4)
+			font-weight: 600
+			line-height: 1.35
+			text-transform: uppercase
+
+		&-list
+			padding-top: 8px
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			gap: 8px
+
+			@include media('max', 'tablet')
+				align-items: stretch
+				padding-top: 0
+				padding-bottom: 4px
+
+	&__mobile
+		display: none
+		flex-direction: column
+
+		@include media('max', 'tablet')
+			display: flex
+
+	&__search
+		display: none
+		flex-direction: column
+
+		@include media('max', 'tablet')
+			display: flex
+
+	&__bottom
+		margin-top: 20px
+		padding-top: 16px
+		border-top: 2px solid var(--color-neutral-300)
+
+	&__rows
+		display: flex
+		flex-direction: column
+		gap: 16px
+
+	&--inner
+		@include media('max', 'tablet')
+			padding: 0
+			border-radius: 0
+			background: transparent
+
+			.catalog-brands__title
+				--t-font-size: var(--font-size-h5)
+				--t-line-height: 1.4
+

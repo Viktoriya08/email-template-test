@@ -1,0 +1,17 @@
+section.page-header
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'Каталог']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 Каталог
+
+section.page-section.catalog
+	.wrapper
+		.page-section__tabs.catalog__tabs.tabls
+			ul.tabs__list
+				li.tabs__item
+					a(href="#").tab.active По модели авто
+
+				li.tabs__item
+					a(href="#").tab По категории
+
+		include /sections/catalog/catalog-brands-search-empty

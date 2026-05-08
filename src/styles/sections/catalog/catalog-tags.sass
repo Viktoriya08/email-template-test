@@ -1,0 +1,26 @@
+.catalog-tags
+	&:not(:last-child)
+		margin-bottom: 48px
+
+	&__title
+		display: block
+		margin-bottom: 12px
+		font-size: var(--font-size-text-m)
+		line-height: var(--line-height-text)
+		color: var(--color-neutral-700)
+
+	&__btn
+		margin-top: 16px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		gap: 4px
+
+		&:not(.open)
+			.catalog-tags__item
+				&:nth-child(n+7)
+					display: none
+
+	&__clear
+		--btn-px: fluid(12,20)

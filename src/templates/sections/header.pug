@@ -1,0 +1,122 @@
+mixin header(isAuth=false, isPersonalArea='')
+	header.header(class=`${isPersonalArea}`)
+		.wrapper
+			.header__top
+				.header__navigation
+					.header__city-toggle.city-toggle
+						base-dropdown(is-fixed).city-toggle__dropdown
+							template(#trigger)
+								button.btn.btn--transparent-dark
+									span.btn__text Челябинск
+									+icon('arrow-small-down').btn__icon.dropdown__icon
+
+							ul.dropdown__list
+								li.dropdown__item
+									a(href="#").link Челябинск
+								li.dropdown__item
+									a(href="#").link Екатеринбург
+								li.dropdown__item
+									a(href="#").link Пермь
+
+					nav.header__nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+						each link, i in ['О компании', 'Оптовикам', 'Вакансии', 'Оплата и возврат', 'Контакты']
+							a(href="#" itemprop="url").btn.btn--transparent-dark
+								span.btn__text=link
+
+				.header__actions
+					.header__actions-el
+						a(href="#" download).btn.btn--transparent-dark
+							+icon('file').btn__icon
+							span.btn__text Скачать прайс лист
+
+					.header__actions-el
+						base-dropdown(is-fixed)
+							template(#trigger)
+								button.btn.btn--transparent-dark
+									+icon('shipping').btn__icon
+									span.btn__text Ожидаемые поставки
+
+							ul.dropdown__list
+								li.dropdown__item
+									a(href="#" download).link Тайвань - 15.02.2024
+								li.dropdown__item
+									a(href="#" download).link Тайвань - 20.02.2024
+								li.dropdown__item
+									a(href="#" download).link Китай - 26.02.2024
+
+				.header__contacts
+					.header__contacts-el
+						a(href="tel:+73517299300" download).btn.btn--transparent-color
+							+icon('phone').btn__icon
+							span.btn__text 8 351 729-93-00
+
+					.header__contacts-el
+						button(@click="openModal('modal-callback')").btn.btn--border-primary
+							span.btn__text Связаться с нами
+
+			.header__bottom
+				a(href="#").header__logo.logo
+					+image(
+						{
+							src: 'img/logo.svg',
+							alt: 'KuzovProject',
+							width: '259',
+							height: '42'
+						}
+					).logo__img
+
+				base-dropdown(is-fixed).header__catalog.dropdown--catalog
+					template(#trigger)
+						a(href="#").btn.btn--color-primary
+							span.btn__text Каталог
+
+					.header-catalog
+						.header-catalog__el
+							ul.header-catalog__list
+								each link, i in ['Каталог по авто', 'Дисконтные товары', 'Универсальные товары', 'Все категории товаров']
+									li.header-catalog__item
+										a(href="#").header-catalog__link.btn.btn--transparent-dark
+											span.btn__text=link
+
+						.header-catalog__el
+							ul.header-catalog__list.header-catalog__list--column
+								each link, i in ['Бамперы', 'Капоты', 'Крылья', 'Фары', 'Радиаторы', 'Бачки', 'Брызговик', 'Заглушка']
+									li.header-catalog__item
+										a(href="#").header-catalog__link.btn.btn--transparent-dark
+											span.btn__text=link
+
+								each link, i in ['Подкрылок', 'Защита двигателя', 'Зеркало', 'Стоп сигнал', 'Дверь', 'Лампы', 'Клипсы', 'Решетка радиатора']
+									li.header-catalog__item
+										a(href="#").header-catalog__link.btn.btn--transparent-dark
+											span.btn__text=link
+
+								each link, i in ['Диффузор', 'Крышка багажника', 'Крепление бампера', 'Рамка радиатора', 'Противотуманная фара', 'Поворотник', 'Пробка радиатора']
+									li.header-catalog__item
+										a(href="#").header-catalog__link.btn.btn--transparent-dark
+											span.btn__text=link
+
+				.header__search.search
+					search-header-form
+
+				.header__btns
+					if isAuth
+						a(href="#").header__btns-el.btn.btn--color-light.btn-user
+							+icon('user').btn__icon
+							span.btn__text.btn-user__text Константин В.
+
+						a(href="#").header__btns-el.btn.btn--color-dark.btn-cart
+							+icon('cart').btn__icon
+							span.btn__text Корзина 0&nbsp;₽
+
+					else
+						a(href="#").header__btns-el.btn.btn--color-light.btn-user
+							+icon('user').btn__icon
+							span.btn__text.btn-user__text Войти
+
+						a(href="#").header__btns-el.btn.btn--color-dark.btn-cart
+							+icon('cart').btn__icon
+							span.btn__text 12&nbsp;530&nbsp;₽
+							span.btn-cart__count 3
+
+				button.burger.header__burger(@click="openModal('modal-menu')")
+					+icon('menu').burger__icon

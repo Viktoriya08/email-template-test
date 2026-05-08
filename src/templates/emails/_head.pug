@@ -1,0 +1,106 @@
+block vars
+	- let title = null
+	- let bodyClass = null
+
+doctype html
+//- для условных комментариев дальше в коде для Microsoft Outlook
+html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office")
+	head
+		meta(http-equiv="Content-Type" content="text/html charset=utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		//-meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+		//- для темной темы
+		meta(name="color-scheme" content="light dark")
+		meta(name="supported-color-schemes" content="light dark")
+		title= title ? title : PROJECT_TITLE
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="css/main.css")
+		style.
+			@import url("/styles/emails/_index.sass");
+
+			.btn:hover{
+				background-color: #e9134cff;
+				color: #ffffffff;
+			}
+			a:hover{
+				color: #0e0ec6;
+			}
+			@media (max-device-width: 859px ){
+				.footer__column{
+					text-align: left !important;
+				}
+				.footer__head-logo{
+					text-align: left !important;
+				}
+			}
+			@media (prefers-color-scheme: dark){
+				table,
+				td {
+					background-color: #06080B !important;
+				}
+				h1,
+				h2,
+				h3,
+				p {
+					color: #ffffff !important;
+				}
+				.btn{
+					background-color: #FF2963 !important;
+					color: #ffffffff !important;
+					border: 1px solid #fff !important;
+				}
+			}
+			@media screen and (max-width: 400px){
+				.footer__logo{
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+			}
+			/* Custom Dark Mode Colors */
+			:root{
+				color-scheme: light dark;
+				supported-color-schemes: light dark;
+			}
+
+		//[if (gte mso 9)|(IE)]>
+			<style type="text/css">
+				table {border-collapse: collapse !important;}
+			</style>
+		//<![endif]
+
+		block head
+
+	//- Вес письма не более 102kb !!!!
+	body.body
+
+		//[if (gte mso 9)|(IE)]>
+			<style type="text/css">
+				body {
+					background-color: #fff !important;
+				}
+				body,
+				table,
+				td,
+				p,
+				a {
+					font-family: sans-serif, Arial !important;
+				}
+			</style>
+		//<![endif]
+
+		center.center-body
+			div.main-body
+
+				//- Прехедер письма
+				div.preheader= title ? title : PROJECT_TITLE
+
+				//[if (gte mso 9)|(IE)]>
+					<table width="842" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="color:#fff;">
+						<tr>
+							<td>
+				//<![endif]
+
+				block content

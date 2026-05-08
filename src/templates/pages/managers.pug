@@ -1,0 +1,29 @@
+section.page-header.page-header--info-page
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'Связаться с руководством']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 Связаться с руководством
+
+
+section.page-section.page-section--height
+	.wrapper
+		+staff('', 
+		[
+			{
+				name: 'Павел',
+				text: 'Собственник',
+				img: 'staff-1.jpg',
+				email: 'www.ua74.ru@gmail.com'
+			},
+			{
+				name: 'Ирина',
+				text: 'Исполнительный директор',
+				img: 'staff-2.jpg',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+		])
+
+
+//- Ответим на ваши вопросы
+include ../blocks/form-questions

@@ -1,0 +1,19 @@
+.products-slider
+	&__list
+		&.swiper
+			@include media('max', 'laptop')
+				max-width: calc(100% + var(--wrapper-padding) * 2)
+				margin-right: calc(-1* var(--wrapper-padding))
+				margin-left: calc(-1* var(--wrapper-padding))
+				padding-right: var(--wrapper-padding)
+				padding-left: var(--wrapper-padding)
+
+		.swiper-navigation
+			margin-top: 12px
+
+			@include media('min', 'tablet')
+				display: none !important
+
+	&__item
+		&.swiper-slide
+			height: auto

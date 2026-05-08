@@ -1,0 +1,74 @@
+.advantages-slider
+	counter-reset: list
+
+	&__item 
+		height: 100%
+		padding: fluid(16, 40)
+		border-radius: var(--radius-m)
+		background-color: var(--color-primary-600)
+		color: var(--color-neutral-100)
+
+		&::before
+			content: counter(list)
+			position: absolute
+			top: 16px
+			left: 16px
+
+			display: flex
+			align-items: center
+			justify-content: center
+
+			width: fluid(24, 32)
+			height: fluid(24, 32)
+
+			border-radius: var(--radius-circle)
+			background-color: var(--color-neutral-100)
+
+			color: var(--color-primary-600)
+			font-size: var(--font-size-text-l)
+			font-weight: 600
+			line-height: 1.3
+
+			counter-increment: list
+
+	&__img 
+		display: flex
+		align-items: center
+		justify-content: center
+		aspect-ratio: 530/350
+		margin-bottom: 16px
+
+		@include media("max", "mobile-xl")
+			aspect-ratio: 215/140
+
+		&-icon 
+			--aspect-ratio: 80/80
+			--width: 80px
+			--object-fit: contain
+
+			@include media("max", "mobile-xl")
+				--aspect-ratio: 48/48
+				--width: 48px
+
+	&__title 
+		margin-bottom: 16px
+
+	&__text 
+		line-height: 1.4
+
+	.advantages-slider__slide 
+		height: auto
+
+	.swiper
+		@include media("max", "mobile-xl")
+			@include out-wrapper
+
+		.swiper-navigation
+			margin-top: 24px
+
+			@include media("max", "mobile-xl")
+				display: none
+
+			.swiper-pagination
+				max-width: 455px
+				margin-bottom: auto

@@ -1,0 +1,663 @@
+section.project-view
+	.wrapper
+		.pv-title
+			a(href=`${BASE_URL}`).pv-logo
+				+image(
+					{
+						src: `img/logo.svg`,
+						width: 270,
+						height: 70,
+					},
+				).pv-logo__image
+			h1.pv-title__text UI Kit
+
+		ui-preview
+			.pv-block
+				h3.pv-block__title Breadcrumbs
+				.pv-block__preview
+					+breadcrumbs(["Главная", "UI"])
+
+			.pv-block
+				h3.pv-block__title Typography & Animations
+				.pv-block__preview
+
+					.pv-block__items
+						.pv-block__item(v-animate="{animationClass: 'fadeInUp'}")
+							h1(style="fontFamily: var(--font-family-primary); font-weight: 600; font-Size: var(--font-size-h1)") Primary Font Family - Mulish
+
+					.pv-block__devider
+
+					.pv-block__items(v-animate="{animationClass: 'fadeInUp'}")
+						.pv-block__item
+							h1.title.title--h1 Heading 1
+
+						.pv-block__item
+							h2.title.title--h2 Heading 2
+
+						.pv-block__item
+							h3.title.title--h3 Heading 3
+
+						.pv-block__item
+							h4.title.title--h4 Heading 4
+
+						.pv-block__item
+							h5.title.title--h5 Heading 5
+
+						.pv-block__item
+							h6.title.title--h6 Heading 6
+
+					.pv-block__items.pv-block__items--row(v-animate="{animationClass: 'fadeInUp'}")
+						.pv-block__item
+							p(style="font-Size: var(--font-size-text-l); line-height: var(--line-height-text)") big text
+						.pv-block__item
+							p(style="font-Size: var(--font-size-text-m); line-height: var(--line-height-text)") regular text
+						.pv-block__item
+							p(style="font-Size: var(--font-size-text-s); line-height: var(--line-height-text)") caption
+						.pv-block__item
+							p(style="font-Size: var(--font-size-text-xs); line-height: var(--line-height-text)") small caption
+
+			.pv-block
+				h3.pv-block__title Buttons
+				.pv-block__preview
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--color-primary
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-color
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--color-primary.disabled
+								span.btn__text Button-color disabled
+
+						.pv-block__item
+						button.btn.btn--color-primary.loading
+								span.btn__text Button-color loading
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--color-dark
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-color
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--color-dark.disabled
+								span.btn__text Button-color disabled
+
+						.pv-block__item
+						button.btn.btn--color-dark.loading
+								span.btn__text Button-color loading
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--color-light
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-color
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--color-light.disabled
+								span.btn__text Button-color disabled
+
+						.pv-block__item
+						button.btn.btn--color-light.loading
+								span.btn__text Button-color loading
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--border-primary
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-border
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--border-primary(disabled)
+								span.btn__text Button-border disabled
+
+						.pv-block__item
+							button.btn.btn--border-primary.loading
+								span.btn__text Button-border loading
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--transparent-color
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-transparent
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--transparent-color.disabled
+								span.btn__text Button-transparent disabled
+
+						.pv-block__item
+						button.btn.btn--transparent-color.loading
+							span.btn__text Button-transparent loading
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--transparent-dark
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-transparent
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--transparent-dark.disabled
+								span.btn__text Button-transparent disabled
+
+						.pv-block__item
+						button.btn.btn--transparent-dark.loading
+							span.btn__text Button-transparent loading
+
+			.pv-block.pv-block--dark
+				h3.pv-block__title Buttons Revert
+				.pv-block__preview
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--color-revert
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-color
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--color-revert.disabled
+								span.btn__text Button-color disabled
+
+						.pv-block__item
+							button.btn.btn--color-revert.loading
+								span.btn__text Button-color loading
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--border-revert
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-border
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--border-revert(disabled)
+								span.btn__text Button-border disabled
+
+						.pv-block__item
+							button.btn.btn--border-revert.loading
+								span.btn__text Button-border loading
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button.btn.btn--transparent-revert
+								+icon('arrow-left').btn__icon
+								span.btn__text Button-transparent
+								+icon('arrow-right').btn__icon
+
+						.pv-block__item
+							button.btn.btn--transparent-revert.disabled
+								span.btn__text Button-transparent disabled
+
+						.pv-block__item
+						button.btn.btn--transparent-revert.loading
+							span.btn__text Button-transparent loading
+
+			.pv-block
+				h3.pv-block__title Links
+				.pv-block__preview
+
+					.pv-block__items
+						.pv-block__item
+							a(href="#").link Link
+
+						.pv-block__item
+							a(href="#").link.link--color Link color
+
+						.pv-block__item
+							a(href="#").link.link--color.disabled
+								span.link__text Link Disabled
+
+						.pv-block__item
+							p Some text with a #[a(href="#").link.link--color link color] inside
+
+						.pv-block__item
+							a(href="#").link
+								+icon('arrow-left').link__icon
+								| Link with icon
+								+icon('arrow-right').link__icon
+
+						.pv-block__item
+							a(href="#").link.link--color
+								+icon('arrow-left').link__icon
+								| Link color with icon
+								+icon('arrow-right').link__icon
+
+			.pv-block
+				h3.pv-block__title Bages
+				.pv-block__preview
+
+					.pv-block__items
+						.pv-block__item
+							.bages
+								span.bage 2 шт в наличии
+								base-tooltip.bage
+									span.bage__tooltip
+										+icon('question').bage__icon
+										| Дисконт
+
+									template(#tooltip)
+										span Дисконтный товар, это товар с небольшими визуальными дефектами, которые не влияют на работу. Благодаря этому товар может стоить дешевле.
+
+					.pv-block__items
+						.pv-block__item
+							.bages
+								span.bage.bage--color 2 шт в наличии
+								base-tooltip.bage.bage--color
+									span.bage__tooltip
+										+icon('question').bage__icon
+										| Дисконт
+
+									template(#tooltip)
+										span Дисконтный товар, это товар с небольшими визуальными дефектами, которые не влияют на работу. Благодаря этому товар может стоить дешевле.
+
+					.pv-block__items
+						.pv-block__item
+							.bages
+								span.bage.bage--small 2 шт в наличии
+								base-tooltip.bage.bage--small
+									span.bage__tooltip
+										+icon('question').bage__icon
+										| Дисконт
+
+									template(#tooltip)
+										span Дисконтный товар, это товар с небольшими визуальными дефектами, которые не влияют на работу. Благодаря этому товар может стоить дешевле.
+
+
+			.pv-block
+				h3.pv-block__title Dropdown
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							base-dropdown(is-fixed)
+								template(#trigger)
+									button.btn.btn--color-primary.btn--size-small
+										span.btn__text Dropdown
+
+								ul.dropdown__list
+									li.dropdown__item
+										a(href="#") Dropdown Item 1
+									li.dropdown__item
+										a(href="#") Dropdown Item 2
+									li.dropdown__item
+										a(href="#") Dropdown Item 3
+			.pv-block
+				h3.pv-block__title Tabs
+				.pv-block__preview
+					.pv-block__items
+						.pv-block__item
+							base-tabs(:tabs="['Tab 1', 'Tab 2', 'Tab 3']" is-hover)
+
+						.pv-block__item
+							base-tabs(:tabs="[{label: 'Tab 1', value: 'tab_1', disabled: false}, {label: 'Tab 2', value: 'tab_2', disabled: true}, {label: 'Tab 3', value: 'tab_3'}]" theme="light" )
+
+						.pv-block__item
+							base-tabs(model-value="tab_1" v-slot="{setTab, activeTab, theme}")
+								li.tabs__item
+									a(@click="setTab($event, 'tab_1')" href="#" :class="[{active: activeTab === 'tab_1'}, `tab--${theme}`]").tab Tab 1
+								li.tabs__item
+									a(@click="setTab($event, 'tab_2')" href="#" :class="[{active: activeTab === 'tab_2'}, `tab--${theme}`]").tab Tab 2
+								li.tabs__item
+									a(@click="setTab($event, 'tab_3')" href="#" :class="[{active: activeTab === 'tab_3'}, `tab--${theme}`]").tab Tab 3
+
+			.pv-block
+				h3.pv-block__title Accordion
+				.pv-block__preview
+					.pv-block__items
+						.pv-block__item
+							+base-accordion(
+								[
+									{
+										title: 'Как регулируются в мире конфликты между государствами и какие организации отвечают за их решение?',
+										content: 'Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.'
+									},
+								]
+							)(media-until="tablet")
+						.pv-block__item
+							+base-accordion(
+								[
+									{
+										title: 'Как регулируются в мире конфликты между государствами и какие организации отвечают за их решение?',
+										content: 'Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.'
+									}
+								]
+							)(theme="secondary")
+						.pv-block__item
+							+base-accordion(
+									[
+										{
+											title: 'Как регулируются в мире конфликты между государствами и какие организации отвечают за их решение?',
+											content: 'Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.'
+										}
+									]
+								)(theme="backdrop")
+
+						.pv-block__item
+							+base-accordion(
+								[
+									{
+										title: 'Как регулируются в мире конфликты между государствами и какие организации отвечают за их решение?',
+										content: '<p>Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.</p><p>Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.</p><p>Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.</p><p>Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.</p>'
+									}
+								]
+							)(theme="backdrop" pointer-side="ltl")
+
+						.pv-block__item
+							+base-accordion(
+								[
+									{
+										title: 'Как регулируются в мире конфликты между государствами и какие организации отвечают за их решение?',
+										content: '<p>Рост населения и экономическое развитие стран оказывают существенное влияние на мировой порядок. С ростом населения возрастает потребление природных ресурсов, что приводит к усилению экологических проблем. Экономическое развитие стран ведет к наращиванию экономической мощности и политического влияния на международной арене. Это может приводить к установлению новых правил игры в мировой экономике, заключению новых торговых, политических и военных союзов, а также изменению баланса сил между государствами. Кроме того, в условиях глобализации и международного общения различные тенденции в развитии экономики и демографии одних стран сильно влияют на другие страны.</p>'
+									}
+								]
+							)(theme="backdrop" pointer-side="ltl" disabled)
+
+			.pv-block
+				h3.pv-block__title Modals
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button(@click="openModal('modal-confirm')").btn.btn--color-primary.btn--size-small Show
+
+			.pv-block
+				h3.pv-block__title Gallery
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							include /blocks/galleries/base-gallery
+							+base-gallery(
+								'gallery',
+								[
+									{
+										img: 'https://images.unsplash.com/photo-1485204261646-2e9f783c88cd?auto=format&fit=crop&q=80&w=375&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+										width: '375',
+										height: '250',
+									},
+									{
+										img: 'https://images.unsplash.com/photo-1539485420953-992679a61975?auto=format&fit=crop&q=80&w=375&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+										width: '375',
+										height: '250',
+									},
+									{
+										img: 'https://images.unsplash.com/photo-1539064979941-65df00f5a3b4?auto=format&fit=crop&q=80&w=375&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+										width: '375',
+										height: '250',
+									},
+								]
+							)
+
+			.pv-block
+				h3.pv-block__title Slider
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							include /blocks/sliders/content-slider
+							+content-slider([
+								{
+									img: 'banner',
+									text: 'Подпись к фотографии, которая может состоять из одной или двух строк'
+								},
+								{
+									img: 'banner',
+									text: 'Подпись к фотографии, которая может состоять из одной или двух строк Подпись к фотографии, которая может состоять из одной или двух строк'
+								},
+								{
+									img: 'banner',
+									text: 'Подпись к фотографии, которая может состоять из одной или двух строк'
+								},
+							])
+
+
+			.pv-block
+				h3.pv-block__title Tips
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							base-tooltip
+								span.link Hover Me
+
+								template(#tooltip)
+									span Catch you!
+
+						.pv-block__item
+							base-tooltip(show-on-click)
+								span.link Click Me
+
+								template(#tooltip)
+									span Catch you!
+
+			.pv-block
+				h3.pv-block__title Pagination
+				.pv-block__preview
+
+					.pv-block__items
+						.pv-block__item
+							base-pagination(:total="100" :limit="10" :max-buttons="3")
+
+						.pv-block__item
+							base-pagination(arrows-style="simple" :total="100" :limit="10" :max-buttons="3")
+
+						.pv-block__item
+							base-pagination(arrows-style="small" :total="100" :limit="10" :max-buttons="3")
+
+						.pv-block__item
+							base-pagination(hide-buttons :total="100" :limit="10" :max-buttons="3")
+
+
+			.pv-block
+				h3.pv-block__title Input
+				.pv-block__preview
+
+					.pv-block__items.pv-block__items--row.pv-block__items--align-start
+						.pv-block__item
+							input-text(placeholder="Type here" id="default-input" label="Default Input")
+
+						.pv-block__item
+							input-text(placeholder="Type here" id="disabled-input" label="Disabled Input" disabled)
+
+						.pv-block__item
+							input-text(placeholder="Type here" id="readonly-input" label="ReadOnly Input" read-only)
+
+						.pv-block__item
+							input-text(placeholder="Type here" id="unvalid-input" label="Unvalid Input" :errors="['Some Error']")
+
+			.pv-block
+				h3.pv-block__title Select
+				.pv-block__preview
+
+					.pv-block__items.pv-block__items--row.pv-block__items--align-start
+						.pv-block__item
+							example-select(placeholder="Select option" id="default-select" label="Default Select" :options="['Option 1', 'Extremely Long Option 2', 'Option 3']")
+
+						.pv-block__item
+							example-select(placeholder="Select option" id="disabled-select" label="Disabled Select" disabled :options="['Option 1', 'Option 2', 'Option 3', { label: 'Option 4', disabled: true }]")
+
+						.pv-block__item
+							example-select(placeholder="Select option" id="readOnly-select" label="ReadOnly Select" read-only :options="['Option 1', 'Option 2', 'Option 3', { label: 'Option 4', disabled: true }]")
+
+						.pv-block__item
+							example-select(placeholder="Select option" id="unvalid-select" label="Unvalid Select" :errors=['Some Other Error'] :options="['Option 1', 'Option 2', 'Option 3', { label: 'Option 4', disabled: true }]")
+
+						.pv-block__item
+							example-select(:model-value="['Option 1']" placeholder="Select option" id="tags-select" label="Tags Select" mode="tags" :options="['Option 1', 'Extremely Long Option 2', 'Option 3', { label: 'Option 4', value: 'Option 4', disabled: true }]")
+
+						.pv-block__item
+							example-select(:model-value="['Option 1', 'Option 3']" placeholder="Select option" id="multiple-select" label="Multiple Select" mode="multiple" :options="['Option 1', 'Extremely Long Option 2', 'Option 3', { label: 'Option 4', value: 'Option 4', disabled: true }]")
+
+						.pv-block__item
+							example-select(placeholder="Select option" id="loading-select" label="Loading Select" loading :options="['Option 1', 'Extremely Long Option 2', 'Option 3', { label: 'Option 4', disabled: true }]")
+
+						.pv-block__item
+							example-select( placeholder="Select option" id="group-select" label="Group Select" mode="multiple" groups :options="[{disabled: true, label: 'Group 1', options: ['Option 1', 'Option 2', 'Option 3'] }, { label: 'Group 2', options: ['Option 4', 'Option 5', 'Option 6'] } ]")
+
+						.pv-block__item
+							example-select(placeholder="Select option" id="searchable-select" label="Searchable Select" searchable :options="['Option 1', 'Extremely Long Option 2', 'Option 3']")
+
+			.pv-block
+				h3.pv-block__title Checkbox
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							input-checkbox(id="default-checkbox" label="Default Checkbox" text="Default Checkbox")
+
+						.pv-block__item
+							input-checkbox(id="checked-checkbox" label="Checked Checkbox" :model-value="true" text="Checked Checkbox")
+
+						.pv-block__item
+							input-checkbox(id="disabled-checkbox" label="Disabled Checkbox" disabled text="Disabled Checkbox")
+
+						.pv-block__item
+							input-checkbox(id="disabled-checked-checkbox" label="Disabled-checked Checkbox" disabled :model-value="true" text="Disabled-checked Checkbox")
+
+						.pv-block__item
+							input-checkbox(id="readonly-checkbox" label="Readonly Checkbox" read-only :model-value="true" text="Readonly Checkbox")
+
+						.pv-block__item
+							input-checkbox(id="unvalid-checkbox" label="Unvalid Checkbox" :errors="['Some error']" text="Unvalid Checkbox")
+
+						.pv-block__item
+							input-checkbox(id="no-label-checkbox" text="No label Checkbox")
+
+			.pv-block
+				h3.pv-block__title Radio
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							input-radio(id="default-radio" name="radio-preview" label="Default Radio" value-prop="Default Radio")
+
+						.pv-block__item
+							input-radio(id="checked-radio" name="radio-preview" label="Checked Radio" value-prop="Checked Radio")
+
+						.pv-block__item
+							input-radio(id="disabled-radio" name="radio-preview" label="Disabled Radio" disabled value-prop="Disabled Radio")
+
+						.pv-block__item
+							input-radio(id="readonly-radio" name="radio-preview" label="Readonly Radio" read-only value-prop="Readonly Radio")
+
+						.pv-block__item
+							input-radio(id="unvalid-radio" name="radio-preview" label="Unvalid Radio" :errors="['Some error']" value-prop="Unvalid Radio")
+
+						.pv-block__item
+							input-radio(id="no-label-radio" name="radio-preview" value-prop="No label Radio")
+
+			.pv-block
+				h3.pv-block__title Switch
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row.pv-block__items--align-start
+						.pv-block__item
+							input-switch(id="default-switch" label="Default Switch" on-label="On text" off-label="Off text")
+
+						.pv-block__item
+							input-switch(id="active-switch" :model-value="true" label="Active Switch" on-label="On text" off-label="Off text")
+
+						.pv-block__item
+							input-switch(id="disabled-switch" label="Disabled Switch" disabled on-label="On text" off-label="Off text")
+
+						.pv-block__item
+							input-switch(id="unvalid-switch" label="Unvalid Switch" :errors="['Some error']" on-label="On text" off-label="Off text")
+
+						.pv-block__item
+							input-switch(id="no-text-switch" label="No text Switch")
+
+						.pv-block__item
+							input-switch(id="no-label-switch" on-label="No label Switch")
+
+			.pv-block
+				h3.pv-block__title Search
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row.pv-block__items--align-start
+						.pv-block__item
+							input-search(placeholder="Search here" id="default-search" :tooltips=['First tooltip', 'Second tooltip'])
+
+						.pv-block__item
+							input-search(placeholder="Disabled search" disabled id="disabled-search" :tooltips=['First tooltip', 'Second tooltip'])
+
+			.pv-block
+				h3.pv-block__title Date
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row.pv-block__items--align-start
+						.pv-block__item
+							input-date(placeholder="Select date" id="default-date" label="Default Date")
+
+						.pv-block__item
+							input-date(placeholder="Select date" id="disabled-date" label="Disabled Date" disabled)
+
+						.pv-block__item
+							input-date(placeholder="Select date" id="unvalid-date" label="Unvalid Date" :errors="['Some error']")
+
+						.pv-block__item
+							input-date(placeholder="Select date" id="selected-date" label="Selected Date" :model-value="new Date(2020, 1, 1)")
+
+						.pv-block__item
+							input-date(placeholder="Select date" id="readonly-date" label="Readonly Date" read-only :model-value="new Date(2020, 1, 1)")
+
+						.pv-block__item
+							input-date(placeholder="Select date" id="custom-date" label="Custom Format (YY/MM/DD)" date-mask="YY/MM/DD" :model-value="new Date(2020, 1, 1)")
+
+						.pv-block__item
+							input-date(placeholder="Select date" id="maxmin-date" label="Max/Min Date" :max-date="new Date(2020, 1, 15)" :min-date="new Date(2020, 1, 1)" :model-value="new Date(2020, 1, 1)")
+
+
+			.pv-block
+				h3.pv-block__title File
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row.pv-block__items--align-start
+						.pv-block__item
+							input-file(placeholder="Choose file" id="default-file" label="Default File")
+
+						.pv-block__item
+							input-file(placeholder="Choose file" id="filled-file" label="Filled File" multiple :model-value="['https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg', 'https://cdn.britannica.com/35/233235-050-8DED07E3/Pug-dog.jpg']")
+
+						.pv-block__item
+							input-file(placeholder="Choose file" id="disabled-file" label="Disabled File" disabled)
+
+						.pv-block__item
+							input-file(placeholder="Choose file" id="readonly-file" label="Readonly File" read-only :model-value="['https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg', 'https://cdn.britannica.com/35/233235-050-8DED07E3/Pug-dog.jpg']")
+
+						.pv-block__item
+							input-file(placeholder="Choose file" id="unvalid-file" label="Unvalid File" :errors="['Some error']")
+
+			.pv-block
+				h3.pv-block__title Range
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row.pv-block__items--align-start
+						.pv-block__item
+							input-range(id="default-range" label="Default Range" suffix="%")
+
+						.pv-block__item
+							input-range(id="decimal-range" label="Decimal Range" suffix="%" mask-type="decimalMask" :step="-1")
+
+						.pv-block__item
+							input-range(id="tooltip-range" label="Tooltip Range" suffix="%" :model-value="75" tooltips)
+
+						.pv-block__item
+							input-range(id="double-range" label="Double File" suffix="$" :model-value="[50, 100]")
+
+						.pv-block__item
+							input-range(id="disabled-range" label="Disabled Range" suffix="%" disabled)
+
+						.pv-block__item
+							input-range(id="readonly-range" label="Readonly Range" suffix="%" :model-value="35" read-only)
+
+						.pv-block__item
+							input-range(id="unvalid-range" label="Unvalid Range" suffix="%" :errors="['Some error']")
+
+			.pv-block
+				h3.pv-block__title Forms
+				.pv-block__preview
+					form-example()
+
+			.pv-block
+				h3.pv-block__title Video
+				.pv-block__preview
+					base-video.pv-block__video
+						template(#default="{canPlayHandler, errorHandler}")
+							video(poster=`https://images.unsplash.com/photo-1682687982134-2ac563b2228b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D` loop preload="metadata" @canplay="canPlayHandler" @error="errorHandler").video__video
+								source(src="https://www.shutterstock.com/shutterstock/videos/1075356548/preview/stock-footage-ice-hockey-rink-arena-professional-forward-player-breaks-defense-hitting-puck-with-stick-scores.mp4" type="video/mp4")
+								source(src="https://www.shutterstock.com/shutterstock/videos/1075356548/preview/stock-footage-ice-hockey-rink-arena-professional-forward-player-breaks-defense-hitting-puck-with-stick-scores.webm" type="video/webm")

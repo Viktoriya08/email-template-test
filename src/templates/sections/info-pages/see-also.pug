@@ -1,0 +1,25 @@
+section.page-section.see-also
+	.wrapper
+		.page-section__top.page-section__top--border
+			h2.page-section__title.title.title--h2 Смотрите также
+
+			.page-section__controls.swiper-buttons
+				button.swiper-button.swiper-button-prev
+				button.swiper-button.swiper-button-next
+
+		.see-also__slider 
+			see-also-slider
+				template(#default)
+					.swiper-slide
+						+media-card('Название альбома в две строки, состоящий из нескольких слов, занимающий не более двух строк  состоящий из нескольких слов, занимающий не более двух строк', 'media/m-1.jpg', true, false)
+					.swiper-slide
+						+media-card('Название альбома в две строки, состоящийиз нескольких слов, занимающий не более двух строк', 'media/m-2.jpg', false, true)
+					.swiper-slide
+						+media-card('Заголовок статьи в две строки, состоящий из нескольких слов, занимающий не более двух строк Заголовок статьи в две строки, состоящий', 'media/m-4.jpg', false, false)
+					.swiper-slide
+						+media-card('Название альбома в две строки, состоящий из нескольких слов, занимающий не более двух строк  состоящий из нескольких слов, занимающий не более двух строк', 'media/m-1.jpg', true, false)
+					.swiper-slide
+						+media-card('Название альбома в две строки, состоящий из нескольких слов, занимающий не более двух строк  состоящий из нескольких слов, занимающий не более двух строк', 'media/m-1.jpg', true, false)
+					.swiper-slide
+						+media-card('Название альбома в две строки, состоящийиз нескольких слов, занимающий не более двух строк', 'media/m-4.jpg', false, true)
+

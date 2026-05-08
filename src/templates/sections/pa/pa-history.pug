@@ -1,0 +1,22 @@
+
+.pa-body__title 
+	h2.title.title--h3 История операций
+	.pa-body__count 12 операций
+
+.pa-body__list 
+	order-accordion(tab-buyers-order, order-history)
+
+	order-accordion(tab-buyers-invoice, order-history)
+
+	order-accordion(tab-return, order-history)
+
+	order-accordion(tab-incoming-payment, order-history)
+
+	order-accordion(tab-outgoing-payment, order-history)
+
+	order-accordion(tab-shipment, order-history)
+
+
+.page-section__pagination
+	big-pagination(arrows-style="simple" :total="100" :limit="15" :max-buttons="5")
+

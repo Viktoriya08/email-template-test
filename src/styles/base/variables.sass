@@ -1,0 +1,134 @@
+\:root
+	// Настройки
+	/* Минимальная ширина страницы */
+	--page-min-width: 320px
+
+	/* Ширина полотна (макета) */
+	--page-max-width: 1920px
+
+	// wrapper
+	--wrapper-padding: 24px
+	--wrapper-max-width: 1840px
+
+	// Цвета
+	// Основной цвет
+	--color-primary-100: #F3F4FF
+	--color-primary-200: #E6E8FF
+	--color-primary-300: #D7D8FF
+	--color-primary-400: #9F94EC
+	--color-primary-500: #6959DC
+	--color-primary-600: #513FD2
+	--color-primary-700: #382CAD
+
+	// Второстепенный цвет
+	--color-neutral-100: #fff
+	--color-neutral-100-rgb: 255,255,255
+	--color-neutral-200: #F0F0F7
+	--color-neutral-300: #E7E8F0
+	--color-neutral-400: #D4D6E5
+	--color-neutral-500: #BFBFD0
+	--color-neutral-600: #9797AA
+	--color-neutral-700: #6D6D80
+	--color-neutral-800: #2F2F4A
+	--color-neutral-900: #181836
+	--color-neutral-900-rgb: 24,24,54
+
+	//- Прозрачные цвета
+	--color-transparent-50: #18183680
+	--color-transparent-100-20: #FFF3
+
+	// Вспомогательный цвет
+	--color-negative: #FF4C41
+	--color-positive: #78FF39
+	--color-warning: #FFEE52
+	--color-info: #513FD2
+	--color-order-paid: #CCFFB4
+	--color-order-await: #FFE6E4
+	--color-order-accepted: #6959DC
+	--color-order-upon: #F0F0F7
+	--color-order-booked: #9797AA
+	--color-order-completed: #E7E8F0
+
+	// Тени
+	--shadow-s: 0px 0px 15px 0px rgba(183, 184, 200, 0.20)
+	--shadow-m: 0px 4px 15px 0px rgba(24, 24, 54, 0.15)
+	--shadow-l: 0px 4px 10px 0px rgba(24, 24, 54, 0.10)
+
+	// Радиусы
+	--radius-circle: 50%
+	--radius-l: 30px
+	--radius-m: 10px
+	--radius-s: 5px
+
+	// Бордеры
+	--border-default: 2px solid var(--color-neutral-200)
+
+	// Типографика
+	--font-family-primary: 'Mulish', sans-serif
+
+	// =======================
+	--font-size-h1: fluid(20, 40)
+	--font-size-h2: fluid(20, 32)
+	--font-size-h3: fluid(18, 28)
+	--font-size-h4: fluid(16, 24)
+	--font-size-h5: fluid(14, 18)
+	--font-size-h6: fluid(14, 16)
+
+	// =======================
+	--font-size-text-xs: fluid(10, 12)
+	--font-size-text-s: fluid(12, 14)
+	--font-size-text-m: fluid(14, 16)
+	--font-size-text-l: fluid(14, 18)
+
+	// Межстрочный интервал
+	--line-height-text: 1.4
+
+	// =======================
+	--font-family: var(--font-family-primary)
+	--font-size: var(--font-size-text-m)
+	--line-height: var(--line-height-text)
+	--font-weight: 400
+	--body-bg: var(--color-neutral-100)
+	--body-color: var(--color-neutral-900)
+
+	// Инпуты
+	--di-font-size: 16px
+	--di-line-height: 1.4
+	--di-color: var(--color-neutral-900)
+	--di-color-disabled: var(--color-neutral-500)
+	--di-color-error: var(--color-neutral-900)
+	--di-bg: var(--color-neutral-200)
+	--di-bg-hover: var(--color-neutral-200)
+	--di-bg-disabled: var(--color-neutral-200)
+	--di-bg-focus: var(--color-neutral-200)
+	--di-border-color: transparent
+	--di-border-color-hover: var(--color-primary-400)
+	--di-border-color-active: var(--color-primary-400)
+	--di-border-color-disabled: transparent
+	--di-border-color-error: var(--color-negative)
+	--di-border-width: 2px
+	--di-border-radius: var(--radius-s)
+	--di-py: fluid(10, 14)
+	--di-px: fluid(12, 16)
+	--di-placeholder-color: var(--color-neutral-700)
+	--di-label-color: var(--color-neutral-900)
+	--di-icon-size: 20px
+
+	// Индексы
+	--z-index-base: 0
+	--z-index-above: 1
+	--z-index-above-secondary: 2
+	--z-index-below: -1
+	--z-index-below-secondary: -2
+	--z-index-dropdown: calc(var(--z-index-above) * 3)
+	--z-index-header: calc(var(--z-index-dropdown) * 3)
+	--z-index-modal: calc(var(--z-index-header) * 3)
+
+	// Размеры блоков
+	--app-height: 100svh
+
+	@include media("max", "laptop")
+		--wrapper-padding: 12px
+
+
+

@@ -1,0 +1,71 @@
+.media-card
+	position: relative
+	display: flex
+	flex-direction: column
+
+	&__photo 
+		position: relative
+
+		order: -1
+
+		aspect-ratio: 430 / 290
+		margin-bottom: fluid(12, 16)
+
+		overflow: hidden
+
+		border-radius: var(--radius-m)
+
+		background-color: var(--color-neutral-200)
+		background-image: url("/img/media/icon-photo.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 64px
+
+		@include media("max", "mobile-xl")
+			aspect-ratio: 300/200
+			background-size: 45px
+
+		&-img 
+			--aspect-ratio: 430 / 290
+			--object-fit: cover
+			--width: 100% 
+			transition: transform .3s
+
+	&__title 
+		margin-bottom: fluid(4, 8)
+		color: var(--color-neutral-900)
+		font-size: var(--font-size-h6)
+		font-weight: 600
+		line-height: 1.4
+		text-decoration: none
+
+		@include cut-string(2)
+
+	&__btn-play
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+	&__tag 
+		position: absolute
+		top: 12px
+		right: 12px
+
+	&__link 
+		&::after
+			content: " "
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+
+		@include hover 
+			+ .media-card
+				&__photo 
+					.media-card__photo
+						&-img 
+							transform: scale(1.02)
+
+

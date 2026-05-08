@@ -1,0 +1,33 @@
+.filters-modal
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+
+	&__top
+		position: sticky
+		top: -1px
+		z-index: var(--z-index-header)
+		background-color: var(--color-neutral-100)
+		display: flex
+		padding-bottom: 12px
+		padding-top: 12px
+		margin-bottom: 12px
+		margin-top: -12px
+		border-bottom: var(--border-default)
+
+	&__close
+		margin-left: auto
+
+	&__form
+		display: flex
+		flex-direction: column
+		gap: 32px
+		flex-grow: 1
+
+	&__submit
+		padding-top: 6px
+		margin-top: auto
+
+		.btn
+			&:only-child
+				width: 100%

@@ -1,0 +1,13 @@
+mixin base-gallery(id, items = [])
+	base-gallery(gallery-id=`${id}`)
+		template(#default)
+			.gallery(id=`${id}`)&attributes(attributes)
+				each item in items
+					a.gallery__item(href=`${item.img}` data-pswp-width=`${item.width}` data-pswp-height=`${item.height}` target="_blank")
+						+image(
+							{
+								src: `img/${item.img}`,
+								width: item.width,
+								height: item.height,
+							},
+						)

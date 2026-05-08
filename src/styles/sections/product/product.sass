@@ -1,0 +1,93 @@
+.product
+	display: flex
+	flex-direction: column
+
+	&__wrapper
+		@include media('max', 'tablet')
+			display: flex
+			flex-direction: column
+
+	&__top
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		flex-wrap: wrap
+		gap: fluid(20,40) fluid(12,24)
+
+		@include media('max', 'tablet')
+			display: contents
+
+		&:not(:last-child)
+			margin-bottom: fluid(12,64)
+
+	&__breadcrumbs
+		width: 100%
+
+		@include media('max', 'tablet')
+			order: -1
+			margin-bottom: fluid(12,20)
+
+	&__title
+		flex-grow: 1
+		max-width: 1065px
+
+		@include media('max', 'tablet')
+			order: 0
+			margin-bottom: fluid(12,20)
+
+	&__share
+		flex-shrink: 0
+
+		@include media('max', 'tablet')
+			margin-bottom: fluid(12,20)
+			order: 2
+			align-self: flex-start
+
+	&__cont
+		display: grid
+		grid-template-columns: repeat(12, minmax(0,1fr))
+		gap: fluid(20,40)
+		align-items: flex-start
+
+		@include media('max', 'tablet')
+			display: contents
+
+	&__gallery
+		grid-column: 1/5
+		width: 100%
+
+		@include media('max', 'laptop')
+			grid-column: 1/7
+
+		@include media('max', 'tablet')
+			order: 1
+			margin-bottom: fluid(12,20)
+
+	&__desc
+		grid-column: 5/9
+		width: 100%
+		display: flex
+		flex-direction: column
+		gap: fluid(40,48)
+
+		@include media('max', 'laptop')
+			grid-column: -1/1
+			order: 3
+
+	&__info
+		grid-column: 10/13
+		width: 100%
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+		@include media('max', 'pc')
+			grid-column: 9/13
+
+		@include media('max', 'laptop')
+			grid-column: 7/13
+
+		@include media('max', 'tablet')
+			order: 2
+			margin-bottom: 40px
+			gap: 40px

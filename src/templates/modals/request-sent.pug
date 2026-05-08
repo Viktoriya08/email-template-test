@@ -1,0 +1,14 @@
+base-modal(id="modal-request-sent")
+	template(#default="{close}")
+		section.modal
+			button(data-dialog-close aria-label="закрыть" @click="close").modal__close
+				+icon('close').modal__close-icon
+
+			.modal__wrapper
+				h3.modal__title.title.title--h4 Ваш запрос успешно отправлен
+
+				p.modal__text Ожидайте звонка менеджера в ближайшее время
+
+				.modal__bottom.modal__buttons
+					button.btn.btn--color-primary(@click="close")
+						span.btn__text Понятно

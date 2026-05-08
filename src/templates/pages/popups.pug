@@ -1,0 +1,70 @@
+section.project-view
+	.wrapper
+		.pv-title
+			a(href=`${BASE_URL}`).pv-logo
+				+image(
+					{
+						src: `img/logo.svg`,
+						width: 270,
+						height: 70,
+					},
+				).pv-logo__image
+			h1.pv-title__text UI Kit
+
+		.pv-blocks.pv-blocks--list
+			.pv-block
+				h3.pv-block__title Modals
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button(@click="openModal('modal-callback')").btn.btn--color-primary Связаться с нами
+
+						.pv-block__item
+							button(@click="openModal('modal-confirm')").btn.btn--color-primary Ваш запрос отправлен
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button(@click="openModal('modal-supplies')").btn.btn--color-primary Ожидаемые поставки
+
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button(@click="openModal('inform-receipt-modal')").btn.btn--color-primary Сообщить о поступлении
+						.pv-block__item
+							button(@click="openModal('one-click-modal')").btn.btn--color-primary Купить в один клик
+						.pv-block__item
+							button(@click="openModal('filters-modal')").btn.btn--color-primary Фильтры
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button(@click="openModal('modal-password-pa')").btn.btn--color-primary Ваш пароль успешно изменен
+						.pv-block__item
+							button(@click="openModal('modal-application-pa')").btn.btn--color-primary Ваша заявка успешно отправлена
+
+		.pv-blocks.pv-blocks--list
+			.pv-block
+				h3.pv-block__title Modal Gallery
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button(@click="openModal('modal-gallery')").btn.btn--color-primary Галерея
+						.pv-block__item
+							button(@click="openModal('modal-video')").btn.btn--color-primary Видео
+
+		.pv-blocks.pv-blocks--list
+			.pv-block
+				h3.pv-block__title Modal Личный кабинет
+				.pv-block__preview
+					.pv-block__items.pv-block__items--row
+						.pv-block__item
+							button(@click="openModal('modal-add-company')").btn.btn--color-primary добавление юр. лица
+						.pv-block__item
+							button(@click="openModal('modal-editing-personal')").btn.btn--color-primary редактирование личных данных
+						.pv-block__item
+							button(@click="openModal('modal-request-sent')").btn.btn--color-primary Ваш запрос успешно отправлен
+						.pv-block__item
+							button(@click="openModal('modal-go-out')").btn.btn--color-primary Вы уверены, что хотите выйти?
+						.pv-block__item
+							button(@click="openModal('modal-error-balance')").btn.btn--color-primary Сообщить об ошибке в балансе
+
+
+
+

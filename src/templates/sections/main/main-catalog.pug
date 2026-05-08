@@ -1,0 +1,59 @@
+section.page-section.main-catalog
+	.wrapper.main-catalog__wrapper
+		.main-catalog__cont
+			.page-section__top.page-section__top--border
+				h2.page-section__title.title.title--h2 Категории товаров
+
+			.categories
+				.categories__list.categories__list--main
+					each category, i in ['Бамперы', 'Капоты', 'Крылья', 'Фары', 'Радиаторы', 'Бачки']
+						.categories__item.category-card.category-card--main
+							+image(
+								{
+									src: 'img/catalog/category-'+(i + 1)+'.webp',
+									width: 162,
+									height: 108,
+								}
+							).category-card__img
+							span.category-card__name=category
+							a(href="#").category-card__link=category
+
+				categories-toggle(btn-class="btn--color-primary categories__toggle-btn").categories__toggle
+					template(#list)
+						.categories__list.categories__list--mini.categories__toggle-list
+							each category, i in ['Брызговик', 'Заглушка', 'Подкрылок', 'Защита двигателя', 'Зеркало', 'Стоп сигнал']
+								.categories__item.category-card.category-card--mini
+									+image(
+										{
+											src: 'img/catalog/category-' + (i + 1) + '.webp',
+											width: 162,
+											height: 108,
+										}
+									).category-card__img
+									span.category-card__name=category
+									a(href="#").category-card__link=category
+
+							each category, i in ['Дверь', 'Лампы', 'Клипсы', 'Решетка радиатора', 'Диффузор', 'Крышка багажника']
+								.categories__item.category-card.category-card--mini
+									+image(
+										{
+											src: 'img/catalog/category-' + (i + 1) + '.webp',
+											width: 162,
+											height: 108,
+										}
+									).category-card__img
+									span.category-card__name=category
+									a(href="#").category-card__link=category
+
+
+							each category, i in ['Крепление бампера', 'Рамка радиатора', 'Противотуманная фара', 'Поворотник', 'Пробка радиатора']
+								.categories__item.category-card.category-card--mini
+									+image(
+										{
+											src: 'img/catalog/category-' + (i + 1) + '.webp',
+											width: 162,
+											height: 108,
+										}
+									).category-card__img
+									span.category-card__name=category
+									a(href="#").category-card__link=category

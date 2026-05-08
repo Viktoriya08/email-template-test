@@ -1,0 +1,75 @@
+section.page-header.page-header--info-page
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'Контакты']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 Контакты
+
+section.page-section
+	.wrapper
+		include /sections/info-pages/contacts
+
+
+//-Наша команда
+section.page-section
+	.wrapper
+		+staff('Наша команда', 
+		[
+			{
+				name: 'Павел',
+				text: 'Собственник',
+				img: 'staff-1.jpg',
+				email: 'www.ua74.ru@gmail.com'
+			},
+			{
+				name: 'Ирина',
+				text: 'Исполнительный директор',
+				img: 'staff-2.jpg',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+			{
+				name: 'Иван',
+				text: 'Руководитель отдела закупок',
+				img: 'staff-3.jpg',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+			{
+				name: 'Юрий',
+				text: 'Руководитель отдела закупок',
+				img: 'staff-4.jpg',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+			{
+				name: 'Владимир',
+				text: 'Менеджер по продажам',
+				img: 'staff-5.jpg',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+			{
+				name: 'Евгений',
+				text: 'Менеджер по продажам',
+				img: 'staff-6.jpg',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+			{
+				name: 'Артур',
+				text: 'Менеджер по продажам',
+				img: 'staff-7.jpg',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+			{
+				name: 'Валентин Александрович Даниленко',
+				text: 'Менеджер по продажам автозапчастей для иностранных автомобилей (эта плашка для примера, если много текста)',
+				email: 'www.ua74.ru@gmail.com',
+				phones: ['8 351 729-93-00', ',  8 995 307-72-07']
+			},
+		])
+
+
+//- Ответим на ваши вопросы
+include ../blocks/form-questions

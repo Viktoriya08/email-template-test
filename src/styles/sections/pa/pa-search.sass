@@ -1,0 +1,53 @@
+.pa-search
+
+	&__wrapper 
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-end
+		gap: fluid(12, 40)
+
+	&__search
+		flex-grow: 1
+
+	&__period
+		@include media("max", "tablet")
+			width: 100%
+
+		&.inputs-period
+			.input-text
+				padding-right: 40px
+
+			.default-input__input
+				width: 210px
+				min-width: 210px
+
+				@include media("max", "tablet")
+					width: auto
+					min-width: auto
+
+				&::after
+					content: ' '
+					position: absolute
+					top: 50%
+					right: 16px
+
+					display: block
+
+					size: 20px
+
+					background-color: var(--color-neutral-500)
+					mask-image: url("/img/icons/calendar-2.svg")
+					mask-position: center
+					mask-repeat: no-repeat
+					mask-size: 100%
+
+					transform: translate(0, -50%)
+
+	&__select 
+		flex-grow: 0.015
+
+		@include media("max", "tablet")
+			width: 100%
+
+	&:not(:last-child)
+		margin-bottom: fluid(24,32)

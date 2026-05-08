@@ -1,0 +1,161 @@
+.catalog-filters
+	display: flex
+	flex-direction: column
+	gap: fluid(20,24)
+
+	&__brands
+		padding: fluid(16,20)
+		border-radius: var(--radius-m)
+		background-color: var(--color-neutral-200)
+
+	&__item
+		display: flex
+
+		&:not(:last-child)
+			padding-bottom: 10px
+			margin-bottom: 10px
+			border-bottom: 1px solid var(--color-neutral-300)
+
+		&:not(.filters-brand)
+			padding-left: 20px
+
+	&__link
+		--link-font-weight: 600
+		--link-font-size: var(--font-size-text-l)
+
+		max-width: 300px
+		width: 100%
+		margin-left: auto
+		justify-content: space-between
+		padding: 4px 12px
+		border-radius: var(--radius-l)
+		transition: color .3s ease, background-color .3s ease
+
+		&.active
+			--link-color: var(--color-neutral-100)
+
+			background-color: var(--color-primary-600)
+
+			@include hover
+				background-color: var(--color-primary-500)
+
+.filters-brand
+	&__title
+		width: 20px
+		flex-shrink: 0
+		font-size: var(--font-size-text-l)
+		font-weight: 600
+		line-height: var(--line-height-text)
+		text-transform: uppercase
+		color: var(--color-neutral-700)
+
+	&__list
+		max-width: 300px
+		width: 100%
+		margin-left: auto
+		display: flex
+		flex-direction: column
+
+	&__name
+		font-size: var(--font-size-text-l)
+		line-height: var(--line-height-text)
+		font-weight: 600
+
+	&__models
+		padding: 10px 0
+		display: flex
+		flex-direction: column
+		gap: 14px
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		
+		&-label
+			margin-bottom: 4px
+			padding-left: 12px
+			font-size: var(--font-size-text-m)
+			font-weight: 600
+			line-height: var(--line-height-text)
+			text-transform: uppercase
+			color: var(--color-neutral-700)
+
+		&-el
+			appearance: none
+			background-color: transparent
+			padding: 4px 12px
+			border-radius: var(--radius-l)
+			border: 0
+			font-size: var(--font-size-text-m)
+			line-height: var(--line-height-text)
+			text-align: left
+			cursor: pointer
+
+			transition: color .3s ease, background-color .3s ease
+
+			&:focus
+				outline: none
+
+			&:focus-visible
+				outline: none
+				color: var(--color-primary-600)
+
+			@include hover
+				color: var(--color-primary-500)
+
+			&:active
+				color: var(--color-primary-700)
+
+			&:not(:last-child)
+				margin-bottom: 2px
+
+			&.active
+				background-color: var(--color-primary-600)
+				color: var(--color-neutral-100)
+
+				@include hover
+					background-color: var(--color-primary-500)
+
+.brand-accordion
+	&.active
+		.brand-accordion__icon
+			transform: rotate(180deg)
+
+	&__header
+		appearance: none
+		width: 100%
+		padding: 4px 12px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		cursor: pointer
+		background-color: transparent
+		border: 0
+		border-radius: var(--radius-l)
+		box-shadow: none
+		transition: color .3s ease
+
+		&:focus-visible
+			outline: 2px solid var(--color-primary-600)
+			outline-offset: 0
+
+		@include hover
+			color: var(--color-primary-500)
+
+		&:active
+			color: var(--color-primary-700)
+
+
+	&__icon
+		flex-shrink: 0
+		transition: transform .3s ease
+
+		&-image
+			display: block
+			width: 20px
+			height: 20px
+			object-fit: contain
+			color: currentColor
+
+

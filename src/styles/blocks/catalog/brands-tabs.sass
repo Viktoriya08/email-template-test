@@ -1,0 +1,29 @@
+.brands-tabs
+	display: flex
+	flex-direction: column
+	gap: 20px
+
+	&__list
+		display: flex
+		gap: 4px
+
+	&__item
+		width: calc(100%/5 - 4px)
+
+	&__tab
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 0
+		border-radius: 0
+		padding: 0
+		background-color: transparent
+		font-size: 16px
+		text-transform: uppercase
+		font-weight: 600
+		line-height: var(--line-height-text)
+		transition: color .3s ease
+
+		&.active
+			color: var(--color-primary-600)

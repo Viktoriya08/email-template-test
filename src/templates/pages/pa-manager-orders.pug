@@ -1,0 +1,16 @@
+section.page-header
+	.wrapper
+		
+		include ../sections/pa/head
+		+head()
+
+section.page-section.pa-body
+	.wrapper
+
+		.page-section__tabs.page-section__tabs--border.pa-tabs
+			+pa-tabs(['Список моих клиентов', 'Список заказов моих клиентов', 'Инструкции', 'Мои данные'])
+		
+
+		.pa-body__content
+
+			include ../sections/pa/manager/pa-orders

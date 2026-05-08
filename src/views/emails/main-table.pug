@@ -1,0 +1,40 @@
+extends /emails/_head
+block vars
+	- let title = 'Заголовок письма будет виден в списке писем.'
+	- let bodyClass = null
+
+block head
+
+block content
+	table.main-table(align="center" border="0" cellspacing="0" cellpadding="0" role="presentation")
+
+		//- header
+		include /emails/header
+
+		//- Text-block
+		include /emails/text-block
+
+	//[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+	//<![endif]
+
+	include /emails/table-text-block
+
+	//[if (gte mso 9)|(IE)]>
+		<table width="842" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="color:#fff;">
+			<tr>
+				<td>
+	//<![endif]
+
+	table.main-table(align="center" border="0" cellspacing="0" cellpadding="0" role="presentation")
+
+		//- Footer
+		include /emails/footer
+
+	//[if (gte mso 9)|(IE)]>
+		</td>
+		</tr>
+		</table>
+	//<![endif]

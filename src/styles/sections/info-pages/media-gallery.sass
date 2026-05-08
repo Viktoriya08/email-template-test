@@ -1,0 +1,40 @@
+.media-gallery
+	display: grid
+	grid-template-columns: repeat(4, minmax(0, 1fr))
+	gap: fluid(8, 40)
+
+	@include media("max", "laptop-xl")
+		grid-template-columns: repeat(3, minmax(0, 1fr))
+
+	@include media("max", "tablet-xl")
+		grid-template-columns: repeat(2, minmax(0, 1fr))
+
+	&__item 
+		aspect-ratio: 430/290
+
+		overflow: hidden
+
+		border-radius: var(--radius-s)
+		background-color: var(--color-neutral-200)
+		background-image: url("/img/media/icon-photo.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 64px
+
+		@include media("max", "tablet")
+			&:nth-child(3n)
+				grid-column: span 2
+				aspect-ratio: 300/200
+
+		&-img 
+			--aspect-ratio: 430/290
+			--width: 100%
+			--object-fit: cover
+			--radius: var(--radius-s)
+
+			@include media("max", "tablet")
+				--aspect-ratio: initial
+
+	&:not(:last-child)
+		margin-bottom: fluid(24,40)
+

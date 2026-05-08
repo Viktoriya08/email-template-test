@@ -1,0 +1,24 @@
+.header-catalog
+	display: flex
+	gap: fluid(42,64)
+
+	&__list
+		display: flex
+		flex-direction: column
+
+		margin-bottom: -16px
+
+		&--column
+			display: block
+			column-count: 3
+			column-gap: fluid(42,64)
+
+	&__item
+		max-width: 200px
+		width: 100%
+
+		padding-bottom: 16px
+
+	&__link
+		justify-content: flex-start
+		text-align: left

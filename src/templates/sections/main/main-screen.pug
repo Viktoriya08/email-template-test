@@ -1,0 +1,58 @@
+section.page-section.main-screen
+	.main-screen__wrapper.wrapper
+		.main-screen__search.search
+			search-header-form
+
+		.main-screen__banner.main-banner
+			main-banner-slider.main-banner__slider
+				template(#default)
+					.swiper-slide.main-banner__slide
+						+image(
+							{
+								src: 'img/main/banner-1.webp',
+								width: '',
+								height: '',
+								lazy: false,
+							},
+							[
+								{
+									src: 'img/main/banner-1-mob.webp',
+									mediaQuery: 'max-width',
+									breakpoint: 768,
+								}
+							]
+						).main-banner__img
+
+						a(href="#").main-banner__link Японские фары в наличии
+
+					-for(var i = 0; i < 4; i ++)
+						.swiper-slide.main-banner__slide
+							+image(
+								{
+									src: 'img/main/banner-1.webp',
+									width: '',
+									height: ''
+								},
+								[
+									{
+										src: 'img/main/banner-1-mob.webp',
+										mediaQuery: 'max-width',
+										breakpoint: 768,
+									}
+								]
+							).main-banner__img
+
+							a(href="#").main-banner__link Японские фары в наличии
+
+		.main-screen__catalog
+			.main-screen__brands
+				.catalog-brands.catalog-brands--main
+					.catalog-brands__top
+						.catalog-brands__title.title.title--h3 Выберите марку авто
+
+					include /blocks/catalog/brands-list
+
+					include /blocks/catalog/brands-mobile
+
+			.main-screen__models
+				include /blocks/catalog/models-search

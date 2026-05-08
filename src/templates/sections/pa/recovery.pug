@@ -1,0 +1,21 @@
+.pa-form 
+	.pa-form__wrapper
+		.pa-form__head
+			h1.pa-form__title.title.title--h2 Восстановление пароля
+
+		tabs-template
+			template(#tabs="{changeTab}")
+				.pa-form__tabs 
+					border-tabs(
+						:tabs="[{label: 'Телефон', value: 'phone'}, {label: 'E-mail', value: 'email'}]"
+						@change="changeTab")
+
+			template(#content="{currentTab}")
+				.pa-form__form
+					recovery-phone-form(v-show="currentTab === 'phone'")
+
+					.pa-form__box(v-show="currentTab === 'email'")
+						recovery-email-form
+
+					.pa-form__info Личный кабинет доступен <span>только для оптовых покупателей </span>  , если вы оптовый покупатель и еще не зарегистрированы, пожалуйста, #[a(href="/" target="_blank") свяжитесь с нами]  , и мы вас зарегистрируем, так как регистрация в личном кабинете осуществляется только через нашего менеджера.
+

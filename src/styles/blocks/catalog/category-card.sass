@@ -1,0 +1,73 @@
+.category-card
+	--category-card-height: fluid(122,200)
+	--category-card-direction: column
+	--category-card-gap: fluid(8,16)
+	--category-card-padding: fluid(16,20)
+	--category-card-radius: var(--radius-m)
+	--category-card-img: 138/94
+	--category-card-img-width: 138px
+	--category-card-text: center
+	--category-card-font: var(--font-size-text-l)
+
+	position: relative
+	min-height: var(--category-card-height)
+	display: flex
+	flex-direction: var(--category-card-direction)
+	align-items: center
+	gap: var(--category-card-gap)
+	padding: var(--category-card-padding)
+	border-radius: var(--category-card-radius)
+	background-color: var(--color-neutral-200)
+	transition: background-color .3s ease
+
+	@include hover
+		background-color: var(--color-primary-100)
+
+	@include media('max', 'tablet')
+		--category-card-radius: var(--radius-s)
+		--category-card-img: 74/48
+		--category-card-img-width: 74px
+
+	&__img
+		--aspect-ratio: var(--category-card-img)
+		--object-fit: contain
+
+		flex-shrink: 0
+		max-width: var(--category-card-img-width)
+
+	&__name
+		flex-grow: 1
+		display: flex
+		align-items: center
+		text-align: var(--category-card-text)
+
+		font-size: var(--category-card-font)
+		font-weight: 600
+		line-height: var(--line-height-text)
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		font-size: 0
+
+	&--main
+		@include media('min', 'tablet')
+			--category-card-padding: fluid(16,24)
+			--category-card-gap: fluid(8,20)
+			--category-card-img: 162/108
+			--category-card-img-width: 162px
+
+	&--mini
+		@include media('min', 'tablet')
+			--category-card-height: 56px
+			--category-card-direction: row
+			--category-card-gap: 12px
+			--category-card-padding: 8px 16px
+			--category-card-radius: var(--radius-s)
+			--category-card-img: 60/40
+			--category-card-img-width: 60px
+			--category-card-text: left
+			--category-card-font: var(--font-size-text-m)

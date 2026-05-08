@@ -1,0 +1,19 @@
+.pa-enter__wrapper 
+	.pa-enter__header 
+		a(href="/").pa-enter__logo
+			+image(
+				{
+					src: `img/logo-white.svg`,
+					alt: 'KuzovProject',
+					width: '196',
+					height: '32',
+				},
+			).pa-enter__logo-img
+
+		.pa-enter__prev 
+			a(href="/").pa-enter__link.btn.btn--transparent-revert 
+				+icon('chevron-left-md').btn__icon
+				span.btn__text Вернуться на сайт
+
+	.pa-enter__content 
+		include ../sections/pa/no-enter

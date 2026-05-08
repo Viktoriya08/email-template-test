@@ -1,0 +1,34 @@
+.main-banner
+	&__slider
+		border-radius: var(--radius-m)
+
+		.swiper-navigation
+			position: absolute
+			bottom: fluid(16,24)
+			left: fluid(16,24)
+			right: fluid(16,24)
+
+		.swiper-buttons
+			@include media('max', 'mobile-xl')
+				display: none !important
+
+	&__slide
+		position: relative
+
+	&__img
+		--width: 100%
+		--aspect-ratio: 1840/180
+		--radius: var(--radius-m)
+		--object-fit: cover
+
+		@include media('max', 'tablet')
+			--aspect-ratio: 296/240
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		font-size: 0
+

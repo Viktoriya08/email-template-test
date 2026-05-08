@@ -1,0 +1,57 @@
+.about
+		
+	&__banner
+		&:not(:last-child)
+			margin-bottom: fluid(24, 56)
+
+		&-img 
+			--aspect-ratio: 1840/560
+			--object-fit: cover
+			--radius: var(--radius-m)
+			--width: 100%
+
+			@include media("max", "mobile-xl")
+				--aspect-ratio: 300/90
+
+	&__grid 
+		display: grid
+		grid-template-columns: repeat(12, minmax(0, 1fr))
+		column-gap: fluid(10,20)
+		row-gap: 40px
+
+	&__content 
+		grid-column: 7/-1
+		max-width: 590px
+
+		@include media("max", "tablet")
+			grid-column: 2/12
+
+		@include media("max", "mobile-xl")
+			grid-column: 1/-1
+
+		:where(h2, h3, h4, h5, h6):where(:not([class]))
+			&:not(:last-child)
+				margin-bottom: fluid(16, 40)
+
+	&__title 
+		grid-column: 2/7
+
+		@include media("max", "tablet")
+			grid-column: 2/12
+
+		@include media("max", "mobile-xl")
+			grid-column: 1/-1
+
+	&__gallery
+		.swiper
+			@include media("max", "mobile-xl")
+				@include out-wrapper
+
+		&-img 
+			--aspect-ratio: 607/460
+			--object-fit: cover
+			--radius: var(--radius-m)
+			--width: 100%
+
+	&:not(:last-child)
+		margin-bottom: fluid(32,120)

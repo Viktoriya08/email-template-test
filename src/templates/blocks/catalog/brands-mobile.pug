@@ -1,0 +1,132 @@
+.catalog-brands__mobile
+	.catalog-brands__rows
+		.catalog-brands__row
+			.brands-tabs
+				tabs-template
+					template(#tabs="{changeTab}")
+						brands-tabs(
+							:tabs="[{label: 'A', value: 'A'}, {label: 'B', value: 'B'}, {label: 'C', value: 'C'}, {label: 'D', value: 'D'}, {label: 'F', value: 'F'}]"
+							@change="changeTab")
+
+					template(#content="{currentTab}")
+						.catalog-brands__group-list(v-show="currentTab === 'A'")
+							a(href="#").catalog-brands__group-el.link Acura
+							a(href="#").catalog-brands__group-el.link Audi
+
+						.catalog-brands__group-list(v-show="currentTab === 'B'")
+							a(href="#").catalog-brands__group-el.link Bmw
+
+						.catalog-brands__group-list(v-show="currentTab === 'C'")
+							a(href="#").catalog-brands__group-el.link Changan
+							a(href="#").catalog-brands__group-el.link Chery
+							a(href="#").catalog-brands__group-el.link Chevrolet
+							a(href="#").catalog-brands__group-el.link Chrysler
+							a(href="#").catalog-brands__group-el.link Citroen
+
+						.catalog-brands__group-list(v-show="currentTab === 'D'")
+							a(href="#").catalog-brands__group-el.link Daewoo
+							a(href="#").catalog-brands__group-el.link Daihatsu
+							a(href="#").catalog-brands__group-el.link Datsun
+							a(href="#").catalog-brands__group-el.link Dodge
+
+						.catalog-brands__group-list(v-show="currentTab === 'F'")
+							a(href="#").catalog-brands__group-el.link Fiat
+							a(href="#").catalog-brands__group-el.link Ford
+
+		.catalog-brands__row
+			.brands-tabs
+				tabs-template
+					template(#tabs="{changeTab}")
+						brands-tabs(
+							:tabs="[{label: 'G', value: 'G'}, {label: 'H', value: 'H'}, {label: 'I', value: 'I'}, {label: 'J', value: 'J'}, {label: 'K', value: 'K'}]"
+							@change="changeTab")
+
+					template(#content="{currentTab}")
+						.catalog-brands__group-list(v-show="currentTab === 'G'")
+							a(href="#").catalog-brands__group-el.link Geely
+
+						.catalog-brands__group-list(v-show="currentTab === 'H'")
+							a(href="#").catalog-brands__group-el.link Haval
+							a(href="#").catalog-brands__group-el.link Honda
+							a(href="#").catalog-brands__group-el.link Hyndai
+
+						.catalog-brands__group-list(v-show="currentTab === 'I'")
+							a(href="#").catalog-brands__group-el.link Infiniti
+
+						.catalog-brands__group-list(v-show="currentTab === 'J'")
+							a(href="#").catalog-brands__group-el.link Jaguar
+							a(href="#").catalog-brands__group-el.link Jeep
+
+						.catalog-brands__group-list(v-show="currentTab === 'K'")
+							a(href="#").catalog-brands__group-el.link Kia
+
+		.catalog-brands__row
+			.brands-tabs
+				tabs-template
+					template(#tabs="{changeTab}")
+						brands-tabs(
+							:tabs="[{label: 'L', value: 'L'}, {label: 'M', value: 'M'}, {label: 'N', value: 'N'}, {label: 'O', value: 'O'}, {label: 'P', value: 'P'}]"
+							@change="changeTab")
+
+					template(#content="{currentTab}")
+						.catalog-brands__group-list(v-show="currentTab === 'L'")
+							a(href="#").catalog-brands__group-el.link Lada
+							a(href="#").catalog-brands__group-el.link Land Rover
+							a(href="#").catalog-brands__group-el.link Lexus
+							a(href="#").catalog-brands__group-el.link Lifan
+
+						.catalog-brands__group-list(v-show="currentTab === 'M'")
+							a(href="#").catalog-brands__group-el.link Mazda
+							a(href="#").catalog-brands__group-el.link Mercedes Benz
+							a(href="#").catalog-brands__group-el.link Mini
+							a(href="#").catalog-brands__group-el.link Mitsubishi
+
+						.catalog-brands__group-list(v-show="currentTab === 'N'")
+							a(href="#").catalog-brands__group-el.link Nissan
+
+						.catalog-brands__group-list(v-show="currentTab === 'O'")
+							a(href="#").catalog-brands__group-el.link Omoda
+							a(href="#").catalog-brands__group-el.link Opel
+
+						.catalog-brands__group-list(v-show="currentTab === 'P'")
+							a(href="#").catalog-brands__group-el.link Peugeot
+							a(href="#").catalog-brands__group-el.link Plymouth
+							a(href="#").catalog-brands__group-el.link Pontiac
+							a(href="#").catalog-brands__group-el.link Porsche
+
+		.catalog-brands__row
+			.brands-tabs
+				tabs-template
+					template(#tabs="{changeTab}")
+						brands-tabs(
+							:tabs="[{label: 'R', value: 'R'}, {label: 'S', value: 'S'}, {label: 'T', value: 'T'}, {label: 'V', value: 'V'}]"
+							@change="changeTab")
+
+					template(#content="{currentTab}")
+						.catalog-brands__group-list(v-show="currentTab === 'R'")
+							a(href="#").catalog-brands__group-el.link Ravon
+							a(href="#").catalog-brands__group-el.link Renault
+
+						.catalog-brands__group-list(v-show="currentTab === 'S'")
+							a(href="#").catalog-brands__group-el.link Seat
+							a(href="#").catalog-brands__group-el.link Skoda
+							a(href="#").catalog-brands__group-el.link Ssang Yong
+							a(href="#").catalog-brands__group-el.link Subaru
+							a(href="#").catalog-brands__group-el.link Suzuki
+
+						.catalog-brands__group-list(v-show="currentTab === 'T'")
+							a(href="#").catalog-brands__group-el.link Toyota
+
+						.catalog-brands__group-list(v-show="currentTab === 'V'")
+							a(href="#").catalog-brands__group-el.link Volkswagen
+							a(href="#").catalog-brands__group-el.link Volvo
+
+	.catalog-brands__bottom
+		.catalog-brands__links
+			a(href="#").catalog-brands__links-el.link.link--color
+				+icon('procent').link__icon
+				| Дисконтные товары
+
+			a(href="#").catalog-brands__links-el.link.link--color
+				+icon('car').link__icon
+				| Универсальные товары

@@ -1,0 +1,15 @@
+section.page-header
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'Марки авто', 'Hyunda, Бамперi']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 Hyundai, Бампер
+
+section.page-section.catalog
+	.wrapper
+		.page-section__top.page-section__top--border
+			h2.page-section__title.title.title--h3 Выберите модель авто
+
+		include /sections/catalog/catalog-models
+
+
+include /sections/catalog/catalog-models-seo

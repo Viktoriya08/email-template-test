@@ -1,0 +1,22 @@
+mixin advantages-slider(items = [])
+	.advantages-slider
+
+		advantages-slider
+			template(#default)
+				each item, i in items
+
+					article.swiper-slide.advantages-slider__slide
+					
+						.advantages-slider__item 
+
+							.advantages-slider__img
+								+image(
+								{
+									src: `img/${item.img}`,
+									width: 80,
+									height: 80,
+								}
+							).advantages-slider__img-icon
+
+							.advantages-slider__title.title.title--h4!=item.title
+							.advantages-slider__text!=item.text

@@ -1,0 +1,16 @@
+.search-section
+	&__empty
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: fluid(24,32)
+
+		&-text
+			max-width: 900px
+			width: 100%
+			font-size: var(--font-size-text-l)
+			font-weight: 600
+
+		&-btn
+			@include media('max', 'mobile-xl')
+				width: 100%

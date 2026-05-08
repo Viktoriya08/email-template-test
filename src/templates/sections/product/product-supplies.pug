@@ -1,0 +1,39 @@
+.product-supplies
+	.product-supplies__top
+		span.product-supplies__title.title.title--h5 Ожидаемые поставки в&nbsp;Челябинск
+		span.product-supplies__info.bage.bage--color Обновлено 10.01.2024
+
+	text-clamp.product-supplies__cont
+		template(#default="{showMore, showLess}")
+			.product-supplies__list.text-clamp__text(data-clamp-text)
+				a(href="#").product-supplies__item
+					span.product-supplies__date 21.05.2024
+					span.product-supplies__count 1 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 22.05.2024
+					span.product-supplies__count 5 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 23.05.2024
+					span.product-supplies__count 10 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 21.05.2024
+					span.product-supplies__count 1 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 22.05.2024
+					span.product-supplies__count 5 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 23.05.2024
+					span.product-supplies__count 10 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 21.05.2024
+					span.product-supplies__count 1 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 22.05.2024
+					span.product-supplies__count 5 шт
+				a(href="#").product-supplies__item
+					span.product-supplies__date 23.05.2024
+					span.product-supplies__count 10 шт
+
+			.product-supplies__btns.text-clamp__btns
+				button.btn.btn--transparent-color.text-clamp__btn-less(@click="showLess") Свернуть
+				button.btn.btn--transparent-color.text-clamp__btn-more(@click="showMore") Показать больше

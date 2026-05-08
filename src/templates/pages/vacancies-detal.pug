@@ -1,0 +1,25 @@
+section.page-header.page-header--info-page
+	.wrapper.page-header__wrapper
+		+breadcrumbs(['Главная', 'Вакансии', 'Менеджер по работе с клиентами']).page-header__breadcrumbs
+		.page-header__cont
+			h1.page-header__title.title.title--h1 Менеджер по работе с клиентами
+
+section.page-section
+	.wrapper
+		include /sections/info-pages/vacancies-detal
+
+
+//-Мы предлагаем
+section.page-section
+	.wrapper
+		include /sections/info-pages/we-offer-vacancies
+
+
+//-Хотите стать частью команды?
+include /sections/info-pages/form-team
+
+
+//-Другие вакансии
+section.page-section
+	.wrapper
+		+vacancies('Другие вакансии', '')

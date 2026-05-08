@@ -1,0 +1,33 @@
+.contacts
+
+	&__grid 
+		display: grid
+		grid-template-columns: repeat(12, minmax(0, 1fr))
+		column-gap: fluid(10,40)
+		row-gap: 32px
+
+	&__map 
+		grid-column: 1/7
+		overflow: hidden
+		border-radius: var(--radius-m)
+
+		@include media("max", "laptop")
+			grid-column: 1/8
+
+		@include media("max", "tablet")
+			grid-column: 1/-1
+
+		.contacts-map
+			height: fluid(320, 560)
+
+
+	&__content 
+		grid-column: 8/12
+
+		@include media("max", "laptop")
+			grid-column: 8/-1
+
+		@include media("max", "tablet")
+			grid-column: 1/-1
+
+

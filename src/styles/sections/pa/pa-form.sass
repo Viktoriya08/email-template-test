@@ -1,0 +1,91 @@
+.pa-form
+	display: flex
+	height: 100%
+	padding: 20px
+	border-radius: var(--radius-m)
+	background-color: var(--color-neutral-100)
+
+	@include media("max", "mobile-xl")
+		padding: 0
+
+	&__wrapper 
+		display: flex
+		flex-direction: column
+		max-width: 480px
+		margin: fluid(20, 80) auto
+
+		@include media("max", "mobile-xl")
+			margin-top: 0
+
+	&__head
+		margin-bottom: fluid(32, 40)
+
+	&__tabs
+		margin-bottom: fluid(28, 40)
+		border-bottom: 2px solid var(--color-neutral-200)
+
+		.tabs
+			margin-bottom: -1px
+
+			&__list
+				width: 100%
+
+			&__item 
+				flex-grow: 1
+
+				.tab 
+					width: 100%
+
+	&__form 
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+		gap: 40px
+
+		.default-input
+			&[type='checkbox']
+				width: fit-content
+
+				.default-input__input 
+					min-width: fit-content
+
+	&__info 
+		margin-top: 20px
+		color: var(--color-neutral-700)
+		font-size: var(--font-size-text-s)
+		line-height: 1.4
+
+		span 
+			color: var(--color-neutral-900)
+
+		a 
+			text-decoration: none
+
+	&__back 
+		margin-bottom: fluid(16, 24)
+
+	&__link
+		&:not(:last-child)
+			margin-bottom: fluid(16, 40)
+			
+	&__contact
+		&-text
+			font-size: var(--font-size-text-m)
+			line-height: 1.4
+
+			&:not(:last-child)
+				margin-bottom: 8px
+
+		&-link 
+			font-size: var(--font-size-text-l)
+			font-weight: 600
+
+	.form
+		&__bottom
+			padding-top: fluid(16, 32)
+
+			&--center 
+				text-align: left
+
+				.form__agree
+					min-width: 100%

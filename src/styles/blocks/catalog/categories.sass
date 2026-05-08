@@ -1,0 +1,62 @@
+.categories
+	--categories-list-grid: repeat(8, minmax(0,1fr))
+	--categories-list-gap: 8px
+
+	@include media('max', 'pc')
+		--categories-list-grid: repeat(6, minmax(0,1fr))
+
+	@include media('max', 'laptop')
+		--categories-list-grid: repeat(4, minmax(0,1fr))
+
+	@include media('max', 'tablet')
+		--categories-list-grid: repeat(3, minmax(0,1fr))
+
+	@include media('max', 'mobile-xl')
+		--categories-list-grid: repeat(2, minmax(0,1fr))
+
+	&__list
+		display: grid
+		grid-template-columns: var(--categories-list-grid)
+		gap: var(--categories-list-gap)
+
+		+ .categories__toggle
+			margin-top: 32px
+
+			@include media('max', 'tablet')
+				margin-top: 8px
+
+		&--main
+			--categories-list-grid: repeat(6, minmax(0,1fr))
+			--categories-list-gap: 14px
+
+			@include media('max', 'laptop-xxl')
+				--categories-list-grid: repeat(4, minmax(0,1fr))
+
+			@include media('max', 'tablet')
+				--categories-list-grid: repeat(3, minmax(0,1fr))
+				--categories-list-gap: 8px
+
+			@include media('max', 'mobile-xl')
+				--categories-list-grid: repeat(2, minmax(0,1fr))
+
+
+		&--mini
+			@include media('min', 'tablet')
+				display: flex
+				flex-wrap: wrap
+
+	&__toggle
+		&-btn
+			display: none
+			margin-top: 16px
+			width: 100%
+
+			@include media('max', 'tablet')
+				display: inline-flex
+
+		&-list
+			@include media('max', 'tablet')
+				display: none
+
+				&.open
+					display: grid

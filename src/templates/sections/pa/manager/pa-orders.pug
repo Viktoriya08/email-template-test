@@ -1,0 +1,31 @@
+.pa-body__search.pa-search.pa-search__wrapper 
+	.pa-search__search
+		input-search(placeholder="Введите ФИО или номер заказа" id="pa-order-search" :tooltips="['First tooltip', 'Second tooltip']")
+	inputs-period(class="pa-search__period")
+
+
+.pa-body__title 
+	h2.title.title--h3 Список заказов
+	.pa-body__count 12 заказов
+
+	a(href="#").pa-body__title-link.link.link--color
+		| Посмотреть все заказы в МойСклад
+		+icon('arrow-link').link__icon
+
+.pa-body__list 
+	order-accordion(quantity-more, tab-paid, tab-accepted, contact)
+
+	order-accordion(tab-paid, tab-accepted , contact)
+
+	order-accordion(tab-paid, tab-accepted, contact)
+
+	order-accordion(tab-paid, tab-accepted , contact)
+
+	order-accordion(tab-paid, tab-accepted, contact)
+
+	order-accordion(tab-paid, tab-accepted , contact)
+
+
+
+.page-section__pagination
+	big-pagination(arrows-style="simple" :total="100" :limit="15" :max-buttons="5")

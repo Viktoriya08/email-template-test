@@ -1,0 +1,29 @@
+.catalog-models
+	.catalog-models__list
+		.catalog-models__item.models-card
+			+image({
+				src: 'img/catalog/model-1.webp',
+				width: 183,
+				heigth: 102,
+			}).models-card__img
+			.models-card__name 1series E87 (04-года)
+			a(href="#").models-card__link 1series E87 (04-года)
+
+		.catalog-models__item.models-card
+			+image({
+				src: 'img/catalog/model-temp.svg',
+				width: 183,
+				heigth: 102,
+			}).models-card__img
+			.models-card__name 1series E87 (04-года)
+			a(href="#").models-card__link 1series E87 (04-года)
+
+		each model, i in ['ACCENT (ТАГАЗ) 00-', 'CRETA 15-', 'ELANTRA (AVANTE) V 11-15', 'ELANTRA III 00-09', 'MATRIX 02-08', 'PORTER TAGAZ (H100) 94-', 'SANTA FE 01-06 (ТАГАЗ 08-)', 'SANTA FE 06-12', '5series E60 (03-09 года)', 'QQ 06-', 'ODYSSEY (SHUTTLE) (RA6,7,8,9) 99-03', 'MAZDA 5 ( PREMACY) (CR W) 05-08']
+			.catalog-models__item.models-card
+				+image({
+					src: 'img/catalog/model-1.webp',
+					width: 183,
+					heigth: 102,
+				}).models-card__img
+				.models-card__name=model
+				a(href="#").models-card__link=model
