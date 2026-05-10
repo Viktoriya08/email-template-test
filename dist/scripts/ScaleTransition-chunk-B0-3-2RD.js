@@ -1,1 +1,0 @@
-import{b as e,e as s,w as a,i as r,T as t}from"./index-CuKUcNeV.js";import{_ as n}from"./_plugin-vue_export-helper-chunk-BCo6x5W8.js";const o=n({},[["render",function(n,o){return e(),s(t,{name:"scale"},{default:a((()=>[r(n.$slots,"default")])),_:3})}]]);export{o as default};

@@ -1,9 +1,0 @@
-mixin pa-tabs(tabs)
-	ul.tabs.tabs__list.tabs__list--gap
-		each elem, i in tabs
-			if i === 0
-				li.tabs__item
-					a.tab.tab--border.active(href="#")=elem 
-			else
-				li.tabs__item
-					a.tab.tab--border(href="#")=elem

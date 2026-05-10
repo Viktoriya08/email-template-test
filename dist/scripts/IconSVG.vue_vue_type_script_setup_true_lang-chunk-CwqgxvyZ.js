@@ -1,0 +1,1 @@
+import{d as s,b as n,g as a,h as e}from"./index-6KYmnAOa.js";const i={"aria-hidden":"true"},o=["xlink:href"],r=s({__name:"IconSVG",props:{name:{}},setup:s=>(s,r)=>(n(),a("svg",i,[e("use",{"xlink:href":`/local/client-app/dist/img/icons.svg#icon-${s.name}`},null,8,o)]))});export{r as _};
