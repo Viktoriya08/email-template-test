@@ -3,25 +3,28 @@ tr
 		table(border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;")
 			tr
 				td.footer__head(style="text-align: center")
-					//[if (gte mso 9)|(IE)]>
-						<table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
-						<tr>
-						<td>
-					//<![endif]
+					|<!--[if (gte mso 9)|(IE)]>
+					|<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+					|<tr>
+					|<td>
+					|<![endif]-->
 					table.footer__head-column.footer-head-logo( border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: left;")
 						tbody.width-100
 							tr.width-100
 								td.footer__column__td
 									table(border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%; text-align: left;")
 										tr
-											td(style="width: 100%;")
+											td(style="width: 100%;").footer__logo-link
 												a(href="https://viktoriya08.github.io/email-template-test/dist/views/emails/main.html").footer__logo-link
 													img.footer__logo(src="https://viktoriya08.github.io/email-template-test/dist/img/logo-test.png" alt="Logo" border="0" width="154")
 
+										tr
+											td(style="width: 100%;")
 												a(href="tel:+78008008080").footer__text-gray.footer__tell 8 800 800 80 80
-					//[if (gte mso 9)|(IE)]>
-						</td><td>
-					//<![endif]
+					|<!--[if (gte mso 9)|(IE)]>
+					|</td>
+					|<td>
+					|<![endif]-->
 					table.footer__head-column( border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: right;")
 						tbody.width-100
 							tr.width-100
@@ -38,11 +41,11 @@ tr
 															td.social__box
 																a.social__link(href="https://viktoriya08.github.io/email-template-test/dist/views/emails/main.html" target="_blank")
 																	img.social__img(src="https://viktoriya08.github.io/email-template-test/dist/img/test-tg.png" alt="логотип месенджера телеграмм" border="0" width="45")
-					//[if (gte mso 9)|(IE)]>
-						</td>
-						</tr>
-						</table>
-					//<![endif]
+					|<!--[if (gte mso 9)|(IE)]>
+					|</tr>
+					|</td>
+					|</table>
+					|<![endif]-->
 			tr
 				td.footer__line-td(align="center")
 					.footer__line

@@ -49,43 +49,37 @@ html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microso
 					border: 1px solid #fff !important;
 				}
 			}
-			@media screen and (max-width: 400px){
-				.footer__logo{
-					width: 100% !important;
-					max-width: 100% !important;
-				}
-			}
 			/* Custom Dark Mode Colors */
 			:root{
 				color-scheme: light dark;
 				supported-color-schemes: light dark;
 			}
 
-		//[if (gte mso 9)|(IE)]>
-			<style type="text/css">
-				table {border-collapse: collapse !important;}
-			</style>
-		//<![endif]
+		|<!--[if (gte mso 9)|(IE)]>
+		|	<style type="text/css">
+		|		table {border-collapse: collapse !important;}
+		|	</style>
+		|<![endif]-->
 
 		block head
 
 	//- Вес письма не более 102kb !!!!
-	body.body
+	body.body(bgcolor="#F5F2ED")
 
-		//[if (gte mso 9)|(IE)]>
-			<style type="text/css">
-				body {
-					background-color: #fff !important;
-				}
-				body,
-				table,
-				td,
-				p,
-				a {
-					font-family: sans-serif, Arial !important;
-				}
-			</style>
-		//<![endif]
+		|<!--[if (gte mso 9)|(IE)]>
+		|	<style type="text/css">
+		|		body {
+		|			background-color: #fff !important;
+		|		}
+		|		body,
+		|		table,
+		|		td,
+		|		p,
+		|		a {
+		|			font-family: sans-serif, Arial !important;
+		|		}
+		|	</style>
+		|<![endif]-->
 
 		center.center-body
 			div.main-body
@@ -93,10 +87,10 @@ html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microso
 				//- Прехедер письма
 				div.preheader= title ? title : PROJECT_TITLE
 
-				//[if (gte mso 9)|(IE)]>
-					<table width="842" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="color:#fff;">
-						<tr>
-							<td>
-				//<![endif]
+				|<!--[if (gte mso 9)|(IE)]>
+				|	<table width="600" align="center" cellspacing="0" cellpadding="0" role="presentation" ">
+				|		<tr>
+				|			<td>
+				|<![endif]-->
 
 				block content

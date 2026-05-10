@@ -23,7 +23,7 @@ async function sendTestEmail() {
 	try {
 		const info = await transporter.sendMail({
 			from: '"Виктория Гнездилова" <victoria.gnezdilova0808@yandex.ru>',
-			to: '<victoria.gnezdilova0808@yandex.ru>',
+			to: '<v.gnezdilova@rt-solar.ru>',
 			subject: `Тест письма — ${new Date().toLocaleString()}`,
 			html: emailHtml,
 		});
