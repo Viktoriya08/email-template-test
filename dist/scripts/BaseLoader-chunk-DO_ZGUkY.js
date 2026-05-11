@@ -1,1 +1,0 @@
-import{d as e,b as a,g as o,v as s}from"./index-6KYmnAOa.js";import{_ as r}from"./_plugin-vue_export-helper-chunk-BCo6x5W8.js";const l=r(e({__name:"BaseLoader",props:{colorScheme:{default:"default"}},setup:e=>(e,r)=>(a(),o("div",{class:s(["loader",`loader--${e.colorScheme}`])},null,2))}),[["__scopeId","data-v-80391237"]]);export{l as default};

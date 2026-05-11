@@ -1,0 +1,1 @@
+import{b as e,e as a,w as s,i as r,T as t}from"./index-Ba4MoYU9.js";import{_ as n}from"./_plugin-vue_export-helper-chunk-BCo6x5W8.js";const o=n({},[["render",function(n,o){return e(),a(t,{name:"fade"},{default:s((()=>[r(n.$slots,"default")])),_:3})}]]);export{o as default};
