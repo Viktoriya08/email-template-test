@@ -12,9 +12,9 @@
 
 ## Основное
 
-**Верстка** - [Ссылка на шаблон]()
+**Верстка** - [Ссылка на шаблон](https://viktoriya08.github.io/email-template-test/dist/index.html)
 
-**Макет** - [Cсылка на макет в Фигме](https://www.figma.com/file/4nWT2y4l26w78f988bGQLP/ua74.ru---%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD?type=design&node-id=19-2&mode=design&t=ncLEqIc344OP5mZb-0)
+**Макет** - [Cсылка на макет в Фигме](https://www.figma.com/file/lJsYuePMhkcsIaiyrZB8vF/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE?type=design&node-id=0-1&mode=design)
 
 #### Краткое описание:
 
@@ -51,18 +51,6 @@
 	```
 	bun run deploy-production
 	```
-
-## Перенос фронта с github на gitlab
-
-1. В gitlab репозитории создать папку `/local/client-app/`
-2. Перенести все содержимое github репозитория
-3. Удалить папки/файлы .github, .git
-5. В [handbook](https://gitlab.in-progress.ru/frontend/frontend-rules/-/wikis/helpfull/hdbk) добавить, ссылку на gitlab фронт
-6. Github репозиторий [архивировать](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories#archiving-a-repository), либо кого то попросить
-7. В github репозитории добавить в `README.md`, что репозиторий перенесен
-```
-# ВНИМАНИЕ!!! ПЕРЕЕХАЛ НА [GITLAB](ссылка) ‼ ‼
-```
 
 ## Доступные команды
 
