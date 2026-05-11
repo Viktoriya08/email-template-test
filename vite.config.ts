@@ -24,7 +24,6 @@ import {
 	FTP_OPTIONS,
 	FTP_PRODUCTION_OPTIONS,
 	OUTPUT_DIR,
-	PROJECT_NAME,
 	PROJECT_TITLE,
 	PROJECT_URL,
 	SOURCE_DIR,
@@ -42,7 +41,7 @@ export default defineConfig(({ mode }) => {
 	let BASE_URL = '/';
 
 	if (IS_DEPLOY)
-		BASE_URL = `/${PROJECT_NAME}/`;
+		BASE_URL = './';
 
 	else if (IS_BUILD || IS_INITIAL)
 		BASE_URL = PROJECT_URL;
