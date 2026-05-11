@@ -18,13 +18,14 @@ const emailHtml = fs.readFileSync(
 	path.resolve(__dirname, 'dist/views/emails/main.html'),
 	'utf-8',
 );
-
+// to: '<v.gnezdilova@rt-solar.ru>',
+// to: '<victoria.gnezdilova@gmail.com>',
 async function sendTestEmail() {
 	try {
 		const info = await transporter.sendMail({
 			from: '"Виктория Гнездилова" <victoria.gnezdilova0808@yandex.ru>',
 			to: '<v.gnezdilova@rt-solar.ru>',
-			subject: `Тест письма — ${new Date().toLocaleString()}`,
+			subject: `Тестовое задание - верстка письма — ${new Date().toLocaleString()}`,
 			html: emailHtml,
 		});
 

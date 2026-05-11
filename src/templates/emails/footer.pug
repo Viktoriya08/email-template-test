@@ -6,7 +6,7 @@ tr
 					|<!--[if (gte mso 9)|(IE)]>
 					|<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
 					|<tr>
-					|<td>
+					|<td width="50%" valign="top" align="left" style="padding: 32px 0 0;">
 					|<![endif]-->
 					table.footer__head-column.footer-head-logo( border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: left;")
 						tbody.width-100
@@ -23,24 +23,31 @@ tr
 												a(href="tel:+78008008080").footer__text-gray.footer__tell 8 800 800 80 80
 					|<!--[if (gte mso 9)|(IE)]>
 					|</td>
-					|<td>
+					|<td width="50%" valign="top" align="right" style="padding: 32px 0 0;">
 					|<![endif]-->
-					table.footer__head-column( border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: right;")
-						tbody.width-100
-							tr.width-100
-								td.footer__column__td
-									table(border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: right;")
-										tbody.width-100
-											tr
-												td.social
-													table.social__table(align="left" border="0" cellspacing="0" cellpadding="0" role="presentation")
-														tr
-															td.social__box
-																a.social__link(href="https://viktoriya08.github.io/email-template-test/dist/views/emails/main.html" target="_blank")
-																	img.social__img(src="https://viktoriya08.github.io/email-template-test/dist/img/test-vk.png" alt="логотип соц сети ВК" border="0" width="45")
-															td.social__box
-																a.social__link(href="https://viktoriya08.github.io/email-template-test/dist/views/emails/main.html" target="_blank")
-																	img.social__img(src="https://viktoriya08.github.io/email-template-test/dist/img/test-tg.png" alt="логотип месенджера телеграмм" border="0" width="45")
+					table.footer__head-column( border="0" cellspacing="0" cellpadding="0" role="presentation" style="vertical-align: top; text-align: right;" align="right" valign="top")
+						tbody.width-100(align="right")
+							tr
+								td.social.footer__social(align="right" style="text-align: right;")
+									|<!--[if gte mso 9]>
+									|<table border="0" cellpadding="0" cellspacing="0" role="presentation">
+									|<tr>
+									|<td style="padding: 0 20px 0 0;">
+									|<![endif]-->
+									a.social__box.social__link(href="https://viktoriya08.github.io/email-template-test/dist/views/emails/main.html" target="_blank")
+										img.social__img(src="https://viktoriya08.github.io/email-template-test/dist/img/test-vk.png" alt="логотип соц сети ВК" border="0" width="45")
+									|<!--[if gte mso 9]>
+									|</td>
+									|<td>
+									|<![endif]-->
+									a.social__box.social__link(href="https://viktoriya08.github.io/email-template-test/dist/views/emails/main.html" target="_blank")
+										img.social__img(src="https://viktoriya08.github.io/email-template-test/dist/img/test-tg.png" alt="логотип месенджера телеграмм" border="0" width="45")
+									|<!--[if gte mso 9]>
+									|</td>
+									|</tr>
+									|</table>
+									|<![endif]-->
+
 					|<!--[if (gte mso 9)|(IE)]>
 					|</tr>
 					|</td>
@@ -48,7 +55,6 @@ tr
 					|<![endif]-->
 			tr
 				td.footer__line-td(align="center")
-					.footer__line
 			tr
 				td.footer__bottom(align="left")
 					p.footer__text Вы получили это письмо, потому что вы были подписаны на нас в этом году, за что вам большое спасибо!
